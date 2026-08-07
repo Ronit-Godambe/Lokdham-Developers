@@ -1,37 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects By Lokdham</title>
-</head>
-<body>
-    
-    <!-- ================= NAVBAR ================= -->
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Projects By Lokdham</title>
+    <link rel="stylesheet" href="css/styleprojects.css">
+
+    <link rel="stylesheet" href="css/styleprojectsmob.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
     <nav>
 
         <div class="logo">
-            <img src="img/sec1/logo.jpg" alt="">
+            <img src="img/index/logo.jpg" alt="Main Logo">
         </div>
 
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
 
-            <li><a href="#">Home</a></li>
-
-            <li><a href="#">About</a></li>
-
-            <li><a href="#">Projects</a></li>
-
-            <li><a href="#">Blogs</a></li>
-
-            <li><a href="#">Contact</a></li>
-
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
         </ul>
 
-        <a href="#" class="btn">Enquire Now</a>
+        <a href="pages/contactus.html" class="btn">Enquire Now</a>
 
     </nav>
-    
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="page-header">
+
+        <h1>Our Projects</h1>
+
+        <p>
+            Discover thoughtfully planned land developments designed for
+            secure investment and a better tomorrow.
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="projects-page">
+
+        <div class="projects-grid">
+
+            <!-- ==========================================
+                    PROJECT CARD
+                 Copy this block for every new project
+            =========================================== -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img src="img/projects/keladgreens.png" alt="Kelad Greens">
+
+                </div>
+
+                <div class="project-details">
+
+                    <h2>Kelad Greens</h2>
+
+                    <p class="location">
+                        Near Madeghat, Pune - 412212
+                    </p>
+
+                    <p>
+
+                        A thoughtfully planned land development offering
+                        premium plots amidst nature, excellent connectivity,
+                        and long-term investment potential.
+
+                    </p>
+
+                    <a href="kelad-greens.html" class="btn">
+                        View Project
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================================
+                    COMING SOON CARD
+            =========================================== -->
+
+            <article class="project-card coming-soon-card">
+
+                <div class="coming-soon-content">
+
+                    <h2>More Projects Coming Soon</h2>
+
+                    <p>
+
+                        We're actively developing new land projects in
+                        carefully selected locations.
+
+                    </p>
+
+                    <span>Stay Tuned</span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ==========================================
+                    FUTURE PROJECT
+
+            Copy this entire block whenever a new
+            project is launched.
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img src="images/project2.jpg">
+
+                </div>
+
+                <div class="project-details">
+
+                    <h2>Project Name</h2>
+
+                    <p class="location">
+                        📍 Location
+                    </p>
+
+                    <p>
+                        Small description...
+                    </p>
+
+                    <a href="#">View Project</a>
+
+                </div>
+
+            </article>
+
+            =========================================== -->
+
+
+        </div>
+
+    </section>
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Lokdham Developers. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <script>
+        const menu = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector("nav ul");
+
+        menu.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
 </body>
+
 </html>

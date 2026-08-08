@@ -142,8 +142,7 @@ nav a{
 
 .page-header{
 
-    background:linear-gradient(rgba(11,42,91,.88),rgba(11,42,91,.88)),
-    url("images/projects-banner.jpg");
+    background:#0B2A5B;
 
     background-size:cover;
     background-position:center;

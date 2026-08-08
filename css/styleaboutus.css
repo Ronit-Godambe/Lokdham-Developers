@@ -144,8 +144,7 @@ nav a {
 
 .about-hero {
 
-    background: linear-gradient(rgba(11, 42, 91, .85), rgba(11, 42, 91, .85)),
-        url("img/about/banner.jpg");
+    background: #0B2A5B;
 
     background-size: cover;
     background-position: center;

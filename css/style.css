@@ -41,7 +41,7 @@ h1{
 h2{
 
     font-size:40px;
-    color:#0B2A5B;
+    color:#b89541;
     text-align:center;
     margin-bottom:40px;
 
@@ -49,7 +49,7 @@ h2{
 
 h3{
 
-    color:#C8931A;
+    color:#b89541;
 
 }
 
@@ -125,12 +125,17 @@ nav a{
 
 .btn-outline{
 
-    border:2px solid #0B2A5B;
-    color:#0B2A5B;
+       background:#0B2A5B;
+    color:#fff;
     padding:14px 28px;
     border-radius:50px;
     text-decoration:none;
-    margin-left:15px;
+    transition:.3s;
+
+}
+.btn-outline:hover{
+
+    background:#C8931A;
 
 }
 
@@ -209,7 +214,6 @@ nav a{
 /*==============================
         PROJECT SECTION
 ==============================*/
-
 .projects{
     padding:100px 8%;
     background:#fff;
@@ -219,6 +223,9 @@ nav a{
     max-width:1100px;
     margin:60px auto;
     text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 .featured-project h3{
@@ -235,12 +242,14 @@ nav a{
 }
 
 .featured-project video{
-    max-width:100%;
-    height: auto;
-    aspect-ratio:16/9;
+    width:100%;
+    max-width:1000px;
+    height:auto;
+    aspect-ratio:16 / 9;
     object-fit:cover;
     border-radius:24px;
     display:block;
+    margin:0 auto;
     box-shadow:0 20px 45px rgba(0,0,0,.15);
     transition:.4s ease;
 }
@@ -259,6 +268,7 @@ nav a{
     border-radius:40px;
     font-weight:600;
     transition:.3s;
+
 }
 
 .featured-project a:hover{

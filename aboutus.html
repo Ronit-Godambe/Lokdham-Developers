@@ -7,34 +7,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styleaboutus.css">
+    <link rel="stylesheet" href="css/aboutusmob.css">
     <title>About Us</title>
 </head>
 <body>
         <!-- ================= NAVBAR ================= -->
 
-    <nav>
+     <nav>
 
         <div class="logo">
-            <img src="img/index/logo.jpg" alt="">
+            <img src="img/index/logo.jpg" alt="Main Logo">
         </div>
 
-        <ul>
+            <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
 
-            <li><a href="index.html">Home</a></li>
+    <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
 
-            <li><a href="aboutus.html">About Us</a></li>
-
-            <li><a href="projects.html">Projects</a></li>
-
-            <li><a href="blogs.html">Blogs</a></li>
-
-            <li><a href="contactus.html">Contact Us</a></li>
-
-        </ul>
-
-        <a href="#" class="btn">Enquire Now</a>
+        <a href="pages/contactus.html" class="btn">Enquire Now</a>
 
     </nav>
+
 <!-- ================= ABOUT HERO ================= -->
 
 <section class="about-hero">
@@ -78,11 +78,6 @@
 
         </div>
 
-        <div class="about-image">
-
-            <img src="img/about/about1.jpg" alt="About Lokdham">
-
-        </div>
 
     </div>
 
@@ -112,21 +107,27 @@
 
 <section class="founder">
 
-    <div class="founder-card">
+    <div class="founder-wrapper">
 
-        <h2>A Message From Our Founder</h2>
+        <div class="founder-image">
+            <img src="img/Aboutus/founderlokdham.png" alt="Founder">
+        </div>
 
-        <h3>Mr. Vishal Shitole</h3>
+        <div class="founder-card">
 
-        <blockquote>
+            <h2>A Message From Our Founder</h2>
 
-            "Every person dreams of having a place they can truly call
-            their own. At Lokdham Developers, our responsibility is not
-            just to sell land, but to help people take the first step
-            toward building that dream. When our customers trust us with
-            their future, we make their satisfaction our highest priority."
+            <h3>Mr. Vishal Shitole</h3>
 
-        </blockquote>
+            <blockquote>
+                "Every person dreams of having a place they can truly call
+                their own. At Lokdham Developers, our responsibility is not
+                just to sell land, but to help people take the first step
+                toward building that dream. When our customers trust us with
+                their future, we make their satisfaction our highest priority."
+            </blockquote>
+
+        </div>
 
     </div>
 

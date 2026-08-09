@@ -1,3 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+    color:#222;
+
+}
+.menu-toggle{
+    display:none;
+}
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+section{
+
+    padding:90px 8%;
+
+}
+
+h1{
+
+    font-size:48px;
+    color:#0B2A5B;
+
+}
+
+h2{
+
+    font-size:40px;
+    color:#0B2A5B;
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+h3{
+
+    color:#b89541;
+
+}
+
+p{
+
+    color:#555;
+    line-height:1.8;
+
+}
+
+
+
+/* NAVBAR */
 
 nav{
     height:80px;
@@ -42,7 +107,7 @@ nav a{
 }
 
 .btn{
-
+    
     background:#0B2A5B;
     color:#fff;
     padding:14px 28px;
@@ -60,23 +125,19 @@ nav a{
 
 .btn-outline{
 
-    border:2px solid #0B2A5B;
-    color:#0B2A5B;
+       background:#0B2A5B;
+    color:#fff;
     padding:14px 28px;
     border-radius:50px;
     text-decoration:none;
-    margin-left:15px;
+    transition:.3s;
 
 }
+.btn-outline:hover{
 
+    background:#C8931A;
 
-
-
-
-
-
-
-
+}
 
 
 

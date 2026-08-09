@@ -2,202 +2,212 @@
             MOBILE RESPONSIVE
 ========================================*/
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
 
     /* GENERAL */
 
-    section{
-        padding:60px 20px;
+    section {
+        padding: 60px 20px;
     }
 
-    h1{
-        font-size:34px;
-        line-height:1.3;
+    h1 {
+        font-size: 34px;
+        line-height: 1.3;
     }
 
-    h2{
-        font-size:26px;
+    h2 {
+        font-size: 26px;
     }
 
-    p{
-        font-size:15px;
-        line-height:1.7;
+    p {
+        font-size: 15px;
+        line-height: 1.7;
     }
 
-    img{
-        max-width:100%;
-        height:auto;
+    img {
+        max-width: 100%;
+        height: auto;
     }
 
     /*========================================
                 NAVBAR
     ========================================*/
 
-    nav{
-        position:relative;
-        height:75px;
-        padding:0 20px;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.3s ease;
+        z-index: 1000;
     }
 
-    .logo img{
-        width:65px;
+    /* Hide navbar */
+    nav.nav-hidden {
+        transform: translateY(-100%);
     }
 
-    .menu-toggle{
-        display:block;
-        font-size:32px;
-        cursor:pointer;
-        color:#0B2A5B;
+    .logo img {
+        width: 65px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        color: #0B2A5B;
     }
 
     /* Hide Enquire Button */
 
-    nav > .btn{
-        display:none;
+    nav>.btn {
+        display: none;
     }
 
-    nav ul{
-        position:absolute;
-        top:75px;
-        left:0;
-        width:100%;
-        background:#fff;
+    nav ul {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #fff;
 
-        display:flex;
-        flex-direction:column;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        max-height: 0;
+        overflow: hidden;
 
-        max-height:0;
-        overflow:hidden;
+        transition: .35s ease;
 
-        transition:.35s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
 
-        box-shadow:0 8px 20px rgba(0,0,0,.12);
-
-        z-index:999;
+        z-index: 999;
     }
 
-    nav ul.active{
-        max-height:500px;
+    nav ul.active {
+        max-height: 500px;
     }
 
-    nav ul li{
-        width:100%;
-        list-style:none;
-        border-bottom:1px solid #eee;
+    nav ul li {
+        width: 100%;
+        list-style: none;
+        border-bottom: 1px solid #eee;
     }
 
-    nav ul li:last-child{
-        border:none;
+    nav ul li:last-child {
+        border: none;
     }
 
-    nav ul li a{
-        display:block;
-        padding:18px;
-        text-align:center;
-        text-decoration:none;
-        color:#0B2A5B;
+    nav ul li a {
+        display: block;
+        padding: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #0B2A5B;
     }
 
     /*========================================
                 PAGE HEADER
     ========================================*/
 
-    .page-header{
-        padding:90px 20px 60px;
+    .page-header {
+        padding: 90px 20px 60px;
     }
 
-    .page-header h1{
-        font-size:36px;
-        margin-bottom:15px;
+    .page-header h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
     }
 
-    .page-header p{
-        font-size:16px;
+    .page-header p {
+        font-size: 16px;
     }
 
     /*========================================
                 PROJECTS
     ========================================*/
 
-    .projects-page{
-        padding:60px 20px;
+    .projects-page {
+        padding: 60px 20px;
     }
 
-    .projects-grid{
-        grid-template-columns:1fr;
-        gap:30px;
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .project-card{
-        width:100%;
+    .project-card {
+        width: 100%;
     }
 
-    .project-image{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        padding:20px;
+    .project-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
     }
 
-    .project-image img{
-        width:100%;
-        height:auto;
-        object-fit:contain;
+    .project-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 
-    .project-details{
-        padding:25px;
-        text-align:center;
+    .project-details {
+        padding: 25px;
+        text-align: center;
     }
 
-    .project-details h2{
-        text-align:center;
-        font-size:26px;
+    .project-details h2 {
+        text-align: center;
+        font-size: 26px;
     }
 
-    .location{
-        margin-bottom:15px;
+    .location {
+        margin-bottom: 15px;
     }
 
-    .project-details .btn{
-        display:inline-block;
-        margin-top:15px;
+    .project-details .btn {
+        display: inline-block;
+        margin-top: 15px;
     }
 
     /*========================================
                 COMING SOON
     ========================================*/
 
-    .coming-soon-card{
-        min-height:350px;
-        padding:30px 20px;
+    .coming-soon-card {
+        min-height: 350px;
+        padding: 30px 20px;
     }
 
-    .coming-soon-content h2{
-        font-size:26px;
+    .coming-soon-content h2 {
+        font-size: 26px;
     }
 
-    .coming-soon-content p{
-        font-size:15px;
+    .coming-soon-content p {
+        font-size: 15px;
     }
 
-    .coming-soon-content span{
-        padding:12px 24px;
-        font-size:14px;
+    .coming-soon-content span {
+        padding: 12px 24px;
+        font-size: 14px;
     }
 
     /*========================================
                 FOOTER
     ========================================*/
 
-footer{
-    background:#071D40;
-    color:#fff;
-    text-align:center;
-    padding:25px 20px;
-}
+    footer {
+        background: #071D40;
+        color: #fff;
+        text-align: center;
+        padding: 25px 20px;
+    }
 
 }

@@ -19,7 +19,7 @@
     <nav>
 
         <div class="logo">
-            <img src="img/index/logo.jpg" alt="Main Logo">
+            <a href="index.html"><img src="img/index/onlylogo.png" alt="Logo"></a>
         </div>
 
         <div class="menu-toggle" id="menu-toggle">
@@ -34,7 +34,7 @@
             <li><a href="contactus.html">Contact Us</a></li>
         </ul>
 
-        <a href="pages/contactus.html" class="btn">Enquire Now</a>
+        <a href="contactus.html" class="btn">Enquire Now</a>
 
     </nav>
 
@@ -67,7 +67,7 @@
                     At Lokdham Developers, we believe that every family deserves
                     a place they can proudly call their own. We specialize in
                     thoughtfully planned land developments that provide a strong
-                    foundation for future homes and long-term investments.
+                    foundation for future homes and long-term investments. 
 
                 </p>
 
@@ -221,6 +221,7 @@
 
     </footer>
 
+
     <script>
 
         const menu = document.getElementById("menu-toggle");
@@ -230,12 +231,43 @@
 
             navLinks.classList.toggle("active");
 
-            menu.innerHTML =
-                navLinks.classList.contains("active") ? "✕" : "☰";
+            menu.innerHTML = navLinks.classList.contains("active") ? "✕" : "☰";
 
         });
-
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const nav = document.querySelector("nav");
+            let lastScrollTop = 0;
+
+            window.addEventListener("scroll", function () {
+
+                // Only run on mobile
+                if (window.innerWidth <= 768) {
+
+                    let currentScroll =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+
+                    if (currentScroll > lastScrollTop && currentScroll > 75) {
+                        // Scrolling DOWN
+                        nav.classList.add("nav-hidden");
+                    }
+                    else {
+                        // Scrolling UP
+                        nav.classList.remove("nav-hidden");
+                    }
+
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                }
+
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>

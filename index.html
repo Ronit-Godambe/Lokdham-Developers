@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/stylemob.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -20,22 +21,22 @@
     <nav>
 
         <div class="logo">
-            <img src="img/index/logo.jpg" alt="Main Logo">
+            <a href="index.html"><img src="img/index/onlylogo.png" alt="Logo"></a>
         </div>
 
-            <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
 
-    <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blogs.html">Blogs</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-    </ul>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
 
-        <a href="pages/contactus.html" class="btn">Enquire Now</a>
+        <a href="contactus.html" class="btn">Enquire Now</a>
 
     </nav>
 
@@ -231,18 +232,53 @@
 
     </footer>
 
+
     <script>
+        const menu = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
 
-const menu = document.getElementById("menu-toggle");
-const nav = document.getElementById("nav-links");
+        menu.addEventListener("click", () => {
 
-menu.onclick = () => {
+            navLinks.classList.toggle("active");
 
-    nav.classList.toggle("active");
+            menu.innerHTML =
+                navLinks.classList.contains("active") ? "✕" : "☰";
 
-};
+        });
+    </script>
 
-</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const nav = document.querySelector("nav");
+            let lastScrollTop = 0;
+
+            window.addEventListener("scroll", function () {
+
+                // Only run on mobile
+                if (window.innerWidth <= 768) {
+
+                    let currentScroll =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+
+                    if (currentScroll > lastScrollTop && currentScroll > 75) {
+                        // Scrolling DOWN
+                        nav.classList.add("nav-hidden");
+                    }
+                    else {
+                        // Scrolling UP
+                        nav.classList.remove("nav-hidden");
+                    }
+
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                }
+
+            });
+
+        });
+    </script>
+
 
 </body>
 

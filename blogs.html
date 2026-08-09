@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleblogs.css">
+    <link rel="stylesheet" href="css/styleblogsmob.css">
     <title>Blogs</title>
 </head>
 <body>
@@ -12,29 +13,27 @@
     <nav>
 
         <div class="logo">
-            <img src="img/index/logo.jpg" alt="">
+            <a href="index.html"><img src="img/index/onlylogo.png" alt="Logo"></a>
         </div>
 
-        <ul>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
 
+        <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
-
             <li><a href="aboutus.html">About Us</a></li>
-
             <li><a href="projects.html">Projects</a></li>
-
             <li><a href="blogs.html">Blogs</a></li>
-
             <li><a href="contactus.html">Contact Us</a></li>
-
         </ul>
 
-        <a href="#" class="btn">Enquire Now</a>
+        <a href="contactus.html" class="btn">Enquire Now</a>
 
     </nav>
-
 <p>
 
+   <br><br><br><br><br><br><br><br><br>
     Coming Soon
 
 </p>
@@ -50,5 +49,54 @@
         </p>
 
     </footer>
+
+
+ <script>
+
+        const menu = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menu.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+            menu.innerHTML = navLinks.classList.contains("active") ? "✕" : "☰";
+
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const nav = document.querySelector("nav");
+            let lastScrollTop = 0;
+
+            window.addEventListener("scroll", function () {
+
+                // Only run on mobile
+                if (window.innerWidth <= 768) {
+
+                    let currentScroll =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+
+                    if (currentScroll > lastScrollTop && currentScroll > 75) {
+                        // Scrolling DOWN
+                        nav.classList.add("nav-hidden");
+                    }
+                    else {
+                        // Scrolling UP
+                        nav.classList.remove("nav-hidden");
+                    }
+
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                }
+
+            });
+
+        });
+    </script>
+</script>
+
 </body>
 </html>

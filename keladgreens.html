@@ -156,6 +156,7 @@
 
 
 
+
         <!-- =========================================
      MASTER PLAN
 ========================================= -->
@@ -172,7 +173,8 @@
                 </h2>
 
                 <p>
-                    Explore the project layout and view the individual plots and internal roads.
+                    Explore the project layout in detail. Zoom in, zoom out
+                    and move the layout to view individual plots and roads.
                 </p>
 
             </div>
@@ -181,15 +183,41 @@
             <!-- LAYOUT VIEWER -->
 
             <div class="kg-plan-viewer">
-<div class="kg-plan-viewport" id="planViewport">
+
+                <div class="kg-plan-controls">
+
+                    <button type="button" id="zoomIn" aria-label="Zoom in">
+                        +
+                    </button>
+
+                    <button type="button" id="zoomOut" aria-label="Zoom out">
+                        −
+                    </button>
+
+                    <button type="button" id="resetZoom" aria-label="Reset layout">
+                        ↺
+                    </button>
+
+                </div>
+
+
+                <div class="kg-plan-viewport" id="planViewport">
 
                     <img id="planImage" src="img/kelad greens/layout.jpg" alt="Kelad Greens Master Plan and Plot Layout"
                         draggable="false">
 
                 </div>
-</div>
+
+
+                <div class="kg-plan-hint">
+                    <span>🖱</span>
+                    Drag to explore · Scroll to zoom
+                </div>
+
+            </div>
 
         </section>
+
 
 <!-- =========================================
      PLOT DETAILS
@@ -795,6 +823,342 @@ document.querySelectorAll('.kg-plot-card').forEach(function(card){
 
             tiles.forEach(tile => observer.observe(tile));
         });
+    </script>
+    <script>
+
+        const viewport = document.getElementById("planViewport");
+        const image = document.getElementById("planImage");
+
+        const zoomInButton = document.getElementById("zoomIn");
+        const zoomOutButton = document.getElementById("zoomOut");
+        const resetButton = document.getElementById("resetZoom");
+
+
+        let scale = 1;
+
+        let translateX = 0;
+        let translateY = 0;
+
+        let isDragging = false;
+
+        let startX = 0;
+        let startY = 0;
+
+        let startTranslateX = 0;
+        let startTranslateY = 0;
+
+
+        /* =====================================================
+           SETTINGS
+        ===================================================== */
+
+        const MIN_ZOOM = 0.7;
+        const MAX_ZOOM = 4;
+
+        const ZOOM_STEP = 0.25;
+
+
+        /* =====================================================
+           APPLY TRANSFORM
+        ===================================================== */
+
+        function updateImage() {
+
+            image.style.transform =
+                `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+        }
+
+
+        /* =====================================================
+           CENTER IMAGE
+        ===================================================== */
+
+        function centerImage() {
+
+            const viewportWidth = viewport.clientWidth;
+            const viewportHeight = viewport.clientHeight;
+
+            const imageWidth = image.naturalWidth * scale;
+            const imageHeight = image.naturalHeight * scale;
+
+
+            translateX =
+                (viewportWidth - imageWidth) / 2;
+
+            translateY =
+                (viewportHeight - imageHeight) / 2;
+
+
+            updateImage();
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        function resetPlan() {
+
+            scale = 1;
+
+            centerImage();
+
+        }
+
+
+        /* =====================================================
+           ZOOM
+        ===================================================== */
+
+        function zoomAtPoint(newScale, mouseX, mouseY) {
+
+            newScale =
+                Math.max(
+                    MIN_ZOOM,
+                    Math.min(MAX_ZOOM, newScale)
+                );
+
+
+            const scaleRatio =
+                newScale / scale;
+
+
+            translateX =
+                mouseX -
+                (mouseX - translateX) * scaleRatio;
+
+
+            translateY =
+                mouseY -
+                (mouseY - translateY) * scaleRatio;
+
+
+            scale = newScale;
+
+
+            updateImage();
+
+        }
+
+
+        /* =====================================================
+           ZOOM IN
+        ===================================================== */
+
+        zoomInButton.addEventListener("click", function () {
+
+            const centerX =
+                viewport.clientWidth / 2;
+
+            const centerY =
+                viewport.clientHeight / 2;
+
+
+            zoomAtPoint(
+                scale + ZOOM_STEP,
+                centerX,
+                centerY
+            );
+
+        });
+
+
+        /* =====================================================
+           ZOOM OUT
+        ===================================================== */
+
+        zoomOutButton.addEventListener("click", function () {
+
+            const centerX =
+                viewport.clientWidth / 2;
+
+            const centerY =
+                viewport.clientHeight / 2;
+
+
+            zoomAtPoint(
+                scale - ZOOM_STEP,
+                centerX,
+                centerY
+            );
+
+        });
+
+
+        /* =====================================================
+           RESET BUTTON
+        ===================================================== */
+
+        resetButton.addEventListener("click", function () {
+
+            resetPlan();
+
+        });
+
+
+        /* =====================================================
+           MOUSE WHEEL ZOOM
+        ===================================================== */
+
+        viewport.addEventListener(
+            "wheel",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const rect =
+                    viewport.getBoundingClientRect();
+
+
+                const mouseX =
+                    event.clientX - rect.left;
+
+                const mouseY =
+                    event.clientY - rect.top;
+
+
+                if (event.deltaY < 0) {
+
+                    zoomAtPoint(
+                        scale + ZOOM_STEP,
+                        mouseX,
+                        mouseY
+                    );
+
+                } else {
+
+                    zoomAtPoint(
+                        scale - ZOOM_STEP,
+                        mouseX,
+                        mouseY
+                    );
+
+                }
+
+            },
+            { passive: false }
+        );
+
+
+        /* =====================================================
+           START DRAG
+        ===================================================== */
+
+        viewport.addEventListener(
+            "pointerdown",
+            function (event) {
+
+                isDragging = true;
+
+
+                viewport.classList.add("dragging");
+
+
+                startX = event.clientX;
+
+                startY = event.clientY;
+
+
+                startTranslateX = translateX;
+
+                startTranslateY = translateY;
+
+
+                viewport.setPointerCapture(event.pointerId);
+
+            }
+        );
+
+
+        /* =====================================================
+           DRAG
+        ===================================================== */
+
+        viewport.addEventListener(
+            "pointermove",
+            function (event) {
+
+                if (!isDragging) return;
+
+
+                const movementX =
+                    event.clientX - startX;
+
+                const movementY =
+                    event.clientY - startY;
+
+
+                translateX =
+                    startTranslateX + movementX;
+
+                translateY =
+                    startTranslateY + movementY;
+
+
+                updateImage();
+
+            }
+        );
+
+
+        /* =====================================================
+           END DRAG
+        ===================================================== */
+
+        viewport.addEventListener(
+            "pointerup",
+            function () {
+
+                isDragging = false;
+
+                viewport.classList.remove("dragging");
+
+            }
+        );
+
+
+        viewport.addEventListener(
+            "pointercancel",
+            function () {
+
+                isDragging = false;
+
+                viewport.classList.remove("dragging");
+
+            }
+        );
+
+
+        /* =====================================================
+           INITIALIZE
+        ===================================================== */
+
+        image.addEventListener(
+            "load",
+            function () {
+
+                centerImage();
+
+            }
+        );
+
+
+        /* =====================================================
+           WINDOW RESIZE
+        ===================================================== */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                centerImage();
+
+            }
+        );
+
     </script>
 
 </body>

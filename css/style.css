@@ -176,21 +176,19 @@ nav a{
     margin-bottom:35px;
 
 }
-
-.hero-right{
-
-    flex:1;
-
+.hero-right {
+    flex: 1;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
-.hero-right img{
-
-    border-radius:20px;
-
+.hero-right img {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
 }
-
-
-
 /* ABOUT */
 
 .about{

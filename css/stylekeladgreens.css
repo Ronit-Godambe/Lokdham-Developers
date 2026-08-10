@@ -1,0 +1,1374 @@
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+
+        font-family:'Poppins',sans-serif;
+        background:#ffffff;
+        color:#222;
+
+    }
+    .menu-toggle{
+        display:none;
+    }
+    img{
+
+        width:100%;
+        display:block;
+
+    }
+
+    section{
+
+        padding:90px 8%;
+
+    }
+
+    h1{
+
+        font-size:48px;
+        color:#0B2A5B;
+
+    }
+
+    h2{
+
+        font-size:40px;
+        color:#0B2A5B;
+        text-align:center;
+        margin-bottom:40px;
+
+    }
+
+    h3{
+
+        color:#b89541;
+
+    }
+
+    p{
+
+        color:#555;
+        line-height:1.8;
+
+    }
+
+
+
+    /* NAVBAR */
+
+    nav{
+        height:80px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+        padding:0 8%;
+
+        position:sticky;
+        top:0;
+
+        background:#fff;
+
+        box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+        z-index:999;
+
+    }
+
+    .logo img{
+
+        width:80px;
+
+    }
+
+    nav ul{
+
+        display:flex;
+        gap:50px;
+
+        list-style:none;
+
+    }
+
+    nav a{
+
+        color:#0B2A5B;
+        text-decoration:none;
+        font-weight:500;
+
+    }
+
+    .mobile-call-btn{
+        display: none;
+    }
+
+    .btn{
+        
+        background:#0B2A5B;
+        color:#fff;
+        padding:14px 28px;
+        border-radius:50px;
+        text-decoration:none;
+        transition:.3s;
+
+    }
+
+    .btn:hover{
+
+        background:#C8931A;
+
+    }
+
+    .btn-outline{
+
+        background:#0B2A5B;
+        color:#fff;
+        padding:14px 28px;
+        border-radius:50px;
+        text-decoration:none;
+        transition:.3s;
+
+    }
+    .btn-outline:hover{
+
+        background:#C8931A;
+
+    }
+
+
+
+
+    /* =====================================================
+    KELAD GREENS PROJECT PAGE
+    ===================================================== */
+
+    .kelad-page{
+
+        --blue:#0B2A5B;
+        --gold:#C8931A;
+        --dark:#10251C;
+        --cream:#F8F5EC;
+        --light:#F5F7F6;
+        --text:#444;
+
+        color:var(--text);
+        overflow:hidden;
+
+    }
+
+
+    .kelad-page img{
+
+        max-width:100%;
+        display:block;
+
+    }
+
+
+    .kg-blue{
+        color:var(--blue);
+    }
+
+    .kg-gold{
+        color:var(--gold);
+    }
+
+
+    /* =====================================================
+    SECTION HEADING
+    ===================================================== */
+
+    .kg-section-heading{
+
+        max-width:800px;
+        margin:0 auto 60px;
+        text-align:center;
+
+    }
+
+    .kg-section-heading > span{
+
+        display:block;
+
+        font-size:13px;
+        font-weight:600;
+
+        letter-spacing:3px;
+
+        color:var(--gold);
+
+        margin-bottom:12px;
+
+    }
+
+    .kg-section-heading h2{
+
+        font-size:42px;
+
+        color:var(--blue);
+
+        margin-bottom:20px;
+
+    }
+
+    .kg-section-heading p{
+
+        max-width:700px;
+        margin:auto;
+
+        color:#666;
+
+        line-height:1.8;
+
+    }
+
+
+
+    /* =====================================================
+    KELAD GREENS HERO
+    ===================================================== */
+
+    .kg-hero{
+
+        min-height:85vh;
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        align-items:center;
+
+        gap:70px;
+
+        padding:80px 8%;
+
+        background:#ffffff;
+
+    }
+
+
+    .kg-hero-content{
+
+        max-width:650px;
+
+    }
+
+
+    .kg-label{
+
+        display:inline-block;
+
+        color:var(--gold);
+
+        font-size:13px;
+
+        font-weight:600;
+
+        letter-spacing:3px;
+
+        margin-bottom:18px;
+
+    }
+
+
+    .kg-hero h1{
+
+        font-size:72px;
+
+        line-height:1;
+
+        letter-spacing:2px;
+
+        margin-bottom:18px;
+
+    }
+
+
+    .kg-blue{
+
+        color:#0B2A5B;
+
+    }
+
+
+    .kg-gold{
+
+        color:#C8931A;
+
+    }
+
+
+    .kg-hero h2{
+
+        text-align:left;
+
+        font-size:25px;
+
+        line-height:1.4;
+
+        color:#10251C;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .kg-hero p{
+
+        max-width:580px;
+
+        font-size:17px;
+
+        line-height:1.8;
+
+        color:#555;
+
+        margin-bottom:35px;
+
+    }
+
+
+    /* BUTTONS */
+
+    .kg-hero-buttons{
+
+        display:flex;
+
+        gap:15px;
+
+        flex-wrap:wrap;
+
+    }
+
+
+    .kg-btn,
+    .kg-btn-outline{
+
+        display:inline-block;
+
+        padding:14px 30px;
+
+        border-radius:50px;
+
+        text-decoration:none;
+
+        font-weight:600;
+
+        transition:.3s;
+
+    }
+
+
+    .kg-btn{
+
+        background:#0B2A5B;
+
+        color:white;
+
+    }
+
+
+    .kg-btn:hover{
+
+        background:#C8931A;
+
+    }
+
+
+    .kg-btn-outline{
+
+        border:2px solid #0B2A5B;
+
+        color:#0B2A5B;
+
+    }
+
+
+    .kg-btn-outline:hover{
+
+        background:#0B2A5B;
+
+        color:white;
+
+    }
+
+
+    /* =====================================================
+    HERO IMAGE
+    ===================================================== */
+
+    .kg-hero-image{
+
+        width:100%;
+
+        height:520px;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        overflow:hidden;
+
+        border-radius:24px;
+
+    }
+
+
+    .kg-hero-image img{
+
+        width:100%;
+
+        height:100%;
+
+        max-width:600px;
+
+        object-fit:cover;
+
+        object-position:center;
+
+        display:block;
+
+        border-radius:24px;
+
+        box-shadow:0 20px 50px rgba(0,0,0,.14);
+
+    }
+
+    /* =====================================================
+    OVERVIEW
+    ===================================================== */
+
+    .kg-overview{
+
+        padding:100px 8%;
+
+        background:#ffffff;
+
+    }
+
+
+    /* SECTION IMAGE */
+
+    .kg-overview-image{
+
+        width:100%;
+
+        height:420px;
+
+        overflow:hidden;
+
+        border-radius:20px;
+
+    }
+
+
+    .kg-overview-image img{
+
+        width:100%;
+
+        height:100%;
+
+        object-fit:cover;
+
+        object-position:center;
+
+        display:block;
+
+    }
+
+
+    /* OVERVIEW GRID */
+
+    .kg-overview-grid{
+
+        max-width:1200px;
+
+        margin:auto;
+
+        display:grid;
+
+        grid-template-columns:1.1fr .9fr;
+
+        gap:70px;
+
+        align-items:center;
+
+    }
+
+
+    /* OVERVIEW CONTENT */
+
+    .kg-overview-content{
+
+        display:grid;
+
+        gap:15px;
+
+    }
+
+
+    /* INFO BOX */
+
+    .kg-info-box{
+
+        padding:20px 25px;
+
+        background:var(--light);
+
+        border-left:4px solid var(--gold);
+
+        border-radius:5px;
+
+    }
+
+
+    .kg-info-box span{
+
+        display:block;
+
+        font-size:12px;
+
+        letter-spacing:2px;
+
+        color:#777;
+
+        margin-bottom:5px;
+
+    }
+
+
+    .kg-info-box strong{
+
+        color:var(--blue);
+
+        font-size:19px;
+
+    }
+
+
+    .kg-note{
+
+        font-size:12px;
+
+        color:#888;
+
+    }
+
+
+    /* =====================================================
+    MASTER PLAN
+    ===================================================== */
+
+    .kg-master-plan{
+
+        padding:100px 8%;
+
+        background:var(--cream);
+
+    }
+
+
+    /* =====================================================
+    PLAN VIEWER
+    ===================================================== */
+
+    .kg-plan-viewer{
+
+        position:relative;
+
+        width:100%;
+
+        max-width:1000px;
+
+        margin:0 auto;
+
+    }
+
+
+    /* =====================================================
+    VIEWPORT
+    ===================================================== */
+
+    .kg-plan-viewport{
+
+        position:relative;
+
+        width:100%;
+
+        height:600px;
+
+        overflow:hidden;
+
+        background:#ffffff;
+
+        border-radius:20px;
+
+        border:1px solid rgba(11,42,91,.12);
+
+        box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+        cursor:grab;
+
+        touch-action:none;
+
+    }
+
+
+    /* While dragging */
+
+    .kg-plan-viewport.dragging{
+
+        cursor:grabbing;
+
+    }
+
+
+    /* =====================================================
+    PLAN IMAGE
+    ===================================================== */
+
+    .kg-plan-viewport img{
+
+        position:absolute;
+
+        top:0;
+
+        left:0;
+
+        width:auto;
+
+        height:auto;
+
+        max-width:none;
+
+        display:block;
+
+        user-select:none;
+
+        -webkit-user-drag:none;
+
+        transform-origin:0 0;
+
+        pointer-events:none;
+
+    }
+
+
+    /* =====================================================
+    ZOOM CONTROLS
+    ===================================================== */
+
+    .kg-plan-controls{
+
+        position:absolute;
+
+        top:20px;
+
+        right:20px;
+
+        z-index:10;
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:8px;
+
+    }
+
+
+    /* BUTTON */
+
+    .kg-plan-controls button{
+
+        width:45px;
+
+        height:45px;
+
+        border:none;
+
+        border-radius:10px;
+
+        background:#0B2A5B;
+
+        color:#ffffff;
+
+        font-size:25px;
+
+        font-weight:600;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        cursor:pointer;
+
+        box-shadow:0 5px 15px rgba(0,0,0,.18);
+
+        transition:
+
+            background .25s ease,
+
+            transform .2s ease;
+
+    }
+
+
+    /* HOVER */
+
+    .kg-plan-controls button:hover{
+
+        background:#C8931A;
+
+        transform:translateY(-2px);
+
+    }
+
+
+    /* CLICK */
+
+    .kg-plan-controls button:active{
+
+        transform:scale(.94);
+
+    }
+
+
+    /* =====================================================
+    INFORMATION HINT
+    ===================================================== */
+
+    .kg-plan-hint{
+
+        position:absolute;
+
+        bottom:15px;
+
+        left:50%;
+
+        transform:translateX(-50%);
+
+        z-index:5;
+
+        padding:8px 16px;
+
+        border-radius:30px;
+
+        background:rgba(11,42,91,.9);
+
+        color:#ffffff;
+
+        font-size:12px;
+
+        white-space:nowrap;
+
+        pointer-events:none;
+
+    }
+
+
+    .kg-plan-hint span{
+
+        margin-right:5px;
+
+    }
+
+
+
+
+
+    /* =====================================================
+    PLOTS
+    ===================================================== */
+
+    .kg-plots{
+
+        padding:100px 8%;
+
+        background:white;
+
+    }
+
+
+    .kg-plot-grid{
+
+        max-width:1100px;
+
+        margin:auto;
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(4,1fr);
+
+        gap:20px;
+
+    }
+
+
+    .kg-plot-card{
+
+        position:relative;
+
+        padding:30px 20px;
+
+        text-align:center;
+
+        background:#fafafa;
+
+        border:1px solid #eee;
+
+        border-radius:15px;
+
+        transition:.3s;
+
+    }
+
+
+    .kg-plot-card:hover{
+
+        transform:translateY(-5px);
+
+        border-color:var(--gold);
+
+        box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+    }
+
+
+    .plot-number{
+
+        width:42px;
+        height:42px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        margin:0 auto 15px;
+
+        border-radius:50%;
+
+        background:var(--blue);
+
+        color:white;
+
+        font-weight:600;
+
+    }
+
+
+    .kg-plot-card h3{
+
+        color:var(--gold);
+
+        font-size:23px;
+
+        margin-bottom:5px;
+
+    }
+
+
+    .kg-plot-card p{
+
+        color:#777;
+
+    }
+
+
+
+    /* =====================================================
+    AMENITIES
+    ===================================================== */
+
+    .kg-amenities{
+
+        padding:100px 8%;
+
+        background:var(--light);
+
+    }
+
+
+    .kg-amenity-grid{
+
+        max-width:1150px;
+
+        margin:auto;
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+        gap:25px;
+
+    }
+
+
+    .kg-amenity{
+
+        background:white;
+
+        padding:35px 30px;
+
+        border-radius:15px;
+
+        text-align:center;
+
+        box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+    }
+
+
+    .kg-icon{
+
+        width:60px;
+        height:60px;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        margin:0 auto 20px;
+
+        border-radius:50%;
+
+        background:var(--blue);
+
+        color:white;
+
+        font-size:25px;
+
+    }
+
+
+    .kg-amenity h3{
+
+        color:var(--blue);
+
+        margin-bottom:10px;
+
+    }
+
+
+    .kg-amenity p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+
+
+    /* =====================================================
+    LOCATION
+    ===================================================== */
+
+    .kg-location{
+
+        padding:100px 8%;
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:70px;
+
+        align-items:center;
+
+        background:white;
+
+    }
+
+
+    .kg-location-content > span{
+
+        color:var(--gold);
+
+        font-size:13px;
+
+        font-weight:600;
+
+        letter-spacing:3px;
+
+    }
+
+
+    .kg-location-content h2{
+
+        text-align:left;
+
+        font-size:42px;
+
+        color:var(--blue);
+
+        margin:15px 0 20px;
+
+    }
+
+
+    .kg-location-content p{
+
+        max-width:550px;
+
+        margin-bottom:30px;
+
+    }
+
+
+    .kg-location-image img{
+
+        width:100%;
+
+        height:500px;
+
+        object-fit:cover;
+
+        border-radius:20px;
+
+    }
+
+
+    .kg-distance-grid{
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:15px;
+
+    }
+
+
+    .kg-distance-grid div{
+
+        padding:18px;
+
+        background:var(--light);
+
+        border-radius:10px;
+
+    }
+
+
+    .kg-distance-grid strong{
+
+        display:block;
+
+        color:var(--gold);
+
+        font-size:22px;
+
+    }
+
+
+    .kg-distance-grid span{
+
+        color:var(--blue);
+
+        font-size:14px;
+
+    }
+
+
+
+    /* =====================================================
+    ATTRACTIONS
+    ===================================================== */
+
+    .kg-attractions{
+
+        padding:100px 8%;
+
+        background:var(--cream);
+
+    }
+
+
+    .kg-attraction-grid{
+
+        max-width:1200px;
+
+        margin:auto;
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(4,1fr);
+
+        gap:20px;
+
+    }
+
+
+    .kg-attraction-card{
+
+        background:white;
+
+        border-radius:15px;
+
+        overflow:hidden;
+
+        box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    }
+
+
+    .kg-attraction-card img{
+
+        width:100%;
+
+        height:200px;
+
+        object-fit:cover;
+
+    }
+
+
+    .kg-attraction-card div{
+
+        padding:20px;
+
+    }
+
+
+    .kg-attraction-card h3{
+
+        color:var(--blue);
+
+        margin-bottom:8px;
+
+    }
+
+
+    .kg-attraction-card span{
+
+        color:var(--gold);
+
+        font-weight:600;
+
+        font-size:14px;
+
+    }
+
+
+
+    /* =====================================================
+    WHY KELAD GREENS
+    ===================================================== */
+
+    .kg-why{
+
+        padding:100px 8%;
+
+        background:var(--dark);
+
+    }
+
+
+    .kg-why .kg-section-heading h2{
+
+        color:white;
+
+    }
+
+
+    .kg-why .kg-section-heading p{
+
+        color:#ccc;
+
+    }
+
+
+    .kg-why-grid{
+
+        max-width:1100px;
+
+        margin:auto;
+
+        display:grid;
+
+        grid-template-columns:
+            repeat(4,1fr);
+
+        gap:20px;
+
+    }
+
+
+    .kg-why-card{
+
+        padding:35px 25px;
+
+        border:1px solid rgba(255,255,255,.15);
+
+        border-radius:15px;
+
+    }
+
+
+    .kg-why-card > span{
+
+        color:var(--gold);
+
+        font-size:14px;
+
+        font-weight:bold;
+
+    }
+
+
+    .kg-why-card h3{
+
+        color:white;
+
+        margin:15px 0;
+
+    }
+
+
+    .kg-why-card p{
+
+        color:#bbb;
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+
+
+    /* =====================================================
+    FINAL CTA
+    ===================================================== */
+
+    .kg-cta{
+
+        padding:110px 8%;
+
+        text-align:center;
+
+        background:
+
+            linear-gradient(
+                rgba(11,42,91,.92),
+                rgba(11,42,91,.92)
+            ),
+
+            url("../img/projects/kelad-greens/kelad-greens-poster.jpg");
+
+        background-size:cover;
+
+        background-position:center;
+
+    }
+
+
+    .kg-cta > div{
+
+        max-width:800px;
+
+        margin:auto;
+
+    }
+
+
+    .kg-cta span{
+
+        color:#E2B84B;
+
+        font-size:13px;
+
+        font-weight:600;
+
+        letter-spacing:3px;
+
+    }
+
+
+    .kg-cta h2{
+
+        color:white;
+
+        font-size:45px;
+
+        margin:15px 0 20px;
+
+    }
+
+
+    .kg-cta p{
+
+        color:#ddd;
+
+        max-width:650px;
+
+        margin:0 auto 30px;
+
+    }
+
+
+    .kg-cta-btn{
+
+        display:inline-block;
+
+        padding:15px 32px;
+
+        border-radius:50px;
+
+        background:var(--gold);
+
+        color:white;
+
+        text-decoration:none;
+
+        font-weight:600;
+
+        transition:.3s;
+
+    }
+
+
+
+    .kg-cta-btn:hover{
+
+        background:white;
+
+        color:var(--blue);
+
+    }
+
+   
+
+    /* FOOTER */
+
+    footer{
+
+        background:#071D40;
+
+        color:#fff;
+        
+        text-align:center;
+
+        padding:30px;
+
+    }
+

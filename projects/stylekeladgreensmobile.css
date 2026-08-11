@@ -72,69 +72,76 @@
         display:none !important;
     }
 
-   /* =========================
-   FIXED CALL BUTTON
-========================= */
+ /* =========================================
+   FIXED MOBILE CONTACT BAR
+========================================= */
 
-.mobile-call-btn {
-    position: fixed;
+.mobile-contact-buttons{
+    position:fixed;
+    left:0;
+    bottom:0;
 
-    left: 50%;
-    bottom: 12px;
+    width:100%;
+    height:52px;
 
-    transform: translateX(-50%);
+    display:flex;
 
-    width: 150px;
-    height: 46px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
-    padding: 0;
-
-    background: #0B2A5B;
-    color: #ffffff;
-
-    border: none;
-    border-radius: 30px;
-
-    text-decoration: none;
-
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .2px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .22);
-
-    z-index: 99999;
-
-    /* Make sure it does NOT create page space */
-    margin: 0;
+    z-index:99999;
 }
 
-/* Phone icon */
+/* BOTH BUTTONS */
 
-.mobile-call-btn .call-icon {
-    font-size: 17px;
-    line-height: 1;
+.mobile-contact-buttons a{
+    flex:1;
+
+    height:52px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    border-radius:0;
+    border:none;
+
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:600;
+
+    box-shadow:none;
 }
 
-/* Click effect */
+/* CALL */
 
-.mobile-call-btn:active {
-    transform: translateX(-50%) scale(.97);
+.mobile-call-btn{
+    background:#0B2A5B;
+    color:#fff;
 }
 
-/* Prevent hover from changing its position */
-
-.mobile-call-btn:hover {
-    transform: translateX(-50%);
-    background: #0B2A5B;
-    color: #ffffff;
+.mobile-call-btn:hover{
+    background:#0B2A5B;
+    color:#fff;
 }
 
+/* WHATSAPP */
+
+.mobile-whatsapp-btn{
+    background:#b89541;
+    color:#fff;
+}
+
+.mobile-whatsapp-btn:hover{
+    background:#b89541;
+    color:#fff;
+}
+
+/* ICONS */
+
+.mobile-contact-buttons i{
+    font-size:17px;
+}
     /* =========================
        GENERAL
     ========================= */
@@ -656,6 +663,6 @@
     background: #071D40;
     color: #fff;
     text-align: center;
-    padding: 80px;
+    padding: 20px;
 }
 }

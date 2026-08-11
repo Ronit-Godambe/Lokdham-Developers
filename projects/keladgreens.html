@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelad Greens</title>
-    <link rel="stylesheet" href="css/stylekeladgreens.css">
-    <link rel="stylesheet" href="css/stylekeladgreensmobile.css">
+    <link rel="stylesheet" href="stylekeladgreens.css">
+    <link rel="stylesheet" href="stylekeladgreensmobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <nav>
 
         <div class="logo">
-            <a href="index.html"><img src="img/index/onlylogo.png" alt="Logo"></a>
+            <a href="index.html"><img src="../img/navbar/onlylogo.png" alt="Logo"></a>
         </div>
 
         <div class="menu-toggle" id="menu-toggle">
@@ -24,13 +25,15 @@
         </div>
 
         <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../aboutus.html">About Us</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../blogs.html">Blogs</a></li>
+            <li><a href="../contactus.html">Contact Us</a></li>
         </ul>
-</nav>
+
+        <a href="contactus.html" class="btn">Enquire Now</a>
+    </nav>
 
     <main class="kelad-page">
 
@@ -38,10 +41,22 @@
          PROJECT HERO
     ========================================== -->
 
-    <a href="tel:+918007901111" class="mobile-call-btn">
-    <span class="call-icon">☎</span>
-    <span>Call Now</span>
-</a>
+        <!-- MOBILE CONTACT BAR -->
+
+        <div class="mobile-contact-buttons">
+
+            <a href="tel:+918007901111" class="mobile-call-btn">
+                <i class="fa-solid fa-phone"></i>
+                <span>Call Now</span>
+            </a>
+
+            <a href="https://wa.me/918007901111" class="mobile-whatsapp-btn" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+
+
 
         <section class="kg-hero">
 
@@ -64,7 +79,7 @@
 
                 <div class="kg-hero-buttons">
 
-                    <a href="contactus.html" class="kg-btn">
+                    <a href="../contactus.html" class="kg-btn">
                         Enquire Now
                     </a>
 
@@ -79,7 +94,7 @@
 
             <div class="kg-hero-image">
 
-                <img src="img/projects/keladgreens.png" alt="Kelad Greens Premium Farmhouse Plots">
+                <img src="img-keladgreens/keladgreens.png" alt="Kelad Greens Premium Farmhouse Plots">
 
             </div>
 
@@ -115,7 +130,7 @@
 
                 <div class="kg-overview-image">
 
-                    <img src="img/projects/keladgreens.png" alt="Kelad Greens Premium Farmhouse Plots">
+                    <img src="img-keladgreens/keladgreens.png" alt="Kelad Greens Premium Farmhouse Plots">
 
                 </div>
 
@@ -134,7 +149,7 @@
 
                     <div class="kg-info-box kg-reveal-tile">
                         <span>PLOT SIZE</span>
-                        <strong>11 Guntha Plots</strong>
+                        <strong>11 Gunthas (11,000 sq.ft.)</strong>
                     </div>
 
                     <div class="kg-info-box kg-reveal-tile">
@@ -202,7 +217,7 @@
 
                 <div class="kg-plan-viewport" id="planViewport">
 
-                    <img id="planImage" src="img/kelad greens/layout.jpg" alt="Kelad Greens Master Plan and Plot Layout"
+                    <img id="planImage" src="img-keladgreens/layout.jpg" alt="Kelad Greens Master Plan and Plot Layout"
                         draggable="false">
 
                 </div>
@@ -218,133 +233,133 @@
         </section>
 
 
-<!-- =========================================
+        <!-- =========================================
      PLOT DETAILS
 ========================================== -->
 
-<section class="kg-plots">
+        <section class="kg-plots">
 
-    <div class="kg-section-heading">
+            <div class="kg-section-heading">
 
-        <span>AVAILABLE PLOTS</span>
+                <span>AVAILABLE PLOTS</span>
 
-        <h2>
-            Choose Your
-            <span class="kg-gold">Dream Plot</span>
-        </h2>
+                <h2>
+                    Choose Your
+                    <span class="kg-gold">Dream Plot</span>
+                </h2>
 
-        <p>
-            Kelad Greens offers individually planned plots surrounded
-            by scenic natural landscapes.
-        </p>
+                <p>
+                    Kelad Greens offers individually planned plots surrounded
+                    by scenic natural landscapes.
+                </p>
 
-    </div>
-
-
-    <div class="kg-plot-grid">
+            </div>
 
 
-        <div class="kg-plot-card" data-plot="01">
-            <div class="plot-number">01</div>
-            <h3>12.23 R</h3>
-            <p>Plot 1</p>
-        </div>
+            <div class="kg-plot-grid">
 
 
-        <div class="kg-plot-card" data-plot="02">
-            <div class="plot-number">02</div>
-            <h3>11.00 R</h3>
-            <p>Plot 2</p>
-        </div>
+                <div class="kg-plot-card" data-plot="01">
+                    <div class="plot-number">01</div>
+                    <h3>12.23 R</h3>
+                    <p>Plot 1</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="03">
-            <div class="plot-number">03</div>
-            <h3>11.00 R</h3>
-            <p>Plot 3</p>
-        </div>
+                <div class="kg-plot-card" data-plot="02">
+                    <div class="plot-number">02</div>
+                    <h3>11.00 R</h3>
+                    <p>Plot 2</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="04">
-            <div class="plot-number">04</div>
-            <h3>11.00 R</h3>
-            <p>Plot 4</p>
-        </div>
+                <div class="kg-plot-card" data-plot="03">
+                    <div class="plot-number">03</div>
+                    <h3>11.00 R</h3>
+                    <p>Plot 3</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="05">
-            <div class="plot-number">05</div>
-            <h3>10.63 R</h3>
-            <p>Plot 5</p>
-        </div>
+                <div class="kg-plot-card" data-plot="04">
+                    <div class="plot-number">04</div>
+                    <h3>11.00 R</h3>
+                    <p>Plot 4</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="06">
-            <div class="plot-number">06</div>
-            <h3>10.65 R</h3>
-            <p>Plot 6</p>
-        </div>
+                <div class="kg-plot-card" data-plot="05">
+                    <div class="plot-number">05</div>
+                    <h3>10.63 R</h3>
+                    <p>Plot 5</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="07">
-            <div class="plot-number">07</div>
-            <h3>11.00 R</h3>
-            <p>Plot 7</p>
-        </div>
+                <div class="kg-plot-card" data-plot="06">
+                    <div class="plot-number">06</div>
+                    <h3>10.65 R</h3>
+                    <p>Plot 6</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="08">
-            <div class="plot-number">08</div>
-            <h3>12.77 R</h3>
-            <p>Plot 8</p>
-        </div>
+                <div class="kg-plot-card" data-plot="07">
+                    <div class="plot-number">07</div>
+                    <h3>11.00 R</h3>
+                    <p>Plot 7</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="09">
-            <div class="plot-number">09</div>
-            <h3>11.00 R</h3>
-            <p>Plot 9</p>
-        </div>
+                <div class="kg-plot-card" data-plot="08">
+                    <div class="plot-number">08</div>
+                    <h3>12.77 R</h3>
+                    <p>Plot 8</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="10">
-            <div class="plot-number">10</div>
-            <h3>11.00 R</h3>
-            <p>Plot 10</p>
-        </div>
+                <div class="kg-plot-card" data-plot="09">
+                    <div class="plot-number">09</div>
+                    <h3>11.00 R</h3>
+                    <p>Plot 9</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="11">
-            <div class="plot-number">11</div>
-            <h3>11.00 R</h3>
-            <p>Plot 11</p>
-        </div>
+                <div class="kg-plot-card" data-plot="10">
+                    <div class="plot-number">10</div>
+                    <h3>11.00 R</h3>
+                    <p>Plot 10</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="12">
-            <div class="plot-number">12</div>
-            <h3>12.86 R</h3>
-            <p>Plot 12</p>
-        </div>
+                <div class="kg-plot-card" data-plot="11">
+                    <div class="plot-number">11</div>
+                    <h3>11.00 R</h3>
+                    <p>Plot 11</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="13">
-            <div class="plot-number">13</div>
-            <h3>11.30 R</h3>
-            <p>Plot 13</p>
-        </div>
+                <div class="kg-plot-card" data-plot="12">
+                    <div class="plot-number">12</div>
+                    <h3>12.86 R</h3>
+                    <p>Plot 12</p>
+                </div>
 
 
-        <div class="kg-plot-card" data-plot="14">
-            <div class="plot-number">14</div>
-            <h3>12.00 R</h3>
-            <p>Plot 14</p>
-        </div>
+                <div class="kg-plot-card" data-plot="13">
+                    <div class="plot-number">13</div>
+                    <h3>11.30 R</h3>
+                    <p>Plot 13</p>
+                </div>
 
 
-    </div>
+                <div class="kg-plot-card" data-plot="14">
+                    <div class="plot-number">14</div>
+                    <h3>12.00 R</h3>
+                    <p>Plot 14</p>
+                </div>
 
-</section>
+
+            </div>
+
+        </section>
 
 
 
@@ -513,7 +528,7 @@
 
             <div class="kg-location-image">
 
-                <img src="img/kelad greens/naturenearkelad.png" alt="Nature near Kelad Greens">
+                <img src="img-keladgreens/naturenearkelad.png" alt="Nature near Kelad Greens">
                 <!-- <img src="img/kelad greens/naturenearkelad.png" alt="Buy Nature Agriculture land nea kelad greens pune"> -->
 
             </div>
@@ -545,7 +560,7 @@
 
                 <div class="kg-attraction-card">
 
-                    <img src="img/kelad greens/Madhe-Ghat-Waterfall.png" alt="Mhadhe Ghat Waterfall">
+                    <img src="img-keladgreens/Madhe-Ghat-Waterfall.png" alt="Mhadhe Ghat Waterfall">
 
                     <div>
                         <h3>Mhadhe Ghat Waterfall</h3>
@@ -557,7 +572,7 @@
 
                 <div class="kg-attraction-card">
 
-                    <img src="img/kelad greens/Rajgad-Fort.jpg" alt="Rajgad Fort">
+                    <img src="img-keladgreens/Rajgad-Fort.jpg" alt="Rajgad Fort">
 
                     <div>
                         <h3>Rajgad Fort</h3>
@@ -569,7 +584,7 @@
 
                 <div class="kg-attraction-card">
 
-                    <img src="img/kelad greens/Torna-Fort.jpg" alt="Torna Fort">
+                    <img src="img-keladgreens/Torna-Fort.jpg" alt="Torna Fort">
 
                     <div>
                         <h3>Torna Fort</h3>
@@ -581,7 +596,7 @@
 
                 <div class="kg-attraction-card">
 
-                    <img src="img/kelad greens/Sinhagad-Fort.jpg" alt="Sinhagad Fort">
+                    <img src="img-keladgreens/Sinhagad-Fort.jpg" alt="Sinhagad Fort">
 
                     <div>
                         <h3>Sinhagad Fort</h3>
@@ -595,7 +610,7 @@
 
         </section>
 
-        
+
 
         <!-- =========================================
          WHY KELAD GREENS
@@ -702,20 +717,20 @@
                     about plot availability, pricing and documentation.
                 </p>
 
-                <a href="contactus.html" class="kg-cta-btn">
+                <a href="../contactus.html" class="kg-cta-btn">
                     Enquire About Kelad Greens
                 </a>
 
             </div>
 
         </section>
-</main>
+    </main>
 
     <footer>
 
         <p>
 
-            © 2026 Lokdham Developers. All Rights Reserved.
+            © 2026 Lokdham Developers. All Rights Reserved. | Designed & Developed by Ronit Godambe
 
         </p>
 
@@ -765,39 +780,39 @@
 
         });
     </script>
-<script>
-document.querySelectorAll('.kg-plot-card').forEach(function(card){
+    <script>
+        document.querySelectorAll('.kg-plot-card').forEach(function (card) {
 
-    card.addEventListener('click', function(){
+            card.addEventListener('click', function () {
 
-        /* Mobile only */
+                /* Mobile only */
 
-        if(window.innerWidth <= 768){
+                if (window.innerWidth <= 768) {
 
-            const plotNumber = card.getAttribute('data-plot');
+                    const plotNumber = card.getAttribute('data-plot');
 
-            const message =
-                "Hello, I am interested in Plot No. " +
-                plotNumber +
-                " at Kelad Greens. Please share the details.";
+                    const message =
+                        "Hello, I am interested in Plot No. " +
+                        plotNumber +
+                        " at Kelad Greens. Please share the details.";
 
-            const whatsappNumber = "918007901111";
+                    const whatsappNumber = "918007901111";
 
-            const whatsappURL =
-                "https://wa.me/" +
-                whatsappNumber +
-                "?text=" +
-                encodeURIComponent(message);
+                    const whatsappURL =
+                        "https://wa.me/" +
+                        whatsappNumber +
+                        "?text=" +
+                        encodeURIComponent(message);
 
-            window.location.href = whatsappURL;
+                    window.location.href = whatsappURL;
 
-        }
+                }
 
-    });
+            });
 
-});
+        });
 
-</script>
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

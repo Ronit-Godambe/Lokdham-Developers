@@ -9,57 +9,56 @@ html{
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
     background:#ffffff;
     color:#222;
 
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
+
+main{
+    flex:1;
+}
+
+footer{
+    margin-top:auto;
+}
+
 .menu-toggle{
     display:none;
 }
-img{
 
+img{
     width:100%;
     display:block;
-
 }
 
 section{
-
     padding:90px 8%;
-
 }
 
 h1{
-
     font-size:48px;
     color:#0B2A5B;
-
 }
 
 h2{
-
     font-size:40px;
     color:#0B2A5B;
     text-align:center;
     margin-bottom:40px;
-
 }
 
 h3{
-
     color:#b89541;
-
 }
 
 p{
-
     color:#555;
     line-height:1.8;
-
 }
-
 
 
 /* NAVBAR */

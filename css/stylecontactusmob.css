@@ -334,6 +334,92 @@
         font-size:15px;
     }
 
+    
+    /* =========================================
+   MOBILE CONTACT BAR
+========================================= */
+
+    .mobile-contact-buttons {
+        width: 100%;
+        height: 52px;
+
+        display: flex;
+
+        margin: 0;
+        padding: 0;
+
+        position: fixed;
+        left: 0;
+        bottom: 0;
+
+        z-index: 99999;
+    }
+
+    /* BOTH BUTTONS */
+
+    .mobile-contact-buttons a {
+        flex: 1;
+
+        height: 52px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        border-radius: 0;
+        border: none;
+
+        text-decoration: none;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        box-shadow: none;
+    }
+
+    /* CALL */
+
+    .mobile-call-btn {
+        background: #0B2A5B;
+        color: #fff;
+    }
+
+    .mobile-call-btn:hover {
+        background: #0B2A5B;
+        color: #fff;
+    }
+
+    /* WHATSAPP */
+
+    .mobile-whatsapp-btn {
+        background: #b89541;
+        color: #fff;
+    }
+
+    .mobile-whatsapp-btn:hover {
+        background: #b89541;
+        color: #fff;
+    }
+
+    /* ICONS */
+
+    .mobile-contact-buttons i {
+        font-size: 17px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* =====================================
        CONTACT FORM

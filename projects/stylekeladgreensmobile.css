@@ -3,148 +3,149 @@
    Replace/use as: css/stylekeladgreensmobile.css
 ========================================================= */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 
-    html{
-        scroll-behavior:smooth;
+    html {
+        scroll-behavior: smooth;
     }
 
-    body{
-        overflow-x:hidden;
+    body {
+        overflow-x: hidden;
     }
 
     /* =========================
        NAVBAR
     ========================= */
 
-    nav{
-        height:68px;
-        padding:0 18px;
-        position:sticky;
-        top:0;
-        z-index:9999;
+    nav {
+        height: 68px;
+        padding: 0 18px;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
     }
 
-    .logo img{
-        width:62px;
+    .logo img {
+        width: 62px;
     }
 
-    .menu-toggle{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        width:42px;
-        height:42px;
-        font-size:28px;
-        color:#0B2A5B;
-        cursor:pointer;
-        margin-left:auto;
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        font-size: 28px;
+        color: #0B2A5B;
+        cursor: pointer;
+        margin-left: auto;
     }
 
-    nav ul{
-        position:absolute;
-        top:68px;
-        left:0;
-        width:100%;
-        display:none;
-        flex-direction:column;
-        gap:0;
-        background:#fff;
-        box-shadow:0 10px 25px rgba(0,0,0,.10);
-        padding:8px 0;
+    nav ul {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: #fff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .10);
+        padding: 8px 0;
     }
 
-    nav ul.active{
-        display:flex;
+    nav ul.active {
+        display: flex;
     }
 
-    nav ul li{
-        width:100%;
+    nav ul li {
+        width: 100%;
     }
 
-    nav ul li a{
-        display:block;
-        padding:14px 22px;
-        border-bottom:1px solid #eee;
+    nav ul li a {
+        display: block;
+        padding: 14px 22px;
+        border-bottom: 1px solid #eee;
     }
 
-    nav .btn{
-        display:none !important;
+    nav .btn {
+        display: none !important;
     }
 
-/* =========================================
+    /* =========================================
    MOBILE CONTACT BAR
 ========================================= */
 
-.mobile-contact-buttons{
-    width:100%;
-    height:52px;
+    .mobile-contact-buttons {
+        width: 100%;
+        height: 52px;
 
-    display:flex;
+        display: flex;
 
-    margin:0;
-    padding:0;
+        margin: 0;
+        padding: 0;
 
-    position:fixed;
-    left:0;
-    bottom:0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
 
-    z-index:99999;
-}
+        z-index: 99999;
+    }
 
-/* BOTH BUTTONS */
+    /* BOTH BUTTONS */
 
-.mobile-contact-buttons a{
-    flex:1;
+    .mobile-contact-buttons a {
+        flex: 1;
 
-    height:52px;
+        height: 52px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    gap:8px;
+        gap: 8px;
 
-    border-radius:0;
-    border:none;
+        border-radius: 0;
+        border: none;
 
-    text-decoration:none;
+        text-decoration: none;
 
-    font-size:14px;
-    font-weight:600;
+        font-size: 14px;
+        font-weight: 600;
 
-    box-shadow:none;
-}
+        box-shadow: none;
+    }
 
-/* CALL */
+    /* CALL */
 
-.mobile-call-btn{
-    background:#0B2A5B;
-    color:#fff;
-}
+    .mobile-call-btn {
+        background: #0B2A5B;
+        color: #fff;
+    }
 
-.mobile-call-btn:hover{
-    background:#0B2A5B;
-    color:#fff;
-}
+    .mobile-call-btn:hover {
+        background: #0B2A5B;
+        color: #fff;
+    }
 
-/* WHATSAPP */
+    /* WHATSAPP */
 
-.mobile-whatsapp-btn{
-    background:#b89541;
-    color:#fff;
-}
+    .mobile-whatsapp-btn {
+        background: #b89541;
+        color: #fff;
+    }
 
-.mobile-whatsapp-btn:hover{
-    background:#b89541;
-    color:#fff;
-}
+    .mobile-whatsapp-btn:hover {
+        background: #b89541;
+        color: #fff;
+    }
 
-/* ICONS */
+    /* ICONS */
 
-.mobile-contact-buttons i{
-    font-size:17px;
-}
+    .mobile-contact-buttons i {
+        font-size: 17px;
+    }
+
     /* =========================
        GENERAL
     ========================= */
@@ -155,30 +156,30 @@
     .kg-plots,
     .kg-amenities,
     .kg-location,
-    .kg-attractions{
-        padding:62px 20px;
+    .kg-attractions {
+        padding: 62px 20px;
     }
 
-    .kg-section-heading{
-        margin:0 auto 34px;
-        max-width:100%;
+    .kg-section-heading {
+        margin: 0 auto 34px;
+        max-width: 100%;
     }
 
-    .kg-section-heading > span{
-        font-size:11px;
-        letter-spacing:2px;
-        margin-bottom:9px;
+    .kg-section-heading>span {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 9px;
     }
 
-    .kg-section-heading h2{
-        font-size:29px;
-        line-height:1.25;
-        margin-bottom:14px;
+    .kg-section-heading h2 {
+        font-size: 29px;
+        line-height: 1.25;
+        margin-bottom: 14px;
     }
 
-    .kg-section-heading p{
-        font-size:14px;
-        line-height:1.7;
+    .kg-section-heading p {
+        font-size: 14px;
+        line-height: 1.7;
     }
 
     /* =========================
@@ -187,80 +188,80 @@
        Presents → Kelad Greens → image → rest
     ========================= */
 
-    .kg-hero{
-        min-height:auto;
-        display:flex;
-        flex-direction:column;
-        gap:0;
-        padding:38px 20px 55px;
-        text-align:left;
+    .kg-hero {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 38px 20px 55px;
+        text-align: left;
     }
 
-    .kg-hero-content{
-        display:contents;
-        max-width:none;
+    .kg-hero-content {
+        display: contents;
+        max-width: none;
     }
 
-    .kg-label{
-        order:1;
-        font-size:11px;
-        letter-spacing:2px;
-        margin-bottom:12px;
+    .kg-label {
+        order: 1;
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
     }
 
-    .kg-hero h1{
-        order:2;
-        font-size:48px;
-        line-height:.98;
-        letter-spacing:1px;
-        margin:0 0 22px;
+    .kg-hero h1 {
+        order: 2;
+        font-size: 48px;
+        line-height: .98;
+        letter-spacing: 1px;
+        margin: 0 0 22px;
     }
 
-    .kg-hero-image{
-        order:3;
-        width:100%;
-        height:270px;
-        margin:0 0 25px;
-        border-radius:18px;
+    .kg-hero-image {
+        order: 3;
+        width: 100%;
+        height: 270px;
+        margin: 0 0 25px;
+        border-radius: 18px;
     }
 
-    .kg-hero-image img{
-        width:100%;
-        height:100%;
-        max-width:none;
-        object-fit:cover;
-        border-radius:18px;
-        box-shadow:0 12px 30px rgba(0,0,0,.12);
+    .kg-hero-image img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .12);
     }
 
-    .kg-hero h2{
-        order:4;
-        text-align:left;
-        font-size:22px;
-        line-height:1.35;
-        margin:0 0 13px;
+    .kg-hero h2 {
+        order: 4;
+        text-align: left;
+        font-size: 22px;
+        line-height: 1.35;
+        margin: 0 0 13px;
     }
 
-    .kg-hero p{
-        order:5;
-        font-size:14px;
-        line-height:1.75;
-        margin:0 0 24px;
+    .kg-hero p {
+        order: 5;
+        font-size: 14px;
+        line-height: 1.75;
+        margin: 0 0 24px;
     }
 
-    .kg-hero-buttons{
-        order:6;
-        display:flex;
-        width:100%;
-        gap:10px;
+    .kg-hero-buttons {
+        order: 6;
+        display: flex;
+        width: 100%;
+        gap: 10px;
     }
 
     .kg-btn,
-    .kg-btn-outline{
-        flex:1;
-        padding:12px 14px;
-        text-align:center;
-        font-size:13px;
+    .kg-btn-outline {
+        flex: 1;
+        padding: 12px 14px;
+        text-align: center;
+        font-size: 13px;
     }
 
     /* =========================
@@ -268,81 +269,92 @@
        Image first, then tiles
     ========================= */
 
-    .kg-overview{
-        background:#fff;
+    .kg-overview {
+        background: #fff;
     }
 
-    .kg-overview .kg-section-heading{
-        margin-bottom:28px;
+    .kg-overview .kg-section-heading {
+        margin-bottom: 28px;
     }
 
-    .kg-overview-grid{
-        display:flex;
-        flex-direction:column;
-        gap:25px;
+    .kg-overview-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
     }
 
-    .kg-overview-image{
-        order:1;
-        width:100%;
-        height:250px;
-        border-radius:17px;
+    .kg-overview-image {
+        order: 1;
+        width: 100%;
+        height: 250px;
+        border-radius: 17px;
     }
 
-    .kg-overview-image img{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        border-radius:17px;
+    .kg-overview-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 17px;
     }
 
-    .kg-overview-content{
-        order:2;
-        display:flex;
-        flex-direction:column;
-        gap:11px;
+    .kg-overview-content {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
     }
 
-    .kg-info-box{
-        padding:15px 17px;
-        border-left:4px solid var(--gold);
-        border-radius:7px;
+    .kg-info-box {
+        padding: 15px 17px;
+        border-left: 4px solid var(--gold);
+        border-radius: 7px;
     }
 
-    .kg-info-box span{
-        font-size:10px;
-        letter-spacing:1.6px;
-        margin-bottom:3px;
+    .kg-info-box span {
+        font-size: 10px;
+        letter-spacing: 1.6px;
+        margin-bottom: 3px;
     }
 
-    .kg-info-box strong{
-        font-size:16px;
-        line-height:1.4;
+    .kg-info-box strong {
+        font-size: 16px;
+        line-height: 1.4;
     }
 
-    .kg-note{
-        margin-top:3px;
-        font-size:11px;
-        line-height:1.6;
+    .kg-note {
+        margin-top: 3px;
+        font-size: 11px;
+        line-height: 1.6;
     }
 
     /* Tiles enter from the right one by one */
-    .kg-reveal-tile{
-        opacity:0;
-        transform:translateX(70px);
+    .kg-reveal-tile {
+        opacity: 0;
+        transform: translateX(70px);
         transition:
             opacity .65s ease,
-            transform .65s cubic-bezier(.22,.61,.36,1);
+            transform .65s cubic-bezier(.22, .61, .36, 1);
     }
 
-    .kg-reveal-tile:nth-child(1){ transition-delay:.05s; }
-    .kg-reveal-tile:nth-child(2){ transition-delay:.16s; }
-    .kg-reveal-tile:nth-child(3){ transition-delay:.27s; }
-    .kg-reveal-tile:nth-child(4){ transition-delay:.38s; }
+    .kg-reveal-tile:nth-child(1) {
+        transition-delay: .05s;
+    }
 
-    .kg-reveal-tile.is-visible{
-        opacity:1;
-        transform:translateX(0);
+    .kg-reveal-tile:nth-child(2) {
+        transition-delay: .16s;
+    }
+
+    .kg-reveal-tile:nth-child(3) {
+        transition-delay: .27s;
+    }
+
+    .kg-reveal-tile:nth-child(4) {
+        transition-delay: .38s;
+    }
+
+    .kg-reveal-tile.is-visible {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     /* =========================
@@ -350,409 +362,409 @@
        Static image — no drag/zoom
     ========================= */
 
-    .kg-master-plan{
-        background:var(--cream);
+    .kg-master-plan {
+        background: var(--cream);
     }
 
-    .kg-plan-viewer{
-        width:100%;
-        max-width:none;
-        margin:0;
+    .kg-plan-viewer {
+        width: 100%;
+        max-width: none;
+        margin: 0;
     }
 
-    .kg-plan-viewport{
-        width:100%;
-        height:auto;
-        min-height:0;
-        overflow:hidden;
-        border-radius:15px;
-        border:1px solid rgba(11,42,91,.12);
-        box-shadow:0 12px 28px rgba(0,0,0,.10);
-        background:#fff;
-        cursor:default;
-        touch-action:auto;
+    .kg-plan-viewport {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+        border-radius: 15px;
+        border: 1px solid rgba(11, 42, 91, .12);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .10);
+        background: #fff;
+        cursor: default;
+        touch-action: auto;
     }
 
     .kg-plan-viewport img,
-    .kg-plan-viewport #planImage{
-        position:static;
-        width:100%;
-        height:auto;
-        max-width:100%;
-        transform:none !important;
-        display:block;
-        user-select:auto;
-        pointer-events:auto;
+    .kg-plan-viewport #planImage {
+        position: static;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        transform: none !important;
+        display: block;
+        user-select: auto;
+        pointer-events: auto;
     }
 
     .kg-plan-controls,
-    .kg-plan-hint{
-        display:none !important;
+    .kg-plan-hint {
+        display: none !important;
     }
 
-  /* =========================
+    /* =========================
    PLOTS
    MOBILE ACCORDION
 ========================= */
 
-.kg-plots{
-    background:#fff;
-}
+    .kg-plots {
+        background: #fff;
+    }
 
 
-.kg-plot-grid{
-    display:flex;
+    .kg-plot-grid {
+        display: flex;
 
-    flex-direction:column;
+        flex-direction: column;
 
-    max-width:none;
+        max-width: none;
 
-    gap:0;
+        gap: 0;
 
-    margin:0;
+        margin: 0;
 
-    border-top:1px solid #ddd;
-}
+        border-top: 1px solid #ddd;
+    }
 
 
-.kg-plot-card{
-    position:relative;
+    .kg-plot-card {
+        position: relative;
 
-    display:grid;
-grid-template-columns:42px 1fr auto 24px;
+        display: grid;
+        grid-template-columns: 42px 1fr auto 24px;
 
-    align-items:center;
+        align-items: center;
 
-    column-gap:12px;
+        column-gap: 12px;
 
-    width:100%;
+        width: 100%;
 
-    min-height:64px;
+        min-height: 64px;
 
-    padding:10px 4px;
+        padding: 10px 4px;
 
-    text-align:left;
+        text-align: left;
 
-    background:#fff;
+        background: #fff;
 
-    border:0;
+        border: 0;
 
-    border-bottom:1px solid #ddd;
+        border-bottom: 1px solid #ddd;
 
-    border-radius:0;
+        border-radius: 0;
 
-    box-shadow:none;
+        box-shadow: none;
 
-    cursor:pointer;
+        cursor: pointer;
 
-    transition:
-        background .25s ease;
-}
+        transition:
+            background .25s ease;
+    }
 
-/* =========================================
+    /* =========================================
    MOBILE PLOT STATUS
 ========================================= */
 
-.plot-status{
-    display:flex;
+    .plot-status {
+        display: flex;
 
-    align-items:center;
-    justify-content:flex-end;
+        align-items: center;
+        justify-content: flex-end;
 
-    gap:5px;
+        gap: 5px;
 
-    font-size:11px;
+        font-size: 11px;
 
-    white-space:nowrap;
-}
+        white-space: nowrap;
+    }
 
-.status-dot{
-    width:7px;
-    height:7px;
-}
+    .status-dot {
+        width: 7px;
+        height: 7px;
+    }
 
-.kg-plot-card:hover{
-    transform:none;
+    .kg-plot-card:hover {
+        transform: none;
 
-    border-color:#ddd;
+        border-color: #ddd;
 
-    box-shadow:none;
-}
+        box-shadow: none;
+    }
 
-.kg-plot-card > .plot-status{
-    position:static;
-}
+    .kg-plot-card>.plot-status {
+        position: static;
+    }
 
-.kg-plot-card > .plot-arrow{
-    position:static;
-}
+    .kg-plot-card>.plot-arrow {
+        position: static;
+    }
 
 
-/* =========================
+    /* =========================
    PLOT NUMBER
 ========================= */
 
-.plot-number{
-    width:34px;
-    height:34px;
+    .plot-number {
+        width: 34px;
+        height: 34px;
 
-    display:flex;
+        display: flex;
 
-    align-items:center;
-    justify-content:center;
+        align-items: center;
+        justify-content: center;
 
-    margin:0;
+        margin: 0;
 
-    border-radius:50%;
+        border-radius: 50%;
 
-    background:var(--blue);
+        background: var(--blue);
 
-    color:#fff;
+        color: #fff;
 
-    font-size:12px;
+        font-size: 12px;
 
-    flex-shrink:0;
-}
+        flex-shrink: 0;
+    }
 
 
-/* =========================
+    /* =========================
    PLOT INFO
 ========================= */
 
-.plot-card-info{
-    min-width:0;
-}
+    .plot-card-info {
+        min-width: 0;
+    }
 
 
-.plot-card-info h3{
-    margin:0;
+    .plot-card-info h3 {
+        margin: 0;
 
-    color:var(--gold);
+        color: var(--gold);
 
-    font-size:16px;
+        font-size: 16px;
 
-    line-height:1.25;
-}
-
-
-.plot-card-info p{
-    margin:2px 0 0;
-
-    color:#555;
-
-    font-size:13px;
-
-    line-height:1.25;
-}
+        line-height: 1.25;
+    }
 
 
-/* =========================
+    .plot-card-info p {
+        margin: 2px 0 0;
+
+        color: #555;
+
+        font-size: 13px;
+
+        line-height: 1.25;
+    }
+
+
+    /* =========================
    DROPDOWN ARROW
 ========================= */
 
-.plot-arrow{
-    display:flex;
+    .plot-arrow {
+        display: flex;
 
-    align-items:center;
-    justify-content:center;
+        align-items: center;
+        justify-content: center;
 
-    color:var(--blue);
+        color: var(--blue);
 
-    font-size:13px;
+        font-size: 13px;
 
-    transition:
-        transform .3s ease;
-}
-
-
-.kg-plot-card.is-open{
-    background:#fafafa;
-}
+        transition:
+            transform .3s ease;
+    }
 
 
-.kg-plot-card.is-open .plot-arrow{
-    transform:rotate(180deg);
-}
+    .kg-plot-card.is-open {
+        background: #fafafa;
+    }
 
 
-/* =========================
+    .kg-plot-card.is-open .plot-arrow {
+        transform: rotate(180deg);
+    }
+
+
+    /* =========================
    EXPANDED DETAILS
 ========================= */
 
-.plot-mobile-details{
-    grid-column:1 / -1;
+    .plot-mobile-details {
+        grid-column: 1 / -1;
 
-    width:100%;
+        width: 100%;
 
-    display:none;
+        display: none;
 
-    padding:20px 0 10px;
+        padding: 20px 0 10px;
 
-    border-top:1px solid #eee;
+        border-top: 1px solid #eee;
 
-    margin-top:10px;
-}
-
-
-.kg-plot-card.is-open .plot-mobile-details{
-    display:block;
-}
+        margin-top: 10px;
+    }
 
 
-/* =========================
+    .kg-plot-card.is-open .plot-mobile-details {
+        display: block;
+    }
+
+
+    /* =========================
    PLOT IMAGE
 ========================= */
 
-.plot-mobile-details img{
-    width:100%;
+    .plot-mobile-details img {
+        width: 100%;
 
-    height:auto;
+        height: auto;
 
-    max-height:300px;
+        max-height: 300px;
 
-    object-fit:contain;
+        object-fit: contain;
 
-    display:block;
+        display: block;
 
-    margin-bottom:18px;
+        margin-bottom: 18px;
 
-    border-radius:8px;
+        border-radius: 8px;
 
-    background:#fff;
+        background: #fff;
 
-    border:1px solid #eee;
-}
+        border: 1px solid #eee;
+    }
 
 
-/* =========================
+    /* =========================
    DETAILS ROW
 ========================= */
 
-.plot-detail-row{
-    display:flex;
+    .plot-detail-row {
+        display: flex;
 
-    align-items:center;
+        align-items: center;
 
-    justify-content:space-between;
+        justify-content: space-between;
 
-    padding:12px 4px;
+        padding: 12px 4px;
 
-    border-bottom:1px solid #e5e5e5;
-}
-
-
-.plot-detail-row span{
-    color:#777;
-
-    font-size:13px;
-}
+        border-bottom: 1px solid #e5e5e5;
+    }
 
 
-.plot-detail-row strong{
-    color:var(--blue);
+    .plot-detail-row span {
+        color: #777;
 
-    font-size:14px;
-}
+        font-size: 13px;
+    }
 
 
-/* =========================
+    .plot-detail-row strong {
+        color: var(--blue);
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
    ENQUIRE BUTTON
 ========================= */
 
-.plot-enquire-btn{
-    width:100%;
+    .plot-enquire-btn {
+        width: 100%;
 
-    display:flex;
+        display: flex;
 
-    align-items:center;
-    justify-content:center;
+        align-items: center;
+        justify-content: center;
 
-    gap:8px;
+        gap: 8px;
 
-    margin-top:18px;
+        margin-top: 18px;
 
-    padding:13px 15px;
+        padding: 13px 15px;
 
-    background:var(--blue);
+        background: var(--blue);
 
-    color:#fff;
+        color: #fff;
 
-    text-decoration:none;
+        text-decoration: none;
 
-    border-radius:3px;
+        border-radius: 3px;
 
-    font-size:13px;
+        font-size: 13px;
 
-    font-weight:600;
-}
-
-
-.plot-enquire-btn:active{
-    background:var(--gold);
-}
+        font-weight: 600;
+    }
 
 
-/* =========================
+    .plot-enquire-btn:active {
+        background: var(--gold);
+    }
+
+
+    /* =========================
    DESKTOP MODAL
    NOT USED ON MOBILE
 ========================= */
 
-.plot-modal{
-    display:none !important;
-}
+    .plot-modal {
+        display: none !important;
+    }
 
     /* =========================
        PROJECT FEATURES
        One item below another
     ========================= */
 
-    .kg-amenities{
-        background:var(--light);
+    .kg-amenities {
+        background: var(--light);
     }
 
-    .kg-amenity-grid{
-        display:flex;
-        flex-direction:column;
-        max-width:none;
-        gap:0;
-        margin:0;
-        border-top:1px solid #ddd;
+    .kg-amenity-grid {
+        display: flex;
+        flex-direction: column;
+        max-width: none;
+        gap: 0;
+        margin: 0;
+        border-top: 1px solid #ddd;
     }
 
-    .kg-amenity{
-        display:grid;
-        grid-template-columns:46px 1fr;
-        column-gap:13px;
-        align-items:center;
-        background:#fff;
-        padding:17px 2px;
-        border-radius:0;
-        border:0;
-        border-bottom:1px solid #ddd;
-        box-shadow:none;
-        text-align:left;
+    .kg-amenity {
+        display: grid;
+        grid-template-columns: 46px 1fr;
+        column-gap: 13px;
+        align-items: center;
+        background: #fff;
+        padding: 17px 2px;
+        border-radius: 0;
+        border: 0;
+        border-bottom: 1px solid #ddd;
+        box-shadow: none;
+        text-align: left;
     }
 
-    .kg-icon{
-        width:42px;
-        height:42px;
-        margin:0;
-        border-radius:50%;
-        font-size:18px;
-        grid-row:span 2;
+    .kg-icon {
+        width: 42px;
+        height: 42px;
+        margin: 0;
+        border-radius: 50%;
+        font-size: 18px;
+        grid-row: span 2;
     }
 
-    .kg-amenity h3{
-        margin:0 0 3px;
-        color:var(--blue);
-        font-size:16px;
+    .kg-amenity h3 {
+        margin: 0 0 3px;
+        color: var(--blue);
+        font-size: 16px;
     }
 
-    .kg-amenity p{
-        margin:0;
-        font-size:12.5px;
-        line-height:1.55;
-        color:#666;
+    .kg-amenity p {
+        margin: 0;
+        font-size: 12.5px;
+        line-height: 1.55;
+        color: #666;
     }
 
     /* =========================
@@ -760,82 +772,82 @@ grid-template-columns:42px 1fr auto 24px;
        Heading + description + image + distances
     ========================= */
 
-    .kg-location{
-        display:flex;
-        flex-direction:column;
-        gap:24px;
-        padding:62px 20px;
-        background:#fff;
+    .kg-location {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 62px 20px;
+        background: #fff;
     }
 
-    .kg-location-content{
-        display:contents;
+    .kg-location-content {
+        display: contents;
     }
 
-    .kg-location-content > span{
-        order:1;
-        font-size:11px;
-        letter-spacing:2px;
+    .kg-location-content>span {
+        order: 1;
+        font-size: 11px;
+        letter-spacing: 2px;
     }
 
-    .kg-location-content h2{
-        order:2;
-        text-align:left;
-        font-size:29px;
-        line-height:1.25;
-        margin:0;
+    .kg-location-content h2 {
+        order: 2;
+        text-align: left;
+        font-size: 29px;
+        line-height: 1.25;
+        margin: 0;
     }
 
-    .kg-location-content p{
-        order:3;
-        max-width:none;
-        font-size:14px;
-        line-height:1.75;
-        margin:0;
+    .kg-location-content p {
+        order: 3;
+        max-width: none;
+        font-size: 14px;
+        line-height: 1.75;
+        margin: 0;
     }
 
-    .kg-location-image{
-        order:4;
-        width:100%;
+    .kg-location-image {
+        order: 4;
+        width: 100%;
     }
 
-    .kg-location-image img{
-        width:100%;
-        height:250px;
-        object-fit:cover;
-        border-radius:17px;
+    .kg-location-image img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 17px;
     }
 
-    .kg-distance-grid{
-        order:5;
-        display:flex;
-        flex-direction:column;
-        gap:0;
-        width:100%;
-        border-top:1px solid #ddd;
+    .kg-distance-grid {
+        order: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        border-top: 1px solid #ddd;
     }
 
-    .kg-distance-grid div{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        gap:15px;
-        padding:14px 4px;
-        background:transparent;
-        border-bottom:1px solid #ddd;
-        border-radius:0;
+    .kg-distance-grid div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 14px 4px;
+        background: transparent;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0;
     }
 
-    .kg-distance-grid strong{
-        display:block;
-        min-width:58px;
-        font-size:18px;
+    .kg-distance-grid strong {
+        display: block;
+        min-width: 58px;
+        font-size: 18px;
     }
 
-    .kg-distance-grid span{
-        flex:1;
-        text-align:right;
-        font-size:13px;
+    .kg-distance-grid span {
+        flex: 1;
+        text-align: right;
+        font-size: 13px;
     }
 
     /* =========================
@@ -843,61 +855,61 @@ grid-template-columns:42px 1fr auto 24px;
        One below another
     ========================= */
 
-    .kg-attractions{
-        background:var(--cream);
+    .kg-attractions {
+        background: var(--cream);
     }
 
-    .kg-attraction-grid{
-        display:flex;
-        flex-direction:column;
-        gap:0;
-        max-width:none;
-        margin:0;
-        border-top:1px solid #ddd;
+    .kg-attraction-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        max-width: none;
+        margin: 0;
+        border-top: 1px solid #ddd;
     }
 
-    .kg-attraction-card{
-        display:grid;
-        grid-template-columns:88px 1fr;
-        align-items:center;
-        gap:14px;
-        width:100%;
-        min-height:92px;
-        background:transparent;
-        border-radius:0;
-        border-bottom:1px solid #ddd;
-        box-shadow:none;
-        overflow:visible;
+    .kg-attraction-card {
+        display: grid;
+        grid-template-columns: 88px 1fr;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+        min-height: 92px;
+        background: transparent;
+        border-radius: 0;
+        border-bottom: 1px solid #ddd;
+        box-shadow: none;
+        overflow: visible;
     }
 
-    .kg-attraction-card img{
-        width:88px;
-        height:68px;
-        border-radius:9px;
-        object-fit:cover;
+    .kg-attraction-card img {
+        width: 88px;
+        height: 68px;
+        border-radius: 9px;
+        object-fit: cover;
     }
 
-    .kg-attraction-card div{
-        padding:0;
+    .kg-attraction-card div {
+        padding: 0;
     }
 
-    .kg-attraction-card h3{
-        margin:0 0 5px;
-        color:var(--blue);
-        font-size:15px;
-        line-height:1.3;
+    .kg-attraction-card h3 {
+        margin: 0 0 5px;
+        color: var(--blue);
+        font-size: 15px;
+        line-height: 1.3;
     }
 
-    .kg-attraction-card span{
-        font-size:12px;
-        color:var(--gold);
+    .kg-attraction-card span {
+        font-size: 12px;
+        color: var(--gold);
     }
 
-     .kg-why{
+    .kg-why {
         display: none;
     }
 
-    .kg-cta{
+    .kg-cta {
         display: none;
     }
 
@@ -906,9 +918,9 @@ grid-template-columns:42px 1fr auto 24px;
     ========================= */
 
     footer {
-    background: #071D40;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
+        background: #071D40;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
 }

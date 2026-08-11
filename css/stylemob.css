@@ -125,14 +125,16 @@
         gap:15px;
         width:100%;
     }
-
-    .btn,
-    .btn-outline{
+    .btnenq{
         display: none;
-        width:220px;
-        text-align:center;
-        margin:0;
     }
+
+.btn,
+.btn-outline{
+    width:220px;
+    text-align:center;
+    margin:0;
+}
 
     /* ===========================
        HERO
@@ -254,6 +256,10 @@
         margin-bottom:25px;
     }
 
+    .btn{
+        background-color: #b89541;
+        color: #eee;
+    }
     /* ===========================
        FOOTER
     =========================== */

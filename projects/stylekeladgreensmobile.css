@@ -72,19 +72,22 @@
         display:none !important;
     }
 
- /* =========================================
-   FIXED MOBILE CONTACT BAR
+/* =========================================
+   MOBILE CONTACT BAR
 ========================================= */
 
 .mobile-contact-buttons{
-    position:fixed;
-    left:0;
-    bottom:0;
-
     width:100%;
     height:52px;
 
     display:flex;
+
+    margin:0;
+    padding:0;
+
+    position:fixed;
+    left:0;
+    bottom:0;
 
     z-index:99999;
 }

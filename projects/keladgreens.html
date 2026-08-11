@@ -41,20 +41,6 @@
          PROJECT HERO
     ========================================== -->
 
-        <!-- MOBILE CONTACT BAR -->
-
-        <div class="mobile-contact-buttons">
-
-            <a href="tel:+918007901111" class="mobile-call-btn">
-                <i class="fa-solid fa-phone"></i>
-                <span>Call Now</span>
-            </a>
-
-            <a href="https://wa.me/918007901111" class="mobile-whatsapp-btn" target="_blank" rel="noopener">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span>WhatsApp</span>
-            </a>
-        </div>
 
 
 
@@ -725,6 +711,21 @@
 
         </section>
     </main>
+    <!-- MOBILE CONTACT BAR -->
+
+    <div class="mobile-contact-buttons">
+
+        <a href="tel:+918007901111" class="mobile-call-btn">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+
+        <a href="https://wa.me/918007901111" class="mobile-whatsapp-btn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
 
     <footer>
 
@@ -1173,7 +1174,57 @@
         );
 
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
+            const contactBar = document.querySelector(".mobile-contact-buttons");
+            const footer = document.querySelector("footer");
+
+            if (!contactBar || !footer) return;
+
+            function updateContactBar() {
+
+                /* Desktop — normal behavior */
+                if (window.innerWidth > 768) {
+                    contactBar.style.position = "static";
+                    contactBar.style.width = "100%";
+                    return;
+                }
+
+                const footerTop = footer.getBoundingClientRect().top;
+                const barHeight = contactBar.offsetHeight;
+                const viewportHeight = window.innerHeight;
+
+                /*
+                If footer is approaching the contact bar,
+                move the bar above the footer.
+                */
+
+                if (footerTop < viewportHeight) {
+
+                    contactBar.style.position = "absolute";
+                    contactBar.style.left = "0";
+                    contactBar.style.bottom = "auto";
+                    contactBar.style.top =
+                        (footer.offsetTop - barHeight) + "px";
+
+                } else {
+
+                    /* Normal mobile scrolling */
+                    contactBar.style.position = "fixed";
+                    contactBar.style.left = "0";
+                    contactBar.style.bottom = "0";
+                    contactBar.style.top = "auto";
+                }
+            }
+
+            window.addEventListener("scroll", updateContactBar);
+            window.addEventListener("resize", updateContactBar);
+
+            updateContactBar();
+
+        });
+    </script>
 </body>
 
 </html>

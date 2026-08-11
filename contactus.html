@@ -1,48 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/stylecontactus.css">
     <link rel="stylesheet" href="css/stylecontactusmob.css">
     <title>Contact Us</title>
 </head>
+
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <header>
 
-    <nav>
+        <!-- ================= NAVBAR ================= -->
 
-        <div class="logo">
-            <a href="index.html"><img src="img/index/onlylogo.png" alt="Logo" preload></a>
+        <nav>
+
+            <div class="logo">
+                <a href="index.html"><img src="img/index/onlylogo.png" alt="Logo" preload></a>
+            </div>
+
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+
+            <a href="contactus.html" class="btn">Enquire Now</a>
+
+        </nav>
+
+    </header>
+    <main class="contact-page">
+
+        <!-- =========================================
+         CONTACT HERO
+    ========================================== -->
+
+        <section class="contact-hero">
+
+            <div class="contact-hero-content">
+
+                <span class="contact-label">
+                    GET IN TOUCH
+                </span>
+
+                <h1>
+                    Let's Talk About
+                    <span>Your Future.</span>
+                </h1>
+
+                <p>
+                    Whether you're interested in a plot, want to know more
+                    about our projects, or simply have a question, our team
+                    is here to help.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+         CONTACT INFORMATION + FORM
+    ========================================== -->
+
+        <section class="contact-main">
+
+            <div class="contact-grid">
+
+                <!-- LEFT SIDE -->
+
+                <div class="contact-info">
+
+                    <span class="contact-small-label">
+                        CONTACT LOKDHAM
+                    </span>
+
+                    <h2>
+                        We're Here
+                        <span>To Help.</span>
+                    </h2>
+
+                    <p class="contact-description">
+                        Have questions about our projects, plot availability,
+                        pricing or documentation? Get in touch with us.
+                    </p>
+
+
+                    <!-- PHONE -->
+
+                    <a href="tel:+918007901111" class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div>
+                            <span>Call Us</span>
+                            <strong>+91 80079 01111</strong>
+                        </div>
+
+                    </a>
+
+
+                    <!-- WHATSAPP -->
+
+                    <a href="https://wa.me/918007901111" target="_blank" rel="noopener" class="contact-info-item">
+
+                        <div class="contact-icon whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+
+                        <div>
+                            <span>WhatsApp</span>
+                            <strong>Chat With Us</strong>
+                        </div>
+
+                    </a>
+
+
+                    <!-- EMAIL -->
+
+                    <a href="mailto:info@lokdham.com" class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <span>Email Us</span>
+                            <strong>info@lokdham.com</strong>
+                        </div>
+
+                    </a>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <span>Location</span>
+                            <strong>Pune, Maharashtra</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- SOCIAL MEDIA -->
+
+                    <div class="contact-social">
+
+                        <span>FOLLOW US</span>
+
+                        <div class="social-icons">
+
+                            <a href="https://www.facebook.com/profile.php?id=61589716630568" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/lokdham_developers/" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://x.com/lokdham" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/@LokdhamDevelopers" aria-label="YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE — FORM -->
+
+                <div class="contact-form-wrapper">
+
+                    <div class="contact-form-header">
+
+                        <span>ENQUIRE NOW</span>
+
+                        <h2>
+                            Tell Us What
+                            <strong>You Need.</strong>
+                        </h2>
+
+                        <p>
+                            Fill in your details and our team will get
+                            back to you shortly.
+                        </p>
+
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <!-- NAME -->
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input type="email" id="email" name="email" placeholder="Enter your email address">
+
+                        </div>
+
+
+                        <!-- INTEREST -->
+
+                        <div class="form-group">
+
+                            <label for="interest">
+                                I'm Interested In
+                            </label>
+
+                            <select id="interest" name="interest">
+
+                                <option value="">
+                                    Select an option
+                                </option>
+
+                                <option value="kelad-greens">
+                                    Kelad Greens
+                                </option>
+
+                                <option value="farmhouse-plots">
+                                    Farmhouse Plots
+                                </option>
+
+                                <option value="other-project">
+                                    Other Project
+                                </option>
+
+                                <option value="general-enquiry">
+                                    General Enquiry
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- MESSAGE -->
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Tell us how we can help..."></textarea>
+
+                        </div>
+
+
+                        <!-- SUBMIT -->
+
+                        <button type="submit" class="contact-submit">
+
+                            Send Enquiry
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+         MOBILE CONTACT BAR
+    ========================================== -->
+
+        <div class="mobile-contact-buttons">
+
+            <a href="tel:+918007901111" class="mobile-call-btn">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <span>
+                    Call Now
+                </span>
+
+            </a>
+
+
+            <a href="https://wa.me/918007901111" class="mobile-whatsapp-btn" target="_blank" rel="noopener">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span>
+                    WhatsApp
+                </span>
+
+            </a>
+
         </div>
 
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
-        </div>
+    </main>
 
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
 
-        <a href="contactus.html" class="btn">Enquire Now</a>
-
-    </nav>
-
-<p>
-
-    Coming Soon <br>
-
-</p>
-
-   <!-- FOOTER -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -54,7 +366,7 @@
 
     </footer>
 
-     <script>
+    <script>
 
         const menu = document.getElementById("menu-toggle");
         const navLinks = document.getElementById("nav-links");
@@ -99,5 +411,101 @@
 
         });
     </script>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const contactForm = document.getElementById("contactForm");
+
+    if (!contactForm) return;
+
+
+    contactForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+
+        /* ==============================
+           GET FORM VALUES
+        ============================== */
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const interest =
+            document.getElementById("interest").value;
+
+        const message =
+            document.getElementById("message").value.trim();
+
+
+        /* ==============================
+           BASIC VALIDATION
+        ============================== */
+
+        if (!name || !phone) {
+
+            alert("Please enter your name and phone number.");
+
+            return;
+        }
+
+
+        /* ==============================
+           WHATSAPP MESSAGE
+        ============================== */
+
+        const whatsappMessage =
+`Hello Lokdham Developers,
+
+I would like to make an enquiry.
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email || "Not provided"}
+Interested In: ${interest || "Not specified"}
+
+Message:
+${message || "No message provided."}`;
+
+
+        /* ==============================
+           WHATSAPP NUMBER
+        ============================== */
+
+        const whatsappNumber = "918007901111";
+
+
+        /* ==============================
+           CREATE WHATSAPP URL
+        ============================== */
+
+        const whatsappURL =
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            encodeURIComponent(whatsappMessage);
+
+
+        /* ==============================
+           OPEN WHATSAPP
+        ============================== */
+
+        window.open(whatsappURL, "_blank");
+
+
+    });
+
+});
+
+</script>
 </body>
+
 </html>

@@ -390,73 +390,316 @@
         display:none !important;
     }
 
-    /* =========================
-       PLOTS
-       One row per plot
-    ========================= */
+  /* =========================
+   PLOTS
+   MOBILE ACCORDION
+========================= */
 
-    .kg-plots{
-        background:#fff;
-    }
+.kg-plots{
+    background:#fff;
+}
 
-    .kg-plot-grid{
-        display:flex;
-        flex-direction:column;
-        max-width:none;
-        gap:0;
-        margin:0;
-        border-top:1px solid #ddd;
-    }
 
-    .kg-plot-card{
-        position:relative;
-        display:grid;
-        grid-template-columns:42px 1fr auto;
-        align-items:center;
-        column-gap:12px;
-        width:100%;
-        min-height:64px;
-        padding:10px 4px;
-        text-align:left;
-        background:#fff;
-        border:0;
-        border-bottom:1px solid #ddd;
-        border-radius:0;
-        box-shadow:none;
-        transition:none;
-    }
+.kg-plot-grid{
+    display:flex;
 
-    .kg-plot-card:hover{
-        transform:none;
-        border-color:#ddd;
-        box-shadow:none;
-    }
+    flex-direction:column;
 
-    .plot-number{
-        width:34px;
-        height:34px;
-        margin:0;
-        border-radius:50%;
-        background:var(--blue);
-        color:#fff;
-        font-size:12px;
-        flex-shrink:0;
-    }
+    max-width:none;
 
-    .kg-plot-card h3{
-        margin:0;
-        color:var(--gold);
-        font-size:16px;
-        line-height:1.25;
-    }
+    gap:0;
 
-    .kg-plot-card p{
-        margin:0;
-        color:#555;
-        font-size:13px;
-        line-height:1.25;
-        text-align:right;
-    }
+    margin:0;
+
+    border-top:1px solid #ddd;
+}
+
+
+.kg-plot-card{
+    position:relative;
+
+    display:grid;
+grid-template-columns:42px 1fr auto 24px;
+
+    align-items:center;
+
+    column-gap:12px;
+
+    width:100%;
+
+    min-height:64px;
+
+    padding:10px 4px;
+
+    text-align:left;
+
+    background:#fff;
+
+    border:0;
+
+    border-bottom:1px solid #ddd;
+
+    border-radius:0;
+
+    box-shadow:none;
+
+    cursor:pointer;
+
+    transition:
+        background .25s ease;
+}
+
+/* =========================================
+   MOBILE PLOT STATUS
+========================================= */
+
+.plot-status{
+    display:flex;
+
+    align-items:center;
+    justify-content:flex-end;
+
+    gap:5px;
+
+    font-size:11px;
+
+    white-space:nowrap;
+}
+
+.status-dot{
+    width:7px;
+    height:7px;
+}
+
+.kg-plot-card:hover{
+    transform:none;
+
+    border-color:#ddd;
+
+    box-shadow:none;
+}
+
+.kg-plot-card > .plot-status{
+    position:static;
+}
+
+.kg-plot-card > .plot-arrow{
+    position:static;
+}
+
+
+/* =========================
+   PLOT NUMBER
+========================= */
+
+.plot-number{
+    width:34px;
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin:0;
+
+    border-radius:50%;
+
+    background:var(--blue);
+
+    color:#fff;
+
+    font-size:12px;
+
+    flex-shrink:0;
+}
+
+
+/* =========================
+   PLOT INFO
+========================= */
+
+.plot-card-info{
+    min-width:0;
+}
+
+
+.plot-card-info h3{
+    margin:0;
+
+    color:var(--gold);
+
+    font-size:16px;
+
+    line-height:1.25;
+}
+
+
+.plot-card-info p{
+    margin:2px 0 0;
+
+    color:#555;
+
+    font-size:13px;
+
+    line-height:1.25;
+}
+
+
+/* =========================
+   DROPDOWN ARROW
+========================= */
+
+.plot-arrow{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:var(--blue);
+
+    font-size:13px;
+
+    transition:
+        transform .3s ease;
+}
+
+
+.kg-plot-card.is-open{
+    background:#fafafa;
+}
+
+
+.kg-plot-card.is-open .plot-arrow{
+    transform:rotate(180deg);
+}
+
+
+/* =========================
+   EXPANDED DETAILS
+========================= */
+
+.plot-mobile-details{
+    grid-column:1 / -1;
+
+    width:100%;
+
+    display:none;
+
+    padding:20px 0 10px;
+
+    border-top:1px solid #eee;
+
+    margin-top:10px;
+}
+
+
+.kg-plot-card.is-open .plot-mobile-details{
+    display:block;
+}
+
+
+/* =========================
+   PLOT IMAGE
+========================= */
+
+.plot-mobile-details img{
+    width:100%;
+
+    height:auto;
+
+    max-height:300px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin-bottom:18px;
+
+    border-radius:8px;
+
+    background:#fff;
+
+    border:1px solid #eee;
+}
+
+
+/* =========================
+   DETAILS ROW
+========================= */
+
+.plot-detail-row{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:12px 4px;
+
+    border-bottom:1px solid #e5e5e5;
+}
+
+
+.plot-detail-row span{
+    color:#777;
+
+    font-size:13px;
+}
+
+
+.plot-detail-row strong{
+    color:var(--blue);
+
+    font-size:14px;
+}
+
+
+/* =========================
+   ENQUIRE BUTTON
+========================= */
+
+.plot-enquire-btn{
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:18px;
+
+    padding:13px 15px;
+
+    background:var(--blue);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:3px;
+
+    font-size:13px;
+
+    font-weight:600;
+}
+
+
+.plot-enquire-btn:active{
+    background:var(--gold);
+}
+
+
+/* =========================
+   DESKTOP MODAL
+   NOT USED ON MOBILE
+========================= */
+
+.plot-modal{
+    display:none !important;
+}
 
     /* =========================
        PROJECT FEATURES

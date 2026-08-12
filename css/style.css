@@ -144,7 +144,7 @@ nav a{
 /* HERO */
 
 .hero{
-
+    
     min-height:90vh;
 
     display:flex;
@@ -206,7 +206,6 @@ nav a{
     text-align:center;
 
 }
-
 
 
 /*==============================
@@ -311,40 +310,6 @@ nav a{
 .feature p{
 
     color:#ddd;
-
-}
-
-
-
-/* SERVICES */
-
-.services{
-
-    background:#F7F9FC;
-
-}
-
-.services .card{
-
-    text-align:center;
-    color: #C8931A;
-    font-size:20px;
-
-    font-weight:600;
-
-}
-
-
-
-
-
-/* CONTACT */
-
-.contact{
-
-    background:#0B2A5B;
-
-    text-align:center;
 
 }
 

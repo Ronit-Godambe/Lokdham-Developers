@@ -187,7 +187,7 @@ nav a {
     background:
         linear-gradient(rgba(7, 31, 64, 0.76),
             rgba(7, 31, 64, 0.76)),
-        url("land-for-sale-near-pune-lokdham.png") center center / cover no-repeat;
+        url("imgblog1/land-for-sale-near-pune-lokdham.png") center center / cover no-repeat;
 }
 
 
@@ -275,6 +275,61 @@ nav a {
     text-align: center;
 }
 
+/* =========================================================
+   SCROLL DOWN BUTTON
+   ========================================================= */
+
+.blog-page .scrollarrow {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 30px;
+}
+
+
+.blog-page .scrldwn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #0f3674;
+
+    color: var(--blog-gold-light);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.blog-page .scrldwn:hover {
+    background: var(--blog-gold);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(176, 122, 18, 0.25);
+}
 
 /* =========================================================
    CONTENT AREA
@@ -410,6 +465,8 @@ nav a {
 }
 
 .blog-page .blog-content h2.no.pointer {
+    display: block;
+    width: 100%;
     text-align: center !important;
 }
 

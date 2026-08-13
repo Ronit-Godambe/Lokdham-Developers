@@ -818,6 +818,21 @@
         line-height: 1.65;
     }
 
+    /* =========================================================
+   MOBILE SCROLL DOWN BUTTON
+   ========================================================= */
+
+.blog-page .scrldwn {
+    background: var(--blog-gold);
+    border-color: var(--blog-gold);
+    color: #ffffff;
+}
+
+.blog-page .scrldwn:hover {
+    background: var(--blog-gold-light);
+    border-color: var(--blog-gold-light);
+    color: #ffffff;
+}
 
     .blog-page .blog-content-section {
         padding: 45px 5% 60px;

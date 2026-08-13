@@ -14,15 +14,15 @@
 
     <meta name="robots" content="index, follow">
 
-    <link rel="canonical" href="https://lokdham.com/blog-1.html">
+    <link rel="canonical" href="https://lokdham.com/land-buying-guide.html">
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Complete Guide to Buying Land Near Pune | Lokdham Developers">
     <meta property="og:description"
         content="Planning to buy land near Pune? Learn 10 essential things to check before purchasing a plot.">
-    <meta property="og:image" content="https://lokdham.com/images/blog-1.jpg">
-    <meta property="og:url" content="https://lokdham.com/blog-1.html">
+    <meta property="og:image" content="https://lokdham.com/blogs/imgblog1/land-for-sale-near-pune-lokdham.png">
+    <meta property="og:url" content="https://lokdham.com/blogs/land-buying-guide.html">
     <meta property="og:site_name" content="Lokdham Developers">
 
     <!-- Twitter / X -->
@@ -33,11 +33,11 @@
     <meta name="twitter:image" content="https://lokdham.com/images/blog-1.jpg">
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="b1style.css">
-    <link rel="stylesheet" href="b1stylemob.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="blogstyle.css">
+    <link rel="stylesheet" href="blogstylemob.css">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
         <nav>
 
             <div class="logo">
-                <a href="../../index.html"><img src="../../img/navbar/onlylogo.png" alt="Logo" loading="eager"></a>
+                <a href="../../index.html"><img src="../img/navbar/onlylogo.png" alt="Logo" loading="eager"></a>
             </div>
 
             <div class="menu-toggle" id="menu-toggle">
@@ -67,7 +67,9 @@
             <a href="contactus.html" class="btn">Enquire Now</a>
         </nav>
 
-        <main class="kelad-page">
+        <main class="blog-main">
+
+     <main class="kelad-page">
 
             <!-- BLOG HERO -->
             <section class="blog-hero">
@@ -92,12 +94,22 @@
                         <span>•</span>
                         <span>Land Buying Guide</span>
                     </div>
+
+                            <div class="scrollarrow">
+            <a href="#blog-content" class="scrldwn">
+                Scroll Down ↓
+            </a>
+        </div>
+    </div>
                 </div>
+
+
             </section>
 
 
+
             <!-- BLOG CONTENT -->
-            <section class="blog-content-section">
+            <section class="blog-content-section" id="blog-content">
 
                 <article class="blog-content">
 
@@ -676,6 +688,80 @@
 
             });
         </script>
+        <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const scrollButton = document.querySelector(".scrldwn");
+    const target = document.querySelector("#blog-content");
+
+    if (!scrollButton || !target) return;
+
+    scrollButton.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const startPosition = window.pageYOffset;
+
+  const headerOffset = window.innerWidth <= 768 ? 75 : 80;
+
+const targetPosition =
+    target.getBoundingClientRect().top +
+    window.pageYOffset -
+    headerOffset;
+
+        const distance = targetPosition - startPosition;
+
+        const duration = 900;
+
+        let startTime = null;
+
+
+        function animateScroll(currentTime) {
+
+            if (!startTime) {
+                startTime = currentTime;
+            }
+
+            const elapsed = currentTime - startTime;
+
+            const progress = Math.min(elapsed / duration, 1);
+
+
+            /*
+             * Smooth ease-in-out
+             * Makes the scrolling visibly travel down
+             * instead of jumping quickly.
+             */
+
+            const ease =
+                progress < 0.5
+                    ? 2 * progress * progress
+                    : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+
+            window.scrollTo(
+                0,
+                startPosition + distance * ease
+            );
+
+
+            if (progress < 1) {
+
+                requestAnimationFrame(animateScroll);
+
+            }
+
+        }
+
+
+        requestAnimationFrame(animateScroll);
+
+    });
+
+});
+
+</script>
 </body>
 
 </html>

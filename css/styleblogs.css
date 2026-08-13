@@ -626,7 +626,9 @@ nav a{
 
 }
 
-
+.mobile-contact-buttons{
+    display: none;
+}
 
 /* =========================================================
    FOOTER

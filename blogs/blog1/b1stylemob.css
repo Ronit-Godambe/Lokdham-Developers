@@ -1,5 +1,4 @@
-
-    
+ 
     /* =========================================================
    LOKDHAM BLOG 01
    MOBILE RESPONSIVE CSS
@@ -201,8 +200,12 @@
        BLOG HERO
        ----------------------------------------------------- */
 
+    .blog-page {
+        padding-top: 75px;
+    }
+
     .blog-page .blog-hero {
-        margin-top: 75px;
+        margin-top: 0;
         min-height: 520px;
 
         padding: 90px 6% 75px;

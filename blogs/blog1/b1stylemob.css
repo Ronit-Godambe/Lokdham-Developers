@@ -1,0 +1,868 @@
+
+    
+    /* =========================================================
+   LOKDHAM BLOG 01
+   MOBILE RESPONSIVE CSS
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* =========================================================
+   KELAD GREENS — MOBILE RESPONSIVE
+   Replace/use as: css/stylekeladgreensmobile.css
+========================================================= */
+
+ /* GENERAL */
+
+    section {
+        padding: 60px 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+        line-height: 1.3;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /*========================================
+                NAVBAR
+    ========================================*/
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Hide navbar */
+    nav.nav-hidden {
+        transform: translateY(-100%);
+    }
+
+    .logo img {
+        width: 65px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        color: #0B2A5B;
+    }
+
+    /* Hide Enquire Button */
+
+    nav>.btn {
+        display: none;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        max-height: 0;
+        overflow: hidden;
+
+        transition: .35s ease;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+
+        z-index: 999;
+    }
+
+    nav ul.active {
+        max-height: 500px;
+    }
+
+    nav ul li {
+        width: 100%;
+        list-style: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav ul li:last-child {
+        border: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #0B2A5B;
+    }
+
+    /* =========================================
+   MOBILE CONTACT BAR
+========================================= */
+
+    .mobile-contact-buttons {
+        width: 100%;
+        height: 52px;
+
+        display: flex;
+
+        margin: 0;
+        padding: 0;
+
+        position: fixed;
+        left: 0;
+        bottom: 0;
+
+        z-index: 99999;
+    }
+
+    /* BOTH BUTTONS */
+
+    .mobile-contact-buttons a {
+        flex: 1;
+
+        height: 52px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        border-radius: 0;
+        border: none;
+
+        text-decoration: none;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        box-shadow: none;
+    }
+
+    /* CALL */
+
+    .mobile-call-btn {
+        background: #0B2A5B;
+        color: #fff;
+    }
+
+    .mobile-call-btn:hover {
+        background: #0B2A5B;
+        color: #fff;
+    }
+
+    /* WHATSAPP */
+
+    .mobile-whatsapp-btn {
+        background: #b89541;
+        color: #fff;
+    }
+
+    .mobile-whatsapp-btn:hover {
+        background: #b89541;
+        color: #fff;
+    }
+
+    /* ICONS */
+
+    .mobile-contact-buttons i {
+        font-size: 17px;
+    }
+    /* -----------------------------------------------------
+       BLOG HERO
+       ----------------------------------------------------- */
+
+    .blog-page .blog-hero {
+        min-height: 520px;
+
+        padding: 90px 6% 75px;
+
+        background-position: center center;
+    }
+
+
+    .blog-page .blog-hero-content {
+        max-width: 720px;
+    }
+
+
+    .blog-page .blog-category {
+        margin-bottom: 18px;
+
+        padding: 7px 13px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.6px;
+    }
+
+
+    .blog-page .blog-hero h1 {
+        max-width: 720px;
+
+        font-size: 42px;
+
+        line-height: 1.18;
+
+        letter-spacing: -0.3px;
+    }
+
+
+    .blog-page .blog-intro {
+        max-width: 650px;
+
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+
+    .blog-page .blog-meta {
+        margin-top: 24px;
+
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       BLOG CONTENT
+       ----------------------------------------------------- */
+
+    .blog-page .blog-content-section {
+        padding: 70px 6% 80px;
+    }
+
+
+    .blog-page .blog-content {
+        max-width: 760px;
+    }
+
+
+    .blog-page .blog-content p {
+        font-size: 16px;
+
+        line-height: 1.85;
+    }
+
+
+    .blog-page .blog-content .blog-lead {
+        font-size: 19px;
+
+        line-height: 1.8;
+    }
+
+
+    /* -----------------------------------------------------
+       H2
+       ----------------------------------------------------- */
+
+    .blog-page .blog-content h2 {
+        margin-top: 55px;
+
+        margin-bottom: 20px;
+
+        font-size: 28px;
+
+        line-height: 1.35;
+
+        letter-spacing: 0;
+
+        text-align: left !important;
+    }
+
+
+    /* Number remains attached to its gold line */
+
+    .blog-page .blog-content h2 .h2-number {
+        padding-bottom: 4px;
+
+        border-bottom-width: 3px;
+    }
+
+
+    /* Major section headings */
+
+    .blog-page .blog-content h2.no.pointer {
+        text-align: center !important;
+    }
+
+
+    .blog-page .blog-content h2.no.pointer::after {
+        width: 100%;
+
+        height: 2px;
+
+        margin-top: 16px;
+    }
+
+
+    /* -----------------------------------------------------
+       LISTS
+       ----------------------------------------------------- */
+
+    .blog-page .blog-content ul {
+        padding-left: 21px;
+    }
+
+
+    .blog-page .blog-content li {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------------------
+       INFORMATION NOTE
+       ----------------------------------------------------- */
+
+    .blog-page .blog-note {
+        margin: 30px 0;
+
+        padding: 20px 21px;
+
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       WARNING LIST
+       ----------------------------------------------------- */
+
+    .blog-page .warning-list {
+        margin-top: 22px !important;
+
+        padding: 20px 24px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       CHECKLIST
+       ----------------------------------------------------- */
+
+    .blog-page .checklist-box {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 24px;
+    }
+
+
+    .blog-page .check-item {
+        min-height: 68px;
+
+        padding: 14px 15px;
+
+        gap: 13px;
+    }
+
+
+    .blog-page .check-item span {
+        flex: 0 0 35px;
+
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 10px;
+    }
+
+
+    .blog-page .check-item p {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------------------
+       CTA
+       ----------------------------------------------------- */
+
+    .blog-page .blog-cta {
+        margin-top: 60px;
+
+        padding: 48px 30px;
+    }
+
+
+    .blog-page .blog-cta h2 {
+        font-size: 29px;
+
+        line-height: 1.35;
+    }
+
+
+    .blog-page .blog-cta p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    .blog-page .cta-button {
+        padding: 13px 26px;
+
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------------------
+       DISCLAIMER
+       ----------------------------------------------------- */
+
+    .blog-page .blog-disclaimer {
+        margin-top: 38px;
+
+        padding-top: 20px;
+
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   600px AND BELOW
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .blog-page .blog-hero {
+        min-height: 500px;
+
+        padding: 75px 6% 65px;
+
+        background-position: center center;
+    }
+
+
+    .blog-page .blog-hero-content {
+        max-width: 100%;
+    }
+
+
+    .blog-page .blog-category {
+        margin-bottom: 17px;
+
+        padding: 6px 10px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.3px;
+    }
+
+
+    .blog-page .blog-hero h1 {
+        margin-bottom: 20px;
+
+        font-size: 31px;
+
+        line-height: 1.2;
+
+        letter-spacing: 0;
+    }
+
+
+    .blog-page .blog-intro {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .blog-page .blog-meta {
+        margin-top: 22px;
+
+        gap: 7px;
+
+        font-size: 10px;
+    }
+
+/* =========================================================
+   MOBILE H2 GOLD LINE
+   ========================================================= */
+
+.blog-page .blog-content h2.no.pointer {
+    display: block;
+    width: 100%;
+}
+
+.blog-page .blog-content h2.no.pointer::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 18px;
+    background: var(--blog-gold);
+}
+    /* -----------------------------------------------------
+       CONTENT
+       ----------------------------------------------------- */
+
+    .blog-page .blog-content-section {
+        padding: 50px 6% 65px;
+    }
+
+
+    .blog-page .blog-content {
+        max-width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       PARAGRAPHS
+       ----------------------------------------------------- */
+
+    .blog-page .blog-content p {
+        margin-bottom: 19px;
+
+        font-size: 15px;
+
+        line-height: 1.82;
+    }
+
+
+    .blog-page .blog-content .blog-lead {
+        margin-bottom: 25px;
+
+        font-size: 17px;
+
+        line-height: 1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADINGS
+       ----------------------------------------------------- */
+
+    .blog-page .blog-content h2 {
+        margin-top: 45px;
+
+        margin-bottom: 18px;
+
+        font-size: 23px;
+
+        line-height: 1.35;
+
+        font-weight: 600;
+
+        text-align: left !important;
+    }
+
+
+    /*
+       Numbered headings:
+       The gold line stays underneath the number,
+       not underneath the entire wrapped heading.
+    */
+
+    .blog-page .blog-content h2 .h2-number {
+        padding-bottom: 3px;
+
+        margin-right: 4px;
+
+        border-bottom-width: 3px;
+    }
+
+
+    /*
+       Major headings:
+       Red Flags / Checklist / Transparency
+       remain centered with a full-width divider.
+    */
+
+    .blog-page .blog-content h2.no.pointer {
+        margin-top: 52px;
+
+        text-align: center !important;
+
+        line-height: 1.3;
+    }
+
+
+    .blog-page .blog-content h2.no.pointer::after {
+        width: 100%;
+
+        height: 2px;
+
+        margin-top: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       LISTS
+       ----------------------------------------------------- */
+
+    .blog-page .blog-content ul {
+        margin: 18px 0 25px;
+
+        padding-left: 20px;
+    }
+
+
+    .blog-page .blog-content li {
+        margin-bottom: 9px;
+
+        padding-left: 2px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------------------
+       INFORMATION NOTE
+       ----------------------------------------------------- */
+
+    .blog-page .blog-note {
+        margin: 28px 0;
+
+        padding: 18px 18px;
+
+        border-left-width: 3px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------------------
+       WARNING LIST
+       ----------------------------------------------------- */
+
+    .blog-page .warning-list {
+        margin-top: 20px !important;
+
+        padding: 18px 21px !important;
+
+        border-left-width: 3px;
+    }
+
+
+    /* -----------------------------------------------------
+       CHECKLIST
+       ----------------------------------------------------- */
+
+    .blog-page .checklist-box {
+        margin-top: 22px;
+
+        gap: 8px;
+    }
+
+
+    .blog-page .check-item {
+        min-height: 64px;
+
+        padding: 12px 13px;
+
+        gap: 11px;
+    }
+
+
+    .blog-page .check-item span {
+        flex: 0 0 33px;
+
+        width: 33px;
+
+        height: 33px;
+
+        font-size: 9px;
+    }
+
+
+    .blog-page .check-item p {
+        font-size: 12.5px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -----------------------------------------------------
+       CTA
+       ----------------------------------------------------- */
+
+    .blog-page .blog-cta {
+        margin-top: 55px;
+
+        padding: 40px 20px;
+
+        border-top-width: 3px;
+    }
+
+
+    .blog-page .cta-label {
+        margin-bottom: 13px;
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .blog-page .blog-cta h2 {
+        margin-bottom: 15px;
+
+        font-size: 25px;
+
+        line-height: 1.3;
+    }
+
+
+    .blog-page .blog-cta p {
+        margin-bottom: 24px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .blog-page .cta-button {
+        width: 100%;
+
+        max-width: 220px;
+
+        padding: 12px 20px;
+
+        font-size: 12px;
+    }
+
+
+    /* -----------------------------------------------------
+       DISCLAIMER
+       ----------------------------------------------------- */
+
+    .blog-page .blog-disclaimer {
+        margin-top: 32px;
+
+        padding-top: 18px;
+
+        font-size: 10.5px;
+
+        line-height: 1.65;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   400px AND BELOW
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .blog-page .blog-hero {
+        min-height: 470px;
+
+        padding: 65px 5% 55px;
+    }
+
+
+    .blog-page .blog-hero h1 {
+        font-size: 28px;
+
+        line-height: 1.2;
+    }
+
+
+    .blog-page .blog-intro {
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    .blog-page .blog-content-section {
+        padding: 45px 5% 60px;
+    }
+
+
+    .blog-page .blog-content p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    .blog-page .blog-content .blog-lead {
+        font-size: 16px;
+    }
+
+
+    .blog-page .blog-content h2 {
+        margin-top: 40px;
+
+        font-size: 21px;
+
+        line-height: 1.35;
+    }
+
+
+    .blog-page .blog-content h2.no.pointer {
+        font-size: 22px;
+    }
+
+
+    .blog-page .blog-content li {
+        font-size: 13px;
+    }
+
+
+    .blog-page .check-item p {
+        font-size: 12px;
+    }
+
+
+    .blog-page .blog-cta {
+        padding: 35px 17px;
+    }
+
+
+    .blog-page .blog-cta h2 {
+        font-size: 23px;
+    }
+
+}

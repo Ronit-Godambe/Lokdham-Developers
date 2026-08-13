@@ -15,9 +15,11 @@ body{
     color:#222;
 
 }
+
 .menu-toggle{
     display:none;
 }
+
 img{
 
     width:100%;
@@ -125,7 +127,7 @@ nav a{
 
 .btn-outline{
 
-       background:#0B2A5B;
+    background:#0B2A5B;
     color:#fff;
     padding:14px 28px;
     border-radius:50px;
@@ -133,6 +135,7 @@ nav a{
     transition:.3s;
 
 }
+
 .btn-outline:hover{
 
     background:#C8931A;
@@ -141,8 +144,493 @@ nav a{
 
 
 
+/* =========================================================
+   LOKDHAM BLOG PAGE
+   ========================================================= */
 
-/* FOOTER */
+
+/* =========================================================
+   BLOG PAGE
+   ========================================================= */
+
+.blogs-page{
+
+    width:100%;
+
+    background:#ffffff;
+
+    padding:100px 8% 110px;
+
+}
+
+
+/* =========================================================
+   BLOG HEADER
+   ========================================================= */
+
+.blogs-header{
+
+    max-width:850px;
+
+    margin:0 auto 65px;
+
+    text-align:center;
+
+}
+
+
+.blogs-label{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:#C8931A;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+}
+
+
+.blogs-header h1{
+
+    margin:0 0 20px;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#0B2A5B;
+
+}
+
+
+.blogs-header p{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+
+/* =========================================================
+   BLOG GRID
+   ========================================================= */
+
+.blogs-grid{
+
+    max-width:1150px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3, 1fr);
+
+    gap:28px;
+
+}
+
+
+/* =========================================================
+   BLOG CARD
+   ========================================================= */
+
+.blog-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#ffffff;
+
+    border:1px solid #e3e6ea;
+
+    overflow:hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.blog-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#d5dbe2;
+
+    box-shadow:
+        0 15px 40px rgba(7,29,64,.10);
+
+}
+
+
+/* =========================================================
+   COVER IMAGE
+   ========================================================= */
+
+.blog-card-image{
+
+    width:100%;
+
+    aspect-ratio:16 / 9;
+
+    overflow:hidden;
+
+    background:#eef0f2;
+
+}
+
+
+.blog-card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .45s ease;
+
+}
+
+
+.blog-card:hover .blog-card-image img{
+
+    transform:scale(1.04);
+
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.blog-card-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+    padding:27px 26px 24px;
+
+}
+
+
+.blog-card-category{
+
+    display:inline-block;
+
+    margin-bottom:13px;
+
+    color:#C8931A;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =========================================================
+   BLOG TITLE
+   ========================================================= */
+
+/*
+   IMPORTANT:
+
+   The title is NOT line-clamped.
+
+   Therefore the complete title will remain visible.
+*/
+
+.blog-card h2{
+
+    margin:0 0 15px;
+
+    font-size:24px;
+
+    line-height:1.35;
+
+    font-weight:600;
+
+    color:#0B2A5B;
+
+    text-align:left;
+
+}
+
+
+/* =========================================================
+   BLOG DESCRIPTION
+   ========================================================= */
+
+/*
+   Maximum 3 lines.
+
+   Anything after the third line is hidden and the browser
+   displays an ellipsis.
+*/
+.blog-card-description {
+
+    display: -webkit-box;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+
+    overflow: hidden;
+
+    margin: 0 0 24px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    color: #666;
+
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+   ========================================================= */
+
+.blog-card-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:auto;
+
+    padding-top:18px;
+
+    border-top:1px solid #e7e9ec;
+
+}
+
+
+.blog-read-time{
+
+    font-size:11px;
+
+    color:#777;
+
+}
+
+
+.blog-read-more{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#0B2A5B;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+    transition:.25s ease;
+
+}
+
+
+.blog-read-more span{
+
+    color:#C8931A;
+
+    font-size:17px;
+
+    transition:.25s ease;
+
+}
+
+
+.blog-read-more:hover{
+
+    color:#C8931A;
+
+}
+
+
+.blog-read-more:hover span{
+
+    transform:translateX(4px);
+
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.blog-pagination{
+
+    max-width:1150px;
+
+    margin:65px auto 0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+}
+
+
+/* =========================================================
+   PREVIOUS / NEXT
+   ========================================================= */
+
+.pagination-button{
+
+    min-width:115px;
+
+    padding:11px 18px;
+
+    border:1px solid #dce1e6;
+
+    background:#ffffff;
+
+    color:#0B2A5B;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+}
+
+
+.pagination-button:hover:not(:disabled){
+
+    background:#0B2A5B;
+
+    border-color:#0B2A5B;
+
+    color:#ffffff;
+
+}
+
+
+.pagination-button:disabled{
+
+    opacity:.35;
+
+    cursor:not-allowed;
+
+}
+
+
+/* =========================================================
+   PAGE NUMBERS
+   ========================================================= */
+
+.pagination-numbers{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+
+.pagination-number{
+
+    width:38px;
+
+    height:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:1px solid #dce1e6;
+
+    background:#ffffff;
+
+    color:#0B2A5B;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+}
+
+
+.pagination-number:hover{
+
+    border-color:#C8931A;
+
+    color:#C8931A;
+
+}
+
+
+.pagination-number.active{
+
+    background:#0B2A5B;
+
+    border-color:#0B2A5B;
+
+    color:#ffffff;
+
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer{
 
@@ -153,5 +641,27 @@ footer{
     text-align:center;
 
     padding:30px;
+
+}
+
+
+/* =========================================================
+   DESKTOP → TABLET
+   ========================================================= */
+
+@media (max-width:1000px){
+
+    .blogs-grid{
+
+        grid-template-columns:repeat(2, 1fr);
+
+    }
+
+
+    .blogs-header h1{
+
+        font-size:42px;
+
+    }
 
 }

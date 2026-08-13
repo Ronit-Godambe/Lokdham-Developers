@@ -13,63 +13,86 @@
         overflow-x: hidden;
     }
 
-    /* =========================
-       NAVBAR
-    ========================= */
+        /*========================================
+                NAVBAR
+    ========================================*/
 
     nav {
-        height: 68px;
-        padding: 0 18px;
-        position: sticky;
+        position: fixed;
         top: 0;
-        z-index: 9999;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Hide navbar */
+    nav.nav-hidden {
+        transform: translateY(-100%);
     }
 
     .logo img {
-        width: 62px;
+        width: 65px;
     }
 
     .menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 42px;
-        height: 42px;
-        font-size: 28px;
-        color: #0B2A5B;
+        display: block;
+        font-size: 32px;
         cursor: pointer;
-        margin-left: auto;
+        color: #0B2A5B;
+    }
+
+    /* Hide Enquire Button */
+
+    nav>.btn {
+        display: none;
     }
 
     nav ul {
         position: absolute;
-        top: 68px;
+        top: 75px;
         left: 0;
         width: 100%;
-        display: none;
-        flex-direction: column;
-        gap: 0;
         background: #fff;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, .10);
-        padding: 8px 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        max-height: 0;
+        overflow: hidden;
+
+        transition: .35s ease;
+
+        box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+
+        z-index: 999;
     }
 
     nav ul.active {
-        display: flex;
+        max-height: 500px;
     }
 
     nav ul li {
         width: 100%;
+        list-style: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav ul li:last-child {
+        border: none;
     }
 
     nav ul li a {
         display: block;
-        padding: 14px 22px;
-        border-bottom: 1px solid #eee;
-    }
-
-    nav .btn {
-        display: none !important;
+        padding: 18px;
+        text-align: center;
+        text-decoration: none;
+        color: #0B2A5B;
     }
 
     /* =========================================

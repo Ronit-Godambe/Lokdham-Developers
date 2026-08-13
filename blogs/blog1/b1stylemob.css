@@ -202,6 +202,7 @@
        ----------------------------------------------------- */
 
     .blog-page .blog-hero {
+        margin-top: 75px;
         min-height: 520px;
 
         padding: 90px 6% 75px;

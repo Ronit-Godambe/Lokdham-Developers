@@ -175,19 +175,17 @@ nav a {
    HERO
    ========================================================= */
 
-.blog-page .blog-hero {
-    width: 100%;
-    min-height: 570px;
 
-    padding: 110px 8% 100px;
+.blog-hero {
+    width: 100%;
+    min-height: 560px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     display: flex;
     align-items: center;
-
-    background:
-        linear-gradient(rgba(7, 31, 64, 0.76),
-            rgba(7, 31, 64, 0.76)),
-        url("imgblog1/land-for-sale-near-pune-lokdham.png") center center / cover no-repeat;
 }
 
 

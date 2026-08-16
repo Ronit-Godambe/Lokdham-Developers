@@ -202,8 +202,7 @@
 
                     <div class="blog-card-image">
 
-                        <img
-                            src="blogs/imgblog2/right-location-for-land-investment.webp"
+                        <img src="blogs/imgblog2/right-location-for-land-investment.webp"
                             alt="img-showing-well-developed-plots">
                     </div>
 
@@ -218,10 +217,10 @@
                         </h2>
 
                         <p class="blog-card-description">
-                    Location is one of the most important factors
-                    when evaluating land. Learn what to look for
-                    before choosing a plot near Pune for investment
-                    or future use.
+                            Location is one of the most important factors
+                            when evaluating land. Learn what to look for
+                            before choosing a plot near Pune for investment
+                            or future use.
                         </p>
 
                         <div class="blog-card-bottom">
@@ -247,12 +246,11 @@
 
                 </article>
 
-                 <article class="blog-card">
+                <article class="blog-card">
 
                     <div class="blog-card-image">
 
-                        <img
-                            src="blogs/imgblog3/nature-is-becoming-a-new-luxury.webp"
+                        <img src="blogs/imgblog3/nature-is-becoming-a-new-luxury.webp"
                             alt="a-bench-under-a-tree-with-the-view-of-nature">
 
                     </div>
@@ -268,10 +266,10 @@
                         </h2>
 
                         <p class="blog-card-description">
-                               In a world filled with traffic, noise and crowded
-                        city spaces, true luxury is beginning to mean
-                        something different — more space, more silence,
-                        more nature and a place that feels like your own.
+                            In a world filled with traffic, noise and crowded
+                            city spaces, true luxury is beginning to mean
+                            something different — more space, more silence,
+                            more nature and a place that feels like your own.
 
                         </p>
 
@@ -281,8 +279,7 @@
                                 Lifestyle and Real Estate
                             </span>
 
-                            <a href="blogs/why-is-nature-becoming-a-new-luxury.html"
-                                class="blog-read-more">
+                            <a href="blogs/why-is-nature-becoming-a-new-luxury.html" class="blog-read-more">
 
                                 Read Article
 
@@ -442,389 +439,930 @@
     </div>
 
 
+    <!-- ================================
+     ENQUIRY POPUP
+================================ -->
+
+    <section class="enquiry-popup" id="enquiryPopup">
+
+        <div class="enquiry-overlay" onclick="closeEnquiryPopup()"></div>
+
+        <div class="enquiry-modal">
+
+            <button class="enquiry-close" type="button" onclick="closeEnquiryPopup()">
+                &times;
+            </button>
+
+            <div class="enquiry-content">
+
+                <div class="enquiry-heading">
+                    <span class="enquiry-tag">LOKDHAM DEVELOPERS</span>
+
+                    <h2>Let's Talk About Your Property Plans</h2>
+
+                    <p>
+                        Looking to buy a plot or sell your land near Pune?
+                        Share your details and our team will get in touch with you.
+                    </p>
+                </div>
+
+
+                <form class="enquiry-form" id="enquiryForm">
+
+                    <!-- NAME -->
+                    <div class="enquiry-field">
+                        <label for="enquiryName">
+                            Full Name <span>*</span>
+                        </label>
+
+                        <input type="text" id="enquiryName" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+
+                    <!-- MOBILE -->
+                    <div class="enquiry-field">
+                        <label for="enquiryPhone">
+                            Mobile Number <span>*</span>
+                        </label>
+
+                        <input type="tel" id="enquiryPhone" name="phone" placeholder="Enter your mobile number"
+                            inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required>
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="enquiry-field">
+                        <label for="enquiryEmail">
+                            Email Address <small>(Optional)</small>
+                        </label>
+
+                        <input type="email" id="enquiryEmail" name="email" placeholder="Enter your email address">
+                    </div>
+
+
+                    <!-- INTEREST -->
+                    <div class="enquiry-field enquiry-interest">
+
+                        <label>
+                            What are you interested in? <span>*</span>
+                        </label>
+
+                        <div class="interest-options">
+
+                            <label class="interest-option">
+                                <input type="radio" name="interest" value="buying" required>
+
+                                <span class="interest-box">
+                                    <strong>Buying a Plot</strong>
+                                    <small>Looking for land near Pune</small>
+                                </span>
+                            </label>
+
+
+                            <label class="interest-option">
+                                <input type="radio" name="interest" value="selling">
+
+                                <span class="interest-box">
+                                    <strong>Selling Land</strong>
+                                    <small>Want to sell your property</small>
+                                </span>
+                            </label>
+
+
+                            <label class="interest-option">
+                                <input type="radio" name="interest" value="other">
+
+                                <span class="interest-box">
+                                    <strong>Other Enquiry</strong>
+                                    <small>Have another property question</small>
+                                </span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+                    <div class="enquiry-field">
+
+                        <label for="enquiryLocation">
+                            Preferred Location <small>(Optional)</small>
+                        </label>
+
+                        <input type="text" id="enquiryLocation" name="location"
+                            placeholder="e.g. Purandar, Saswad, Velhe...">
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+                    <div class="enquiry-field">
+
+                        <label for="enquiryMessage">
+                            Your Message <small>(Optional)</small>
+                        </label>
+
+                        <textarea id="enquiryMessage" name="message" rows="3"
+                            placeholder="Tell us what you're looking for..."></textarea>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+                    <button type="submit" class="enquiry-submit">
+                        Submit Enquiry
+                        <span>→</span>
+                    </button>
+
+
+                    <p class="enquiry-note">
+                        Your information is kept private and will only be used
+                        to respond to your enquiry.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
-        <!-- ================= FOOTER ================= -->
+        <p>
 
-        <footer>
+            © 2026 Lokdham Developers. All Rights Reserved. | Designed & Developed by Ronit Godambe
 
-            <p>
+        </p>
 
-                © 2026 Lokdham Developers. All Rights Reserved. | Designed & Developed by Ronit Godambe
-
-            </p>
-
-        </footer>
+    </footer>
 
 
-        <!-- =========================================================
+    <!-- =========================================================
          NAVBAR SCRIPT
          ========================================================= -->
 
-        <script>
+    <script>
 
-            const menu = document.getElementById("menu-toggle");
-            const navLinks = document.getElementById("nav-links");
+        const menu = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
 
-            menu.addEventListener("click", () => {
+        menu.addEventListener("click", () => {
 
-                navLinks.classList.toggle("active");
+            navLinks.classList.toggle("active");
 
-                menu.innerHTML =
-                    navLinks.classList.contains("active")
-                        ? "✕"
-                        : "☰";
+            menu.innerHTML =
+                navLinks.classList.contains("active")
+                    ? "✕"
+                    : "☰";
 
-            });
+        });
 
-        </script>
+    </script>
 
 
-        <!-- =========================================================
+    <!-- =========================================================
          MOBILE NAVBAR HIDE / SHOW
          ========================================================= -->
 
-        <script>
+    <script>
 
-            document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function () {
 
-                const nav = document.querySelector("nav");
+            const nav = document.querySelector("nav");
 
-                let lastScrollTop = 0;
+            let lastScrollTop = 0;
 
-                window.addEventListener("scroll", function () {
+            window.addEventListener("scroll", function () {
 
-                    if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 768) {
 
-                        let currentScroll =
-                            window.pageYOffset ||
-                            document.documentElement.scrollTop;
+                    let currentScroll =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
 
-                        if (currentScroll > lastScrollTop && currentScroll > 75) {
+                    if (currentScroll > lastScrollTop && currentScroll > 75) {
 
-                            nav.classList.add("nav-hidden");
-
-                        }
-
-                        else {
-
-                            nav.classList.remove("nav-hidden");
-
-                        }
-
-                        lastScrollTop =
-                            currentScroll <= 0
-                                ? 0
-                                : currentScroll;
+                        nav.classList.add("nav-hidden");
 
                     }
 
-                });
+                    else {
 
-            });
+                        nav.classList.remove("nav-hidden");
 
-        </script>
+                    }
 
-
-        <script>
-
-            document.addEventListener("DOMContentLoaded", function () {
-
-                /* =====================================================
-                   PAGINATION CONTROL
-                   ===================================================== */
-
-                const showPagination = false;
-                // true  = show pagination
-                // false = hide pagination
-
-
-                const pagination =
-                    document.getElementById("blog-pagination");
-
-
-                if (!showPagination) {
-
-                    pagination.style.display = "none";
-
-                    return;
+                    lastScrollTop =
+                        currentScroll <= 0
+                            ? 0
+                            : currentScroll;
 
                 }
 
-
-                /* =====================================================
-                   SETTINGS
-                   ===================================================== */
-
-                const blogs =
-                    document.querySelectorAll(".blog-card");
-
-                const previousButton =
-                    document.getElementById("previous-button");
-
-                const nextButton =
-                    document.getElementById("next-button");
-
-                const pageButtons =
-                    document.querySelectorAll(".pagination-number");
-
-
-                const blogsPerPage = 6;
-
-                let currentPage = 1;
-
-                const totalPages =
-                    Math.ceil(blogs.length / blogsPerPage);
-
-
-                /* =====================================================
-                   SHOW PAGE
-                   ===================================================== */
-
-                function showPage(page) {
-
-                    currentPage = page;
-
-                    const start =
-                        (currentPage - 1) * blogsPerPage;
-
-                    const end =
-                        start + blogsPerPage;
-
-
-                    blogs.forEach(function (blog, index) {
-
-                        if (index >= start && index < end) {
-
-                            blog.style.display = "";
-
-                        } else {
-
-                            blog.style.display = "none";
-
-                        }
-
-                    });
-
-
-                    /* ACTIVE NUMBER */
-
-                    pageButtons.forEach(function (button, index) {
-
-                        button.classList.toggle(
-                            "active",
-                            index + 1 === currentPage
-                        );
-
-                    });
-
-
-                    /* PREVIOUS */
-
-                    previousButton.disabled =
-                        currentPage === 1;
-
-                    previousButton.classList.toggle(
-                        "disabled",
-                        currentPage === 1
-                    );
-
-
-                    /* NEXT */
-
-                    nextButton.disabled =
-                        currentPage === totalPages;
-
-                    nextButton.classList.toggle(
-                        "disabled",
-                        currentPage === totalPages
-                    );
-
-                }
-
-
-                /* =====================================================
-                   PAGE NUMBERS
-                   ===================================================== */
-
-                pageButtons.forEach(function (button, index) {
-
-                    button.addEventListener("click", function () {
-
-                        showPage(index + 1);
-
-                        window.scrollTo({
-                            top: 0,
-                            behavior: "smooth"
-                        });
-
-                    });
-
-                });
-
-
-                /* =====================================================
-                   PREVIOUS
-                   ===================================================== */
-
-                previousButton.addEventListener("click", function () {
-
-                    if (currentPage > 1) {
-
-                        showPage(currentPage - 1);
-
-                        window.scrollTo({
-                            top: 0,
-                            behavior: "smooth"
-                        });
-
-                    }
-
-                });
-
-
-                /* =====================================================
-                   NEXT
-                   ===================================================== */
-
-                nextButton.addEventListener("click", function () {
-
-                    if (currentPage < totalPages) {
-
-                        showPage(currentPage + 1);
-
-                        window.scrollTo({
-                            top: 0,
-                            behavior: "smooth"
-                        });
-
-                    }
-
-                });
-
-
-                /* =====================================================
-                   INITIAL PAGE
-                   ===================================================== */
-
-                showPage(1);
-
             });
 
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
+        });
 
-                const nav = document.querySelector("nav");
-                let lastScrollTop = 0;
+    </script>
 
-                window.addEventListener("scroll", function () {
 
-                    // Only run on mobile
-                    if (window.innerWidth <= 768) {
+    <script>
 
-                        let currentScroll =
-                            window.pageYOffset ||
-                            document.documentElement.scrollTop;
+        document.addEventListener("DOMContentLoaded", function () {
 
-                        if (currentScroll > lastScrollTop && currentScroll > 75) {
-                            // Scrolling DOWN
-                            nav.classList.add("nav-hidden");
-                        }
-                        else {
-                            // Scrolling UP
-                            nav.classList.remove("nav-hidden");
-                        }
+            /* =====================================================
+               PAGINATION CONTROL
+               ===================================================== */
 
-                        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-                    }
+            const showPagination = false;
+            // true  = show pagination
+            // false = hide pagination
 
-                });
 
-            });
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
+            const pagination =
+                document.getElementById("blog-pagination");
 
-                const nav = document.querySelector("nav");
-                let lastScrollTop = 0;
 
-                window.addEventListener("scroll", function () {
+            if (!showPagination) {
 
-                    // Only run on mobile
-                    if (window.innerWidth <= 768) {
+                pagination.style.display = "none";
 
-                        let currentScroll =
-                            window.pageYOffset ||
-                            document.documentElement.scrollTop;
+                return;
 
-                        if (currentScroll > lastScrollTop && currentScroll > 75) {
-                            // Scrolling DOWN
-                            nav.classList.add("nav-hidden");
-                        }
-                        else {
-                            // Scrolling UP
-                            nav.classList.remove("nav-hidden");
-                        }
+            }
 
-                        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-                    }
 
-                });
+            /* =====================================================
+               SETTINGS
+               ===================================================== */
 
-            });
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
+            const blogs =
+                document.querySelectorAll(".blog-card");
 
-                const contactBar = document.querySelector(".mobile-contact-buttons");
-                const footer = document.querySelector("footer");
+            const previousButton =
+                document.getElementById("previous-button");
 
-                if (!contactBar || !footer) return;
+            const nextButton =
+                document.getElementById("next-button");
 
-                function updateContactBar() {
+            const pageButtons =
+                document.querySelectorAll(".pagination-number");
 
-                    /* Desktop — normal behavior */
-                    if (window.innerWidth > 768) {
-                        contactBar.style.position = "static";
-                        contactBar.style.width = "100%";
-                        return;
-                    }
 
-                    const footerTop = footer.getBoundingClientRect().top;
-                    const barHeight = contactBar.offsetHeight;
-                    const viewportHeight = window.innerHeight;
+            const blogsPerPage = 6;
 
-                    /*
-                    If footer is approaching the contact bar,
-                    move the bar above the footer.
-                    */
+            let currentPage = 1;
 
-                    if (footerTop < viewportHeight) {
+            const totalPages =
+                Math.ceil(blogs.length / blogsPerPage);
 
-                        contactBar.style.position = "absolute";
-                        contactBar.style.left = "0";
-                        contactBar.style.bottom = "auto";
-                        contactBar.style.top =
-                            (footer.offsetTop - barHeight) + "px";
+
+            /* =====================================================
+               SHOW PAGE
+               ===================================================== */
+
+            function showPage(page) {
+
+                currentPage = page;
+
+                const start =
+                    (currentPage - 1) * blogsPerPage;
+
+                const end =
+                    start + blogsPerPage;
+
+
+                blogs.forEach(function (blog, index) {
+
+                    if (index >= start && index < end) {
+
+                        blog.style.display = "";
 
                     } else {
 
-                        /* Normal mobile scrolling */
-                        contactBar.style.position = "fixed";
-                        contactBar.style.left = "0";
-                        contactBar.style.bottom = "0";
-                        contactBar.style.top = "auto";
+                        blog.style.display = "none";
+
                     }
-                }
 
-                window.addEventListener("scroll", updateContactBar);
-                window.addEventListener("resize", updateContactBar);
+                });
 
-                updateContactBar();
+
+                /* ACTIVE NUMBER */
+
+                pageButtons.forEach(function (button, index) {
+
+                    button.classList.toggle(
+                        "active",
+                        index + 1 === currentPage
+                    );
+
+                });
+
+
+                /* PREVIOUS */
+
+                previousButton.disabled =
+                    currentPage === 1;
+
+                previousButton.classList.toggle(
+                    "disabled",
+                    currentPage === 1
+                );
+
+
+                /* NEXT */
+
+                nextButton.disabled =
+                    currentPage === totalPages;
+
+                nextButton.classList.toggle(
+                    "disabled",
+                    currentPage === totalPages
+                );
+
+            }
+
+
+            /* =====================================================
+               PAGE NUMBERS
+               ===================================================== */
+
+            pageButtons.forEach(function (button, index) {
+
+                button.addEventListener("click", function () {
+
+                    showPage(index + 1);
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                });
 
             });
-        </script>
+
+
+            /* =====================================================
+               PREVIOUS
+               ===================================================== */
+
+            previousButton.addEventListener("click", function () {
+
+                if (currentPage > 1) {
+
+                    showPage(currentPage - 1);
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }
+
+            });
+
+
+            /* =====================================================
+               NEXT
+               ===================================================== */
+
+            nextButton.addEventListener("click", function () {
+
+                if (currentPage < totalPages) {
+
+                    showPage(currentPage + 1);
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+
+                }
+
+            });
+
+
+            /* =====================================================
+               INITIAL PAGE
+               ===================================================== */
+
+            showPage(1);
+
+        });
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const nav = document.querySelector("nav");
+            let lastScrollTop = 0;
+
+            window.addEventListener("scroll", function () {
+
+                // Only run on mobile
+                if (window.innerWidth <= 768) {
+
+                    let currentScroll =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+
+                    if (currentScroll > lastScrollTop && currentScroll > 75) {
+                        // Scrolling DOWN
+                        nav.classList.add("nav-hidden");
+                    }
+                    else {
+                        // Scrolling UP
+                        nav.classList.remove("nav-hidden");
+                    }
+
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                }
+
+            });
+
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const nav = document.querySelector("nav");
+            let lastScrollTop = 0;
+
+            window.addEventListener("scroll", function () {
+
+                // Only run on mobile
+                if (window.innerWidth <= 768) {
+
+                    let currentScroll =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+
+                    if (currentScroll > lastScrollTop && currentScroll > 75) {
+                        // Scrolling DOWN
+                        nav.classList.add("nav-hidden");
+                    }
+                    else {
+                        // Scrolling UP
+                        nav.classList.remove("nav-hidden");
+                    }
+
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                }
+
+            });
+
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const contactBar = document.querySelector(".mobile-contact-buttons");
+            const footer = document.querySelector("footer");
+
+            if (!contactBar || !footer) return;
+
+            function updateContactBar() {
+
+                /* Desktop — normal behavior */
+                if (window.innerWidth > 768) {
+                    contactBar.style.position = "static";
+                    contactBar.style.width = "100%";
+                    return;
+                }
+
+                const footerTop = footer.getBoundingClientRect().top;
+                const barHeight = contactBar.offsetHeight;
+                const viewportHeight = window.innerHeight;
+
+                /*
+                If footer is approaching the contact bar,
+                move the bar above the footer.
+                */
+
+                if (footerTop < viewportHeight) {
+
+                    contactBar.style.position = "absolute";
+                    contactBar.style.left = "0";
+                    contactBar.style.bottom = "auto";
+                    contactBar.style.top =
+                        (footer.offsetTop - barHeight) + "px";
+
+                } else {
+
+                    /* Normal mobile scrolling */
+                    contactBar.style.position = "fixed";
+                    contactBar.style.left = "0";
+                    contactBar.style.bottom = "0";
+                    contactBar.style.top = "auto";
+                }
+            }
+
+            window.addEventListener("scroll", updateContactBar);
+            window.addEventListener("resize", updateContactBar);
+
+            updateContactBar();
+
+        });
+    </script>
+
+    <script>
+
+        /*========================================
+                LOKDHAM ENQUIRY POPUP
+                WEBSITE-WIDE CONTROL
+        ========================================*/
+
+        const ENQUIRY_SHOWN_KEY = "lokdhamEnquiryShown";
+        const ENQUIRY_SUBMITTED_KEY = "lokdhamEnquirySubmitted";
+
+        const TWO_MINUTES = 3 * 60 * 1000;
+        const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+
+
+        /*========================================
+                OPEN POPUP
+        ========================================*/
+
+        function openEnquiryPopup() {
+
+            const popup = document.getElementById("enquiryPopup");
+
+            if (popup) {
+                popup.classList.add("active");
+            }
+
+            document.body.classList.add("enquiry-open");
+
+        }
+
+
+        /*========================================
+                CLOSE POPUP
+        ========================================*/
+
+        function closeEnquiryPopup() {
+
+            const popup = document.getElementById("enquiryPopup");
+
+            if (popup) {
+                popup.classList.remove("active");
+            }
+
+            document.body.classList.remove("enquiry-open");
+
+        }
+
+
+        /*========================================
+                ESCAPE KEY
+        ========================================*/
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                closeEnquiryPopup();
+
+            }
+
+        });
+
+
+        /*========================================
+                CHECK WHETHER POPUP CAN APPEAR
+        ========================================*/
+
+        function shouldShowEnquiry() {
+
+            const now = Date.now();
+
+
+            /*--------------------------------------
+                CHECK 7-DAY SUBMISSION LOCK
+            --------------------------------------*/
+
+            const submittedTime =
+                localStorage.getItem(ENQUIRY_SUBMITTED_KEY);
+
+
+            if (submittedTime) {
+
+                const submittedAgo =
+                    now - Number(submittedTime);
+
+
+                /*
+                    If enquiry was submitted
+                    less than 7 days ago,
+                    don't show the popup.
+                */
+
+                if (submittedAgo < SEVEN_DAYS) {
+
+                    return false;
+
+                }
+
+
+                /*
+                    7 days have passed.
+                    Remove old submission record.
+                */
+
+                localStorage.removeItem(
+                    ENQUIRY_SUBMITTED_KEY
+                );
+
+            }
+
+
+            /*--------------------------------------
+                CHECK 5-MINUTE POPUP COOLDOWN
+            --------------------------------------*/
+
+            const shownTime =
+                localStorage.getItem(ENQUIRY_SHOWN_KEY);
+
+
+            if (shownTime) {
+
+                const shownAgo =
+                    now - Number(shownTime);
+
+
+                /*
+                    If popup was shown less than
+                    5 minutes ago, don't show it.
+                */
+
+                if (shownAgo < TWO_MINUTES) {
+
+                    return false;
+
+                }
+
+            }
+
+
+            return true;
+
+        }
+
+
+        /*========================================
+                SHOW POPUP AFTER 15 SECONDS
+        ========================================*/
+
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                /*
+                    Make sure popup exists on this page.
+                */
+
+                const popup =
+                    document.getElementById("enquiryPopup");
+
+
+                if (!popup) {
+                    return;
+                }
+
+
+                if (shouldShowEnquiry()) {
+
+                    openEnquiryPopup();
+
+
+                    /*
+                        Record EXACT time popup
+                        was displayed.
+                    */
+
+                    localStorage.setItem(
+                        ENQUIRY_SHOWN_KEY,
+                        Date.now().toString()
+                    );
+
+                }
+
+            }, 5000);
+
+        });
+
+
+        /*========================================
+                WHATSAPP ENQUIRY
+        ========================================*/
+
+        const enquiryForm =
+            document.getElementById("enquiryForm");
+
+
+        if (enquiryForm) {
+
+            enquiryForm.addEventListener(
+                "submit",
+                function (e) {
+
+                    e.preventDefault();
+
+
+                    /*----------------------------------
+                        GET FORM VALUES
+                    ----------------------------------*/
+
+                    const name =
+                        document
+                            .getElementById("enquiryName")
+                            .value
+                            .trim();
+
+
+                    const phone =
+                        document
+                            .getElementById("enquiryPhone")
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById("enquiryEmail")
+                            .value
+                            .trim();
+
+
+                    const location =
+                        document
+                            .getElementById("enquiryLocation")
+                            .value
+                            .trim();
+
+
+                    const message =
+                        document
+                            .getElementById("enquiryMessage")
+                            .value
+                            .trim();
+
+
+                    /*----------------------------------
+                        GET SELECTED INTEREST
+                    ----------------------------------*/
+
+                    const selectedInterest =
+                        document.querySelector(
+                            'input[name="interest"]:checked'
+                        );
+
+
+                    let interest = "";
+
+
+                    if (selectedInterest) {
+
+                        if (
+                            selectedInterest.value === "buying"
+                        ) {
+
+                            interest = "Buying a Plot";
+
+                        }
+
+                        else if (
+                            selectedInterest.value === "selling"
+                        ) {
+
+                            interest = "Selling Land";
+
+                        }
+
+                        else {
+
+                            interest = "Other Enquiry";
+
+                        }
+
+                    }
+
+
+                    /*----------------------------------
+                        BUILD WHATSAPP MESSAGE
+                    ----------------------------------*/
+
+                    let whatsappMessage =
+                        `Hello Lokdham Developers,
+
+I would like to make an enquiry.
+
+Name: ${name}
+Mobile: ${phone}
+Interest: ${interest}`;
+
+
+                    if (email) {
+
+                        whatsappMessage +=
+                            `
+Email: ${email}`;
+
+                    }
+
+
+                    if (location) {
+
+                        whatsappMessage +=
+                            `
+Preferred Location: ${location}`;
+
+                    }
+
+
+                    if (message) {
+
+                        whatsappMessage +=
+                            `
+Message: ${message}`;
+
+                    }
+
+
+                    whatsappMessage +=
+                        `
+
+Thank you.`;
+
+
+                    /*==================================
+                        YOUR WHATSAPP NUMBER
+        
+                        Replace this with the actual
+                        Lokdham WhatsApp number.
+                    ==================================*/
+
+                    const whatsappNumber =
+                        "918007901111";
+
+
+                    /*----------------------------------
+                        ENCODE MESSAGE
+                    ----------------------------------*/
+
+                    const encodedMessage =
+                        encodeURIComponent(
+                            whatsappMessage
+                        );
+
+
+                    /*----------------------------------
+                        CREATE WHATSAPP URL
+                    ----------------------------------*/
+
+                    const whatsappURL =
+                        `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+
+                    /*==================================
+                        7-DAY SUBMISSION LOCK
+                    ==================================*/
+
+                    localStorage.setItem(
+                        ENQUIRY_SUBMITTED_KEY,
+                        Date.now().toString()
+                    );
+
+
+                    /*----------------------------------
+                        CLOSE POPUP
+                    ----------------------------------*/
+
+                    closeEnquiryPopup();
+
+
+                    /*----------------------------------
+                        OPEN WHATSAPP
+                    ----------------------------------*/
+
+                    window.open(
+                        whatsappURL,
+                        "_blank"
+                    );
+
+                }
+            );
+
+        }
+
+    </script>
 
 </body>
 

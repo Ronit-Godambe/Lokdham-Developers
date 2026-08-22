@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/stylemob.css">
     <link rel="shortcut icon" href="favicon/faviconbig.png" type="image/png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
@@ -28,30 +28,9 @@
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <div id="navbar-container"></div>
 
-    <nav>
-
-        <div class="logo">
-            <a href="index.html"><img src="img/index/onlylogo.png" alt="Logo"></a>
-        </div>
-
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
-        </div>
-
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-
-        <a href="contactus.html" class="btnenq">Enquire Now</a>
-
-    </nav>
-
+    <script src="Common/navbar/cnavbar.js"></script>
     <main>
 
         <!-- ================= HERO ================= -->
@@ -219,7 +198,7 @@
         </a>
     </div>
 
-    
+
     <!-- ================================
      ENQUIRY POPUP
 ================================ -->
@@ -363,411 +342,432 @@
                     </p>
 
                 </form>
-
+                
             </div>
 
         </div>
-
     </section>
 
-    <!-- FOOTER -->
+    <div id="footer-container"></div>
 
-    <footer>
+    <script src="Common/footer/cfooter.js"></script>
 
-        <p>
+<script>
 
-            © 2026 Lokdham Developers. All Rights Reserved. | Designed & Developed by Ronit Godambe
+    function setupMobileContactBar() {
 
-        </p>
+        const contactBar =
+            document.querySelector(".mobile-contact-buttons");
 
-    </footer>
+        const footer =
+            document.querySelector(".site-footer");
 
-
-    <script>
-        const menu = document.getElementById("menu-toggle");
-        const navLinks = document.getElementById("nav-links");
-
-        menu.addEventListener("click", () => {
-
-            navLinks.classList.toggle("active");
-
-            menu.innerHTML =
-                navLinks.classList.contains("active") ? "✕" : "☰";
-
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const nav = document.querySelector("nav");
-            let lastScrollTop = 0;
-
-            window.addEventListener("scroll", function () {
-
-                // Only run on mobile
-                if (window.innerWidth <= 768) {
-
-                    let currentScroll =
-                        window.pageYOffset ||
-                        document.documentElement.scrollTop;
-
-                    if (currentScroll > lastScrollTop && currentScroll > 75) {
-                        // Scrolling DOWN
-                        nav.classList.add("nav-hidden");
-                    }
-                    else {
-                        // Scrolling UP
-                        nav.classList.remove("nav-hidden");
-                    }
-
-                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-                }
-
-            });
-
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const contactBar = document.querySelector(".mobile-contact-buttons");
-            const footer = document.querySelector("footer");
-
-            if (!contactBar || !footer) return;
-
-            function updateContactBar() {
-
-                /* Desktop — normal behavior */
-                if (window.innerWidth > 768) {
-                    contactBar.style.position = "static";
-                    contactBar.style.width = "100%";
-                    return;
-                }
-
-                const footerTop = footer.getBoundingClientRect().top;
-                const barHeight = contactBar.offsetHeight;
-                const viewportHeight = window.innerHeight;
-
-                /*
-                If footer is approaching the contact bar,
-                move the bar above the footer.
-                */
-
-                if (footerTop < viewportHeight) {
-
-                    contactBar.style.position = "absolute";
-                    contactBar.style.left = "0";
-                    contactBar.style.bottom = "auto";
-                    contactBar.style.top =
-                        (footer.offsetTop - barHeight) + "px";
-
-                } else {
-
-                    /* Normal mobile scrolling */
-                    contactBar.style.position = "fixed";
-                    contactBar.style.left = "0";
-                    contactBar.style.bottom = "0";
-                    contactBar.style.top = "auto";
-                }
-            }
-
-            window.addEventListener("scroll", updateContactBar);
-            window.addEventListener("resize", updateContactBar);
-
-            updateContactBar();
-
-        });
-    </script>
- <script>
-
-/*========================================
-        LOKDHAM ENQUIRY POPUP
-        WEBSITE-WIDE CONTROL
-========================================*/
-
-const ENQUIRY_SHOWN_KEY = "lokdhamEnquiryShown";
-const ENQUIRY_SUBMITTED_KEY = "lokdhamEnquirySubmitted";
-
-const TWO_MINUTES = 3 * 60 * 1000;
-const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
-
-
-/*========================================
-        OPEN POPUP
-========================================*/
-
-function openEnquiryPopup() {
-
-    const popup = document.getElementById("enquiryPopup");
-
-    if (popup) {
-        popup.classList.add("active");
-    }
-
-    document.body.classList.add("enquiry-open");
-
-}
-
-
-/*========================================
-        CLOSE POPUP
-========================================*/
-
-function closeEnquiryPopup() {
-
-    const popup = document.getElementById("enquiryPopup");
-
-    if (popup) {
-        popup.classList.remove("active");
-    }
-
-    document.body.classList.remove("enquiry-open");
-
-}
-
-
-/*========================================
-        ESCAPE KEY
-========================================*/
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-
-        closeEnquiryPopup();
-
-    }
-
-});
-
-
-/*========================================
-        CHECK WHETHER POPUP CAN APPEAR
-========================================*/
-
-function shouldShowEnquiry() {
-
-    const now = Date.now();
-
-
-    /*--------------------------------------
-        CHECK 7-DAY SUBMISSION LOCK
-    --------------------------------------*/
-
-    const submittedTime =
-        localStorage.getItem(ENQUIRY_SUBMITTED_KEY);
-
-
-    if (submittedTime) {
-
-        const submittedAgo =
-            now - Number(submittedTime);
-
-
-        /*
-            If enquiry was submitted
-            less than 7 days ago,
-            don't show the popup.
-        */
-
-        if (submittedAgo < SEVEN_DAYS) {
-
-            return false;
-
-        }
-
-
-        /*
-            7 days have passed.
-            Remove old submission record.
-        */
-
-        localStorage.removeItem(
-            ENQUIRY_SUBMITTED_KEY
-        );
-
-    }
-
-
-    /*--------------------------------------
-        CHECK 5-MINUTE POPUP COOLDOWN
-    --------------------------------------*/
-
-    const shownTime =
-        localStorage.getItem(ENQUIRY_SHOWN_KEY);
-
-
-    if (shownTime) {
-
-        const shownAgo =
-            now - Number(shownTime);
-
-
-        /*
-            If popup was shown less than
-            5 minutes ago, don't show it.
-        */
-
-        if (shownAgo < TWO_MINUTES) {
-
-            return false;
-
-        }
-
-    }
-
-
-    return true;
-
-}
-
-
-/*========================================
-        SHOW POPUP AFTER 15 SECONDS
-========================================*/
-
-window.addEventListener("load", function() {
-
-    setTimeout(function() {
-
-        /*
-            Make sure popup exists on this page.
-        */
-
-        const popup =
-            document.getElementById("enquiryPopup");
-
-
-        if (!popup) {
+        if (!contactBar || !footer) {
             return;
         }
 
 
-        if (shouldShowEnquiry()) {
+        function updateContactBar() {
 
-            openEnquiryPopup();
+            /* Desktop */
+
+            if (window.innerWidth > 768) {
+
+                contactBar.style.position = "";
+                contactBar.style.bottom = "";
+                contactBar.style.left = "";
+                contactBar.style.width = "";
+
+                return;
+            }
+
+
+            const footerRect =
+                footer.getBoundingClientRect();
+
+            const barHeight =
+                contactBar.offsetHeight;
+
+            const viewportHeight =
+                window.innerHeight;
 
 
             /*
-                Record EXACT time popup
-                was displayed.
+                If footer reaches the
+                contact button area,
+                push the bar upward
             */
 
-            localStorage.setItem(
-                ENQUIRY_SHOWN_KEY,
-                Date.now().toString()
-            );
+            const overlap =
+                viewportHeight - footerRect.top;
+
+
+            if (overlap > 0) {
+
+                contactBar.style.position =
+                    "fixed";
+
+                contactBar.style.left =
+                    "0";
+
+                contactBar.style.bottom =
+                    Math.max(
+                        0,
+                        overlap
+                    ) + "px";
+
+                contactBar.style.width =
+                    "100%";
+
+            }
+
+            else {
+
+                contactBar.style.position =
+                    "fixed";
+
+                contactBar.style.left =
+                    "0";
+
+                contactBar.style.bottom =
+                    "0";
+
+                contactBar.style.width =
+                    "100%";
+
+            }
 
         }
 
-    }, 5000);
 
-});
-
-
-/*========================================
-        WHATSAPP ENQUIRY
-========================================*/
-
-const enquiryForm =
-    document.getElementById("enquiryForm");
+        window.addEventListener(
+            "scroll",
+            updateContactBar
+        );
 
 
-if (enquiryForm) {
-
-    enquiryForm.addEventListener(
-        "submit",
-        function(e) {
-
-            e.preventDefault();
+        window.addEventListener(
+            "resize",
+            updateContactBar
+        );
 
 
-            /*----------------------------------
-                GET FORM VALUES
-            ----------------------------------*/
+        updateContactBar();
 
-            const name =
-                document
-                    .getElementById("enquiryName")
-                    .value
-                    .trim();
+    }
 
 
-            const phone =
-                document
-                    .getElementById("enquiryPhone")
-                    .value
-                    .trim();
+    /*
+        Footer is loaded dynamically,
+        so wait until it exists.
+    */
+
+    const footerCheck = setInterval(function () {
+
+        const footer =
+            document.querySelector(".site-footer");
 
 
-            const email =
-                document
-                    .getElementById("enquiryEmail")
-                    .value
-                    .trim();
+        if (footer) {
+
+            clearInterval(footerCheck);
+
+            setupMobileContactBar();
+
+        }
+
+    }, 100);
+
+</script>
+    <script>
+
+        /*========================================
+                LOKDHAM ENQUIRY POPUP
+                WEBSITE-WIDE CONTROL
+        ========================================*/
+
+        const ENQUIRY_SHOWN_KEY = "lokdhamEnquiryShown";
+        const ENQUIRY_SUBMITTED_KEY = "lokdhamEnquirySubmitted";
+
+        const TWO_MINUTES = 3 * 60 * 1000;
+        const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
 
 
-            const location =
-                document
-                    .getElementById("enquiryLocation")
-                    .value
-                    .trim();
+        /*========================================
+                OPEN POPUP
+        ========================================*/
+
+        function openEnquiryPopup() {
+
+            const popup = document.getElementById("enquiryPopup");
+
+            if (popup) {
+                popup.classList.add("active");
+            }
+
+            document.body.classList.add("enquiry-open");
+
+        }
 
 
-            const message =
-                document
-                    .getElementById("enquiryMessage")
-                    .value
-                    .trim();
+        /*========================================
+                CLOSE POPUP
+        ========================================*/
+
+        function closeEnquiryPopup() {
+
+            const popup = document.getElementById("enquiryPopup");
+
+            if (popup) {
+                popup.classList.remove("active");
+            }
+
+            document.body.classList.remove("enquiry-open");
+
+        }
 
 
-            /*----------------------------------
-                GET SELECTED INTEREST
-            ----------------------------------*/
+        /*========================================
+                ESCAPE KEY
+        ========================================*/
 
-            const selectedInterest =
-                document.querySelector(
-                    'input[name="interest"]:checked'
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                closeEnquiryPopup();
+
+            }
+
+        });
+
+
+        /*========================================
+                CHECK WHETHER POPUP CAN APPEAR
+        ========================================*/
+
+        function shouldShowEnquiry() {
+
+            const now = Date.now();
+
+
+            /*--------------------------------------
+                CHECK 7-DAY SUBMISSION LOCK
+            --------------------------------------*/
+
+            const submittedTime =
+                localStorage.getItem(ENQUIRY_SUBMITTED_KEY);
+
+
+            if (submittedTime) {
+
+                const submittedAgo =
+                    now - Number(submittedTime);
+
+
+                /*
+                    If enquiry was submitted
+                    less than 7 days ago,
+                    don't show the popup.
+                */
+
+                if (submittedAgo < SEVEN_DAYS) {
+
+                    return false;
+
+                }
+
+
+                /*
+                    7 days have passed.
+                    Remove old submission record.
+                */
+
+                localStorage.removeItem(
+                    ENQUIRY_SUBMITTED_KEY
                 );
 
+            }
 
-            let interest = "";
+
+            /*--------------------------------------
+                CHECK 5-MINUTE POPUP COOLDOWN
+            --------------------------------------*/
+
+            const shownTime =
+                localStorage.getItem(ENQUIRY_SHOWN_KEY);
 
 
-            if (selectedInterest) {
+            if (shownTime) {
 
-                if (
-                    selectedInterest.value === "buying"
-                ) {
+                const shownAgo =
+                    now - Number(shownTime);
 
-                    interest = "Buying a Plot";
 
-                }
+                /*
+                    If popup was shown less than
+                    5 minutes ago, don't show it.
+                */
 
-                else if (
-                    selectedInterest.value === "selling"
-                ) {
+                if (shownAgo < TWO_MINUTES) {
 
-                    interest = "Selling Land";
-
-                }
-
-                else {
-
-                    interest = "Other Enquiry";
+                    return false;
 
                 }
 
             }
 
 
-            /*----------------------------------
-                BUILD WHATSAPP MESSAGE
-            ----------------------------------*/
+            return true;
 
-            let whatsappMessage =
-`Hello Lokdham Developers,
+        }
+
+
+        /*========================================
+                SHOW POPUP AFTER 15 SECONDS
+        ========================================*/
+
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                /*
+                    Make sure popup exists on this page.
+                */
+
+                const popup =
+                    document.getElementById("enquiryPopup");
+
+
+                if (!popup) {
+                    return;
+                }
+
+
+                if (shouldShowEnquiry()) {
+
+                    openEnquiryPopup();
+
+
+                    /*
+                        Record EXACT time popup
+                        was displayed.
+                    */
+
+                    localStorage.setItem(
+                        ENQUIRY_SHOWN_KEY,
+                        Date.now().toString()
+                    );
+
+                }
+
+            }, 5000);
+
+        });
+
+
+        /*========================================
+                WHATSAPP ENQUIRY
+        ========================================*/
+
+        const enquiryForm =
+            document.getElementById("enquiryForm");
+
+
+        if (enquiryForm) {
+
+            enquiryForm.addEventListener(
+                "submit",
+                function (e) {
+
+                    e.preventDefault();
+
+
+                    /*----------------------------------
+                        GET FORM VALUES
+                    ----------------------------------*/
+
+                    const name =
+                        document
+                            .getElementById("enquiryName")
+                            .value
+                            .trim();
+
+
+                    const phone =
+                        document
+                            .getElementById("enquiryPhone")
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById("enquiryEmail")
+                            .value
+                            .trim();
+
+
+                    const location =
+                        document
+                            .getElementById("enquiryLocation")
+                            .value
+                            .trim();
+
+
+                    const message =
+                        document
+                            .getElementById("enquiryMessage")
+                            .value
+                            .trim();
+
+
+                    /*----------------------------------
+                        GET SELECTED INTEREST
+                    ----------------------------------*/
+
+                    const selectedInterest =
+                        document.querySelector(
+                            'input[name="interest"]:checked'
+                        );
+
+
+                    let interest = "";
+
+
+                    if (selectedInterest) {
+
+                        if (
+                            selectedInterest.value === "buying"
+                        ) {
+
+                            interest = "Buying a Plot";
+
+                        }
+
+                        else if (
+                            selectedInterest.value === "selling"
+                        ) {
+
+                            interest = "Selling Land";
+
+                        }
+
+                        else {
+
+                            interest = "Other Enquiry";
+
+                        }
+
+                    }
+
+
+                    /*----------------------------------
+                        BUILD WHATSAPP MESSAGE
+                    ----------------------------------*/
+
+                    let whatsappMessage =
+                        `Hello Lokdham Developers,
 
 I would like to make an enquiry.
 
@@ -776,100 +776,100 @@ Mobile: ${phone}
 Interest: ${interest}`;
 
 
-            if (email) {
+                    if (email) {
 
-                whatsappMessage +=
-`
+                        whatsappMessage +=
+                            `
 Email: ${email}`;
 
-            }
+                    }
 
 
-            if (location) {
+                    if (location) {
 
-                whatsappMessage +=
-`
+                        whatsappMessage +=
+                            `
 Preferred Location: ${location}`;
 
-            }
+                    }
 
 
-            if (message) {
+                    if (message) {
 
-                whatsappMessage +=
-`
+                        whatsappMessage +=
+                            `
 Message: ${message}`;
 
-            }
+                    }
 
 
-            whatsappMessage +=
-`
+                    whatsappMessage +=
+                        `
 
 Thank you.`;
 
 
-            /*==================================
-                YOUR WHATSAPP NUMBER
+                    /*==================================
+                        YOUR WHATSAPP NUMBER
+        
+                        Replace this with the actual
+                        Lokdham WhatsApp number.
+                    ==================================*/
 
-                Replace this with the actual
-                Lokdham WhatsApp number.
-            ==================================*/
-
-            const whatsappNumber =
-                "918007901111";
-
-
-            /*----------------------------------
-                ENCODE MESSAGE
-            ----------------------------------*/
-
-            const encodedMessage =
-                encodeURIComponent(
-                    whatsappMessage
-                );
+                    const whatsappNumber =
+                        "918007901111";
 
 
-            /*----------------------------------
-                CREATE WHATSAPP URL
-            ----------------------------------*/
+                    /*----------------------------------
+                        ENCODE MESSAGE
+                    ----------------------------------*/
 
-            const whatsappURL =
-                `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-
-            /*==================================
-                7-DAY SUBMISSION LOCK
-            ==================================*/
-
-            localStorage.setItem(
-                ENQUIRY_SUBMITTED_KEY,
-                Date.now().toString()
-            );
+                    const encodedMessage =
+                        encodeURIComponent(
+                            whatsappMessage
+                        );
 
 
-            /*----------------------------------
-                CLOSE POPUP
-            ----------------------------------*/
+                    /*----------------------------------
+                        CREATE WHATSAPP URL
+                    ----------------------------------*/
 
-            closeEnquiryPopup();
+                    const whatsappURL =
+                        `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
 
-            /*----------------------------------
-                OPEN WHATSAPP
-            ----------------------------------*/
+                    /*==================================
+                        7-DAY SUBMISSION LOCK
+                    ==================================*/
 
-            window.open(
-                whatsappURL,
-                "_blank"
+                    localStorage.setItem(
+                        ENQUIRY_SUBMITTED_KEY,
+                        Date.now().toString()
+                    );
+
+
+                    /*----------------------------------
+                        CLOSE POPUP
+                    ----------------------------------*/
+
+                    closeEnquiryPopup();
+
+
+                    /*----------------------------------
+                        OPEN WHATSAPP
+                    ----------------------------------*/
+
+                    window.open(
+                        whatsappURL,
+                        "_blank"
+                    );
+
+                }
             );
 
         }
-    );
 
-}
-
-</script>
+    </script>
 
 </body>
 

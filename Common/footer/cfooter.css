@@ -1,0 +1,269 @@
+/* ========================================
+        LOKDHAM COMMON FOOTER
+======================================== */
+
+.site-footer {
+    position: relative;
+
+    width: 100%;
+
+    background: #172b4d;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+
+/* ========================================
+        FOOTER WRAPPER
+======================================== */
+
+.footer-wrapper {
+    max-width: 1280px;
+
+    margin: 0 auto;
+
+    padding: 75px 40px 35px;
+}
+
+
+/* ========================================
+        MAIN GRID
+======================================== */
+
+.footer-main {
+    display: grid;
+
+    grid-template-columns:
+        1.25fr
+        1fr
+        1fr
+        1fr
+        1.05fr
+        1fr;
+
+    gap: 42px;
+
+    align-items: start;
+}
+
+
+/* ========================================
+        LOGO
+======================================== */
+
+.footer-brand {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.footer-logo {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/* Add your logo image */
+
+.footer-logo img {
+    width: 165px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* ========================================
+        HEADINGS
+======================================== */
+
+.footer-column h3 {
+    margin: 0 0 20px;
+
+    color: #d5aa4b;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+
+/* ========================================
+        LISTS
+======================================== */
+
+.footer-column ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+
+/* ========================================
+        LINKS
+======================================== */
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.70);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    transition: color 0.2s ease;
+}
+
+
+.footer-column a:hover {
+    color: #d5aa4b;
+}
+
+
+/* ========================================
+        SOCIAL LINKS
+======================================== */
+
+.social-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    flex-wrap: wrap;
+}
+
+
+.social-links a {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.45);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.social-links a:hover {
+    background: #d5aa4b;
+
+    color: #172b4d;
+
+    border-color: #d5aa4b;
+}
+
+
+/* ========================================
+        FOOTER BOTTOM
+======================================== */
+
+.footer-bottom {
+    max-width: 900px;
+
+    margin: 70px auto 0;
+
+    padding-top: 18px;
+
+    border-top: 1px solid
+        rgba(213, 170, 75, 0.35);
+
+    text-align: center;
+}
+
+
+/* ========================================
+        POLICY TEXT
+======================================== */
+
+.footer-policy {
+    margin: 0 auto 8px;
+
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    max-width: 800px;
+}
+
+
+.footer-policy a {
+    color: rgba(255, 255, 255, 0.60);
+
+    text-decoration: none;
+}
+
+
+.footer-policy a:hover {
+    color: #d5aa4b;
+}
+
+
+/* ========================================
+        COPYRIGHT
+======================================== */
+
+.footer-copyright {
+    margin: 0 0 7px;
+
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+        DEVELOPED BY
+======================================== */
+
+.footer-developed {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.50);
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+.footer-developed span {
+    color: #d5aa4b;
+
+    font-weight: 500;
+}

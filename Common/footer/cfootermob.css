@@ -1,0 +1,163 @@
+/* ========================================
+        TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .footer-wrapper {
+        padding: 65px 30px 35px;
+    }
+
+
+    .footer-main {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 45px 35px;
+    }
+
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+
+/* ========================================
+        MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .footer-gold-line {
+        width: 80%;
+    }
+
+
+    .footer-wrapper {
+        padding: 45px 20px 30px;
+    }
+
+
+    .footer-main {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 35px 25px;
+    }
+
+
+    /* LOGO */
+
+    .footer-brand {
+        grid-column: 1 / -1;
+
+        margin-bottom: 5px;
+    }
+
+
+    .footer-logo img {
+        width: 130px;
+    }
+
+
+    /* HEADINGS */
+
+    .footer-column h3 {
+        font-size: 13px;
+
+        margin-bottom: 13px;
+    }
+
+
+    /* LINKS */
+
+    .footer-column li {
+        margin-bottom: 9px;
+    }
+
+
+    .footer-column a {
+        font-size: 11px;
+    }
+
+
+    /* SOCIAL */
+
+    .footer-social {
+        grid-column: 1 / -1;
+    }
+
+
+    .social-links {
+        gap: 8px;
+    }
+
+
+    .social-links a {
+        width: 27px;
+        height: 27px;
+
+        font-size: 12px;
+    }
+
+
+    /* BOTTOM */
+
+    .footer-bottom {
+        margin-top: 45px;
+
+        padding-top: 14px;
+
+        width: 100%;
+    }
+
+
+    .footer-policy,
+    .footer-copyright,
+    .footer-developed {
+        font-size: 8px;
+
+        line-height: 1.55;
+    }
+
+}
+
+
+
+/* ========================================
+        SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+    .footer-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .footer-main {
+        gap: 30px 18px;
+    }
+
+
+    .footer-column h3 {
+        font-size: 12px;
+    }
+
+
+    .footer-column a {
+        font-size: 10px;
+    }
+
+
+    .footer-policy,
+    .footer-copyright,
+    .footer-developed {
+        font-size: 7.5px;
+    }
+
+}

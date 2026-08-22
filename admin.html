@@ -7,1333 +7,1503 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kelad Greens | Admin Panel</title>
+    <title>Lokdham Developers | Project Manager</title>
+
 
     <style>
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        :root {
+            --navy: #1d2f4d;
+            --navy-light: #273d61;
+            --gold: #b18428;
+            --gold-dark: #987021;
+            --bg: #f3f5f8;
+            --white: #ffffff;
+            --text: #1d2f4d;
+            --muted: #7b8594;
+            --border: #e4e8ee;
+        }
+
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background:
+                radial-gradient(circle at top left,
+                    rgba(177, 132, 40, 0.10),
+                    transparent 35%),
+                var(--bg);
+            color: var(--text);
+        }
+
+
+        button,
+        select,
+        input {
+            font-family: inherit;
+        }
+
+
+        button {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+
+        /* =========================================
+           LOGIN
+        ========================================= */
+
+        .login-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+        }
+
+
+        .login-card {
+            width: 100%;
+            max-width: 440px;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 42px;
+            border-radius: 22px;
+            border: 1px solid rgba(29, 47, 77, 0.08);
+            box-shadow:
+                0 25px 70px rgba(29, 47, 77, 0.12);
+        }
+
+
+        .login-logo {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 22px;
+            background: #ffffff;
+            border: 1px solid #e5e8ed;
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                0 8px 25px rgba(29, 47, 77, 0.10);
+        }
+
+
+        .login-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+
+        .login-card h1 {
+            text-align: center;
+            font-size: 30px;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+
+        .login-card>p {
+            text-align: center;
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+
+        .login-card hr {
+            border: none;
+            height: 1px;
+            background: #e8ebef;
+            margin-bottom: 28px;
+        }
+
+
+        .login-card label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #34445e;
+        }
+
+
+        .login-card input {
+            width: 100%;
+            height: 52px;
+            padding: 0 15px;
+            margin-bottom: 20px;
+            border: 1px solid #d9dee6;
+            border-radius: 10px;
+            background: #ffffff;
+            font-size: 15px;
+            outline: none;
+        }
+
 
-/* =========================================
-   RESET & BASE
-========================================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background:
-        radial-gradient(
-            circle at top left,
-            rgba(177, 132, 40, 0.08),
-            transparent 35%
-        ),
-        #f4f6f8;
+        .login-card input:focus {
+            border-color: var(--gold);
+            box-shadow:
+                0 0 0 4px rgba(177, 132, 40, 0.12);
+        }
 
-    color: #1d2f4d;
-}
+
+        .login-btn {
+            width: 100%;
+            height: 54px;
+            border: none;
+            border-radius: 10px;
+            background: var(--navy);
+            color: white;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
 
+        .login-btn:hover {
+            background: var(--navy-light);
+            transform: translateY(-1px);
+        }
+
+
+        #loginMessage {
+            min-height: 20px;
+            margin-top: 16px;
+            text-align: center;
+            color: #c0392b;
+            font-size: 14px;
+        }
+
+
 
-/* =========================================
-   LOGIN SCREEN
-========================================= */
+        /* =========================================
+           COMMON FIXED NAVBAR
+        ========================================= */
 
-.login-screen {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 20px;
-}
+        .top-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 76px;
+            z-index: 9999;
 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-/* =========================================
-   LOGIN CARD
-========================================= */
+            padding: 0 32px;
 
-.login-card {
-    width: 100%;
-    max-width: 420px;
-    background: #ffffff;
-    padding: 42px;
-    border-radius: 22px;
-    border: 1px solid #e6e9ee;
+            background:
+                rgba(29, 47, 77, 0.98);
 
-    box-shadow:
-        0 25px 70px rgba(29, 47, 77, 0.12);
-}
+            box-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.12);
+        }
 
 
-/* =========================================
-   BRAND
-========================================= */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 0;
+        }
 
-.login-brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-}
 
-.login-logo {
-    width: 82px;
-    height: 82px;
+        .navbar-logo {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            background: white;
+            border-radius: 9px;
+            padding: 4px;
 
-    background: #ffffff;
-    border: 1px solid #e2e6eb;
-    border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    overflow: hidden;
+            overflow: hidden;
+        }
 
-    box-shadow:
-        0 8px 25px rgba(29, 47, 77, 0.10);
-}
 
-.login-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
+        .navbar-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
 
-/* Hide duplicate text branding */
+        .navbar-text {
+            min-width: 0;
+        }
 
-.brand-text {
-    display: none;
-}
 
+        .navbar-text span {
+            display: block;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 3px;
+        }
 
-/* =========================================
-   LOGIN HEADING
-========================================= */
 
-.login-heading {
-    text-align: center;
-}
+        .navbar-text strong {
+            display: block;
+            color: white;
+            font-size: 17px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
-.admin-label {
-    display: inline-block;
 
-    color: #b18428;
+        .navbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
 
-    font-size: 11px;
-    font-weight: 700;
 
-    letter-spacing: 1.5px;
+        .back-btn,
+        .logout-btn {
+            height: 42px;
 
-    margin-bottom: 10px;
-}
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
 
-.login-heading h1 {
-    font-size: 30px;
-    font-weight: 700;
+            border-radius: 9px;
 
-    letter-spacing: -0.5px;
+            padding: 0 17px;
 
-    color: #1d2f4d;
+            font-size: 14px;
+            font-weight: 700;
 
-    margin-bottom: 8px;
-}
+            cursor: pointer;
 
-.login-subtitle {
-    color: #7b8594;
+            white-space: nowrap;
+        }
 
-    font-size: 15px;
-    line-height: 1.5;
-}
 
+        .back-btn {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: transparent;
+            color: white;
+        }
 
-/* =========================================
-   DIVIDER
-========================================= */
 
-.login-divider {
-    height: 1px;
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.10);
+        }
 
-    background: #e7eaf0;
 
-    margin: 28px 0;
-}
+        .logout-btn {
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: white;
+            color: var(--navy);
 
+            min-width: 92px;
+        }
 
-/* =========================================
-   LOGIN FORM
-========================================= */
 
-.login-card label {
-    display: block;
+        .logout-btn:hover {
+            background: #f1f3f6;
+        }
 
-    margin-bottom: 8px;
 
-    font-size: 13px;
-    font-weight: 700;
 
-    color: #34445e;
-}
+        /* =========================================
+           MAIN APP
+        ========================================= */
 
-.login-card input {
-    width: 100%;
-    height: 50px;
+        .app-screen {
+            display: none;
+            min-height: 100vh;
+        }
 
-    margin-bottom: 20px;
 
-    padding: 0 15px;
+        .app-content {
+            width: 100%;
+            max-width: 1150px;
+            margin: 0 auto;
+            padding:
+                116px 25px 60px;
+        }
 
-    border: 1px solid #d9dee6;
-    border-radius: 10px;
 
-    background: #ffffff;
+        .page-header {
+            margin-bottom: 32px;
+        }
 
-    color: #1d2f4d;
 
-    font-size: 15px;
+        .page-header h1 {
+            font-size: 32px;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
 
-    outline: none;
 
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
+        .page-header p {
+            color: var(--muted);
+            font-size: 15px;
+        }
 
-.login-card input:focus {
-    border-color: #b18428;
 
-    box-shadow:
-        0 0 0 4px rgba(177, 132, 40, 0.10);
-}
 
-.login-card input::placeholder {
-    color: #9aa4b2;
-}
+        /* =========================================
+           PROJECTS
+        ========================================= */
 
+        .projects-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
 
-/* =========================================
-   LOGIN BUTTON
-========================================= */
 
-.login-btn {
-    width: 100%;
-    height: 52px;
+        .project-card {
+            width: 100%;
+            text-align: left;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+            border: 1px solid var(--border);
+            background: white;
 
-    border: none;
-    border-radius: 10px;
+            padding: 28px;
+            border-radius: 18px;
 
-    background: #1d2f4d;
+            cursor: pointer;
 
-    color: #ffffff;
+            box-shadow:
+                0 8px 25px rgba(29, 47, 77, 0.05);
 
-    font-size: 15px;
-    font-weight: 700;
+            transition: 0.2s ease;
+        }
 
-    cursor: pointer;
 
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
-}
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 15px 35px rgba(29, 47, 77, 0.10);
+            border-color:
+                rgba(177, 132, 40, 0.40);
+        }
 
-.login-btn:hover {
-    background: #273d61;
 
-    transform: translateY(-1px);
 
-    box-shadow:
-        0 8px 20px rgba(29, 47, 77, 0.18);
-}
+        .project-card h2 {
+            color: var(--navy);
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
 
-.login-btn:active {
-    transform: translateY(0);
-}
 
-.login-arrow {
-    font-size: 18px;
-}
+        .project-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
 
-/* =========================================
-   LOGIN MESSAGE
-========================================= */
+        .project-card-footer {
+            margin-top: 24px;
 
-#loginMessage {
-    min-height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-    margin-top: 16px;
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 700;
+        }
 
-    text-align: center;
 
-    color: #c0392b;
 
-    font-size: 14px;
-}
+        /* =========================================
+           PROJECT PAGE
+        ========================================= */
 
+        #keladGreensPage {
+            display: none;
+        }
 
-/* =========================================
-   ADMIN DASHBOARD
-========================================= */
 
-.admin-container {
-    width: 100%;
-    max-width: 1200px;
+        .project-page-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
 
-    margin: 0 auto;
+            margin-bottom: 28px;
+        }
 
-    padding: 30px 20px 50px;
-}
 
+        .project-page-header h1 {
+            font-size: 32px;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
 
-/* =========================================
-   ADMIN HEADER
-========================================= */
 
-.admin-header {
-    display: flex;
+        .project-page-header p {
+            color: var(--muted);
+            font-size: 15px;
+        }
 
-    align-items: center;
-    justify-content: space-between;
 
-    gap: 25px;
 
-    padding: 24px 30px;
+        /* =========================================
+           PLOTS
+        ========================================= */
 
-    margin-bottom: 28px;
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--muted);
+            font-size: 17px;
+        }
 
-    background:
-        linear-gradient(
-            135deg,
-            #1d2f4d,
-            #273d61
-        );
 
-    color: #ffffff;
+        .plot-grid {
+            display: grid;
 
-    border-radius: 18px;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
 
-    box-shadow:
-        0 15px 35px rgba(29, 47, 77, 0.15);
-}
+            gap: 20px;
 
-.admin-header-left {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
+            /*
+             Extra bottom space ensures Plot 14
+             never goes behind the fixed save bar.
+            */
+            padding-bottom: 120px;
+        }
 
-.admin-logo {
-    width: 64px;
-    height: 64px;
 
-    flex-shrink: 0;
+        .plot-card {
+            background: white;
+            border: 1px solid var(--border);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            padding: 22px;
+            border-radius: 16px;
 
-    background: #ffffff;
+            box-shadow:
+                0 8px 25px rgba(29, 47, 77, 0.05);
 
-    border-radius: 12px;
+            transition: 0.2s ease;
+        }
 
-    overflow: hidden;
-}
 
-.admin-logo img {
-    width: 100%;
-    height: 100%;
+        .plot-card:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 14px 30px rgba(29, 47, 77, 0.09);
+        }
 
-    object-fit: contain;
 
-    display: block;
-}
+        .plot-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
 
-.admin-title .admin-label {
-    color: #d4b05c;
 
-    margin-bottom: 5px;
+        .plot-number {
+            width: 52px;
+            height: 52px;
 
-    font-size: 10px;
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-.admin-title h1 {
-    font-size: 28px;
+            border-radius: 14px;
 
-    font-weight: 700;
+            background: var(--navy);
+            color: white;
 
-    margin-bottom: 5px;
-}
+            font-size: 17px;
+            font-weight: 700;
+        }
 
-.admin-title p {
-    color: rgba(255, 255, 255, 0.70);
 
-    font-size: 14px;
-}
+        .plot-details {
+            margin-bottom: 20px;
+        }
 
 
-/* =========================================
-   LOGOUT BUTTON
-========================================= */
+        .plot-details h3 {
+            color: var(--gold);
+            font-size: 22px;
+            margin-bottom: 7px;
+        }
 
-.logout-btn {
-    flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    gap: 8px;
+        .plot-details p {
+            color: var(--muted);
+            font-size: 14px;
+        }
 
-    padding: 11px 18px;
 
-    border:
-        1px solid rgba(255, 255, 255, 0.25);
+        .plot-card select {
+            width: 100%;
+            height: 50px;
 
-    border-radius: 9px;
+            padding: 0 14px;
 
-    background:
-        rgba(255, 255, 255, 0.08);
+            border: 1px solid #dce1e8;
+            border-radius: 9px;
 
-    color: #ffffff;
+            background: white;
+            color: var(--navy);
 
-    font-size: 14px;
-    font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            outline: none;
+        }
 
-    cursor: pointer;
 
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
-}
+        .plot-card select:focus {
+            border-color: var(--gold);
+            box-shadow:
+                0 0 0 3px rgba(177, 132, 40, 0.10);
+        }
 
-.logout-btn:hover {
-    background: #ffffff;
 
-    color: #1d2f4d;
-}
 
+        /* =========================================
+           FIXED SAVE BAR
+        ========================================= */
 
-/* =========================================
-   PLOT GRID
-========================================= */
+        .save-bar {
+            position: fixed;
 
-.plot-grid {
-    display: grid;
+            left: 0;
+            right: 0;
+            bottom: 0;
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+            z-index: 9998;
 
-    gap: 20px;
-}
+            display: none;
 
+            background:
+                rgba(255, 255, 255, 0.96);
 
-/* =========================================
-   PLOT CARD
-========================================= */
+            border-top:
+                1px solid #e1e5eb;
 
-.plot-card {
-    background: #ffffff;
+            box-shadow:
+                0 -8px 25px rgba(29, 47, 77, 0.08);
 
-    padding: 22px;
+            padding: 14px 25px;
+        }
 
-    border:
-        1px solid #e7eaf0;
 
-    border-radius: 16px;
+        .save-bar-inner {
+            width: 100%;
+            max-width: 1150px;
+            margin: 0 auto;
 
-    box-shadow:
-        0 8px 25px rgba(29, 47, 77, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
 
-.plot-card:hover {
-    transform: translateY(-3px);
+        .save-info {
+            color: var(--muted);
+            font-size: 14px;
+        }
 
-    box-shadow:
-        0 15px 35px rgba(29, 47, 77, 0.10);
-}
 
-.plot-card-top {
-    display: flex;
+        .save-all-btn {
+            min-width: 190px;
+            height: 50px;
 
-    align-items: center;
-    justify-content: space-between;
+            border: none;
+            border-radius: 10px;
 
-    margin-bottom: 18px;
-}
+            background: var(--gold);
+            color: white;
 
-.plot-number {
-    width: 52px;
-    height: 52px;
+            font-size: 15px;
+            font-weight: 700;
 
-    display: flex;
+            cursor: pointer;
 
-    align-items: center;
-    justify-content: center;
+            transition: 0.2s ease;
+        }
 
-    border-radius: 14px;
 
-    background: #1d2f4d;
+        .save-all-btn:hover {
+            background: var(--gold-dark);
+            transform: translateY(-1px);
+        }
 
-    color: #ffffff;
 
-    font-size: 17px;
-    font-weight: 700;
-}
+        .save-all-btn:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+        }
 
-.plot-details {
-    margin-bottom: 20px;
-}
 
-.plot-details h3 {
-    color: #b18428;
 
-    font-size: 22px;
-    font-weight: 700;
+        /* =========================================
+           MESSAGE
+        ========================================= */
 
-    margin-bottom: 7px;
-}
+        .message {
+            position: fixed;
+            right: 25px;
+            bottom: 85px;
 
-.plot-details p {
-    color: #7b8594;
+            z-index: 10000;
 
-    font-size: 14px;
-}
+            display: none;
 
+            padding: 15px 22px;
 
-/* =========================================
-   SELECT
-========================================= */
+            background: var(--navy);
+            color: white;
 
-select {
-    width: 100%;
-    height: 48px;
+            border-radius: 10px;
 
-    padding: 0 14px;
+            font-size: 14px;
 
-    border:
-        1px solid #dce1e8;
+            box-shadow:
+                0 12px 30px rgba(29, 47, 77, 0.20);
+        }
 
-    border-radius: 9px;
 
-    background: #ffffff;
 
-    color: #1d2f4d;
+        /* =========================================
+           TABLET
+        ========================================= */
 
-    font-size: 15px;
+        @media (max-width: 900px) {
 
-    cursor: pointer;
+            .projects-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
 
-    outline: none;
-}
 
-select:focus {
-    border-color: #b18428;
+            .plot-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
 
-    box-shadow:
-        0 0 0 3px rgba(177, 132, 40, 0.10);
-}
+        }
 
 
-/* =========================================
-   SAVE BUTTON
-========================================= */
 
-.save-btn {
-    width: 100%;
-    height: 48px;
+        /* =========================================
+           MOBILE
+        ========================================= */
 
-    margin-top: 12px;
+        @media (max-width: 650px) {
 
-    border: none;
-    border-radius: 9px;
+            .login-screen {
+                padding: 20px 15px;
+            }
 
-    background: #b18428;
 
-    color: #ffffff;
+            .login-card {
+                padding: 32px 22px;
+                border-radius: 18px;
+            }
 
-    font-size: 14px;
-    font-weight: 700;
 
-    cursor: pointer;
+            .login-logo {
+                width: 78px;
+                height: 78px;
+            }
 
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-}
 
-.save-btn:hover {
-    background: #987021;
+            .login-card h1 {
+                font-size: 26px;
+            }
 
-    transform: translateY(-1px);
-}
 
-.save-btn:disabled {
-    opacity: 0.65;
+            .top-navbar {
+                height: 68px;
+                padding: 0 14px;
+                gap: 10px;
+            }
 
-    cursor: not-allowed;
 
-    transform: none;
-}
+            .navbar-brand {
+                gap: 9px;
+                flex: 1;
+                overflow: hidden;
+            }
 
 
-/* =========================================
-   LOADING
-========================================= */
+            .navbar-logo {
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+            }
 
-.loading {
-    padding: 70px 20px;
 
-    text-align: center;
+            .navbar-text span {
+                font-size: 9px;
+            }
 
-    color: #5f6b7c;
 
-    font-size: 17px;
-}
+            .navbar-text strong {
+                font-size: 13px;
+            }
 
 
-/* =========================================
-   MESSAGE
-========================================= */
+            .navbar-actions {
+                gap: 6px;
+            }
 
-.message {
-    position: fixed;
 
-    right: 25px;
-    bottom: 25px;
+            .back-btn,
+            .logout-btn {
+                height: 38px;
+                padding: 0 11px;
+                font-size: 12px;
+                min-width: auto;
+            }
 
-    z-index: 9999;
 
-    display: none;
+            .app-content {
+                padding:
+                    96px 15px 130px;
+            }
 
-    padding: 15px 22px;
 
-    background: #1d2f4d;
+            .page-header {
+                margin-bottom: 24px;
+            }
 
-    color: #ffffff;
 
-    border-radius: 10px;
+            .page-header h1,
+            .project-page-header h1 {
+                font-size: 26px;
+            }
 
-    font-size: 14px;
 
-    box-shadow:
-        0 12px 30px rgba(29, 47, 77, 0.20);
-}
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
 
 
-/* =========================================
-   TABLET
-========================================= */
+            .project-card {
+                padding: 23px;
+            }
 
-@media (max-width: 900px) {
 
-    .plot-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
+            .plot-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding-bottom: 140px;
+            }
 
-}
 
+            .plot-card {
+                padding: 20px;
+            }
 
-/* =========================================
-   MOBILE
-========================================= */
 
-@media (max-width: 600px) {
+            .save-bar {
+                padding: 10px 14px;
+            }
 
-    .login-screen {
-        padding: 20px 15px;
-    }
 
-    .login-card {
-        padding: 32px 24px;
+            .save-bar-inner {
+                gap: 10px;
+            }
 
-        border-radius: 18px;
-    }
 
-    .login-logo {
-        width: 76px;
-        height: 76px;
-    }
+            .save-info {
+                display: none;
+            }
 
-    .login-heading h1 {
-        font-size: 26px;
-    }
 
-    .admin-container {
-        padding: 15px 14px 35px;
-    }
+            .save-all-btn {
+                width: 100%;
+                height: 52px;
+                font-size: 15px;
+            }
 
-    .admin-header {
-        align-items: flex-start;
 
-        padding: 20px;
+            .message {
+                left: 15px;
+                right: 15px;
+                bottom: 78px;
+                text-align: center;
+            }
 
-        border-radius: 15px;
-    }
+        }
 
-    .admin-header-left {
-        gap: 12px;
-    }
 
-    .admin-logo {
-        width: 52px;
-        height: 52px;
-    }
+        @media (max-width: 390px) {
 
-    .admin-title h1 {
-        font-size: 21px;
-    }
+            .navbar-text strong {
+                font-size: 12px;
+            }
 
-    .admin-title p {
-        font-size: 12px;
-        line-height: 1.4;
-    }
 
-    .logout-btn {
-        padding: 9px 11px;
+            .navbar-text span {
+                display: none;
+            }
 
-        font-size: 0;
-    }
 
-    .logout-btn span:last-child {
-        font-size: 18px;
-    }
+            .back-btn {
+                padding: 0 9px;
+                font-size: 11px;
+            }
 
-    .plot-grid {
-        grid-template-columns: 1fr;
 
-        gap: 15px;
-    }
+            .logout-btn {
+                padding: 0 10px;
+                font-size: 12px;
+            }
 
-    .plot-card {
-        padding: 20px;
-
-        border-radius: 14px;
-    }
-
-    select,
-    .save-btn {
-        height: 50px;
-
-        font-size: 16px;
-    }
-
-    .message {
-        left: 15px;
-        right: 15px;
-
-        bottom: 15px;
-
-        text-align: center;
-    }
-
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 380px) {
-
-    .login-card {
-        padding: 28px 18px;
-    }
-
-    .admin-title h1 {
-        font-size: 19px;
-    }
-
-}
-
-</style>
+        }
+    </style>
 
 </head>
 
 
 <body>
 
+
+    <!-- =====================================
+         LOGIN SCREEN
+    ====================================== -->
+
     <div id="loginScreen" class="login-screen">
 
-    <div class="login-card">
-
-        <div class="login-brand">
+        <div class="login-card">
 
             <div class="login-logo">
-                <img 
-                    src="img/index/lokdhamtm.png"
-                    alt="Lokdham Developers"
-                >
+
+                <!-- CHANGE IMAGE PATH IF REQUIRED -->
+
+                <img src="img/index/lokdhamtm.png" alt="Lokdham Developers">
+
             </div>
 
-            <div class="brand-text">
-                <span>LOKDHAM</span>
-                <small>DEVELOPERS</small>
-            </div>
 
-        </div>
+            <h1>
+                Lokdham Developers
+            </h1>
 
 
-        <div class="login-heading">
-
-            <span class="admin-label">
-                SECURE ADMIN ACCESS
-            </span>
-
-            <h1>Kelad Greens</h1>
-
-            <p class="login-subtitle">
-                Sign in to manage plot availability
+            <p>
+                Project Manager Dashboard
             </p>
 
+
+            <hr>
+
+
+            <form id="loginForm">
+                <label>Username</label>
+
+                <input type="text" id="username" placeholder="Enter your username" required>
+
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+
+                <button type="submit" class="login-btn">
+                    Login to Dashboard
+                </button>
+
+            </form>
+
+
+            <div id="loginMessage"></div>
+
         </div>
-
-
-        <div class="login-divider"></div>
-
-
-        <form id="loginForm">
-
-            <label for="email">
-                Email Address
-            </label>
-
-            <input 
-                type="email"
-                id="email"
-                placeholder="Enter your email"
-                required
-            >
-
-
-            <label for="password">
-                Password
-            </label>
-
-            <input 
-                type="password"
-                id="password"
-                placeholder="Enter your password"
-                required
-            >
-
-
-            <button 
-                type="submit"
-                class="login-btn"
-            >
-                <span>Login to Dashboard</span>
-                <span class="login-arrow">→</span>
-            </button>
-
-        </form>
-
-
-        <div id="loginMessage"></div>
 
     </div>
 
-</div>
 
 
+    <!-- =====================================
+         COMMON APP
+    ====================================== -->
 
-<div 
-    class="admin-container"
-    id="adminDashboard"
-    style="display: none;"
->
+    <div id="appScreen" class="app-screen">
 
-    <div class="admin-header">
 
-        <div class="admin-header-left">
+        <!-- COMMON FIXED NAVBAR -->
 
-            <div class="admin-logo">
+        <nav class="top-navbar">
 
-                <img 
-                    src="img/index/lokdhamtm.png"
-                    alt="Lokdham Developers"
-                >
+
+            <div class="navbar-brand">
+
+                <div class="navbar-logo">
+
+                    <!-- CHANGE IMAGE PATH IF REQUIRED -->
+
+                    <img src="img/index/lokdhamtm.png" alt="Lokdham Developers">
+
+                </div>
+
+
+                <div class="navbar-text">
+
+                    <span>
+                        LOKDHAM DEVELOPERS
+                    </span>
+
+                    <strong id="navbarTitle">
+                        All Projects
+                    </strong>
+
+                </div>
 
             </div>
 
 
-            <div class="admin-title">
+            <div class="navbar-actions">
 
-                <span class="admin-label">
-                    LOKDHAM DEVELOPERS
-                </span>
+                <button id="backBtn" class="back-btn" style="display: none;">
+                    ← Projects
+                </button>
 
-                <h1>
-                    Kelad Greens
-                </h1>
 
-                <p>
-                    Manage plot availability and booking status
-                </p>
+                <button id="logoutBtn" class="logout-btn">
+                    Logout
+                </button>
 
             </div>
 
-        </div>
+        </nav>
 
 
-        <button 
-            id="logoutBtn"
-            class="logout-btn"
-        >
-            <span>Logout</span>
-            <span>↗</span>
-        </button>
 
-    </div>
+        <main class="app-content">
 
 
+            <!-- =====================================
+                 ALL PROJECTS PAGE
+            ====================================== -->
 
-    <div 
-        id="loading"
-        class="loading"
-    >
-        Loading plots...
-    </div>
+            <section id="projectsPage">
 
+                <div class="page-header">
 
+                    <h1>
+                        All Projects
+                    </h1>
 
-    <div 
-        id="plotGrid"
-        class="plot-grid"
-    >
-    </div>
+                    <p>
+                        Select a project to manage its availability and booking status.
+                    </p>
 
+                </div>
 
-</div>
 
+                <div id="projectsGrid" class="projects-grid">
 
 
-<div 
-    id="message"
-    class="message"
->
-</div>
+                    <!-- KELAD GREENS -->
 
-  <script type="module">
+                    <button class="project-card" data-project="kelad-greens">
 
-    import { createClient }
-    from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+                        <h2>
+                            Kelad Greens
+                        </h2>
 
 
-    const supabaseUrl =
-        "https://wmtxbkfbipntdaoeuetl.supabase.co";
+                        <p>
+                            Manage plot availability, bookings and sold-out status.
+                        </p>
 
 
-    const supabaseKey =
-        "sb_publishable_IMqCNjOib4YxKhM0RL93iA_b6IAEOF3";
+                        <div class="project-card-footer">
 
+                            <span>
+                                Manage Project
+                            </span>
 
-    const supabase =
-        createClient(
-            supabaseUrl,
-            supabaseKey
-        );
+                            <span>
+                                →
+                            </span>
 
+                        </div>
 
-    const plotGrid =
-        document.getElementById(
-            "plotGrid"
-        );
+                    </button>
 
 
-    const loading =
-        document.getElementById(
-            "loading"
-        );
+                    <!--
+                    FUTURE PROJECT EXAMPLE
 
+                    <button
+                        class="project-card"
+                        data-project="project-2"
+                    >
 
-    const message =
-        document.getElementById(
-            "message"
-        );
+                        <div class="project-card-icon">
+                            P2
+                        </div>
 
+                        <h2>
+                            Project 2
+                        </h2>
 
-    const loginScreen =
-        document.getElementById(
-            "loginScreen"
-        );
+                        <p>
+                            Project description.
+                        </p>
 
+                        <div class="project-card-footer">
 
-    const adminDashboard =
-        document.getElementById(
-            "adminDashboard"
-        );
+                            <span>
+                                Manage Project
+                            </span>
 
+                            <span>
+                                →
+                            </span>
 
-    const loginForm =
-        document.getElementById(
-            "loginForm"
-        );
+                        </div>
 
+                    </button>
+                    -->
 
-    const loginMessage =
-        document.getElementById(
-            "loginMessage"
-        );
+                </div>
 
+            </section>
 
-    const logoutBtn =
-        document.getElementById(
-            "logoutBtn"
-        );
 
 
+            <!-- =====================================
+                 KELAD GREENS PAGE
+            ====================================== -->
 
-    /* =====================================
-       MESSAGE
-    ===================================== */
+            <section id="keladGreensPage">
 
-    function showMessage(text) {
+                <div class="project-page-header">
 
-        message.textContent = text;
+                    <div>
 
-        message.style.display =
-            "block";
+                        <h1>
+                            Kelad Greens
+                        </h1>
 
-
-        setTimeout(function () {
-
-            message.style.display =
-                "none";
-
-        }, 3000);
-
-    }
-
-
-
-    /* =====================================
-       LOAD PLOTS
-    ===================================== */
-
-    async function loadPlots() {
-
-
-        plotGrid.innerHTML = "";
-
-
-        loading.style.display =
-            "block";
-
-
-        const {
-            data,
-            error
-        }
-        =
-        await supabase
-            .from(
-                "kelad_greens_plots"
-            )
-            .select("*")
-            .order(
-                "plot_number",
-                {
-                    ascending: true
-                }
-            );
-
-
-        loading.style.display =
-            "none";
-
-
-        if (error) {
-
-            console.error(error);
-
-
-            plotGrid.innerHTML =
-                "<p>Error loading plots.</p>";
-
-
-            showMessage(
-                "Error loading plots"
-            );
-
-
-            return;
-
-        }
-
-
-
-        if (!data || data.length === 0) {
-
-            plotGrid.innerHTML =
-                "<p>No plots found.</p>";
-
-            return;
-
-        }
-
-
-
-        data.forEach(function (plot) {
-
-
-            const card =
-                document.createElement(
-                    "div"
-                );
-
-
-            card.className =
-                "plot-card";
-
-
-            card.innerHTML = `
-
-                <div class="plot-card-top">
-
-                    <div class="plot-number">
-
-                        ${plot.plot_number}
+                        <p>
+                            Manage plot availability and booking status.
+                        </p>
 
                     </div>
 
                 </div>
 
 
-                <div class="plot-details">
-
-                    <h3>
-
-                        ${plot.plot_size}
-
-                    </h3>
-
-
-                    <p>
-
-                        Road:
-                        ${plot.road}
-
-                    </p>
-
+                <div id="loading" class="loading">
+                    Loading plots...
                 </div>
 
 
-                <select
-                    id="status-${plot.id}"
-                >
+                <div id="plotGrid" class="plot-grid">
+                </div>
 
-                    <option
-                        value="available"
-                        ${plot.status === "available"
-                            ? "selected"
-                            : ""}
-                    >
-
-                        Available
-
-                    </option>
+            </section>
 
 
-                    <option
-                        value="booked"
-                        ${plot.status === "booked"
-                            ? "selected"
-                            : ""}
-                    >
-
-                        Booked
-
-                    </option>
+        </main>
 
 
-                    <option
-                        value="soldout"
-                        ${plot.status === "soldout"
-                            ? "selected"
-                            : ""}
-                    >
 
-                        Sold Out
+        <!-- FIXED SAVE BAR -->
 
-                    </option>
+        <div id="saveBar" class="save-bar">
 
-                </select>
+            <div class="save-bar-inner">
+
+                <div class="save-info">
+                    Review your changes and save them together.
+                </div>
 
 
-                <button
-                    class="save-btn"
-                    data-id="${plot.id}"
-                >
-
-                    Save Status
-
+                <button id="saveAllBtn" class="save-all-btn">
+                    Save All Changes
                 </button>
 
-            `;
+            </div>
+
+        </div>
 
 
-            plotGrid.appendChild(
-                card
+    </div>
+
+
+
+    <!-- MESSAGE -->
+
+    <div id="message" class="message">
+    </div>
+
+
+
+    <script type="module">
+
+
+        /* =====================================
+           SUPABASE
+        ====================================== */
+
+        import { createClient }
+            from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+
+        const supabaseUrl =
+            "https://wmtxbkfbipntdaoeuetl.supabase.co";
+
+
+        const supabaseKey =
+            "sb_publishable_IMqCNjOib4YxKhM0RL93iA_b6IAEOF3";
+
+
+        const supabase =
+            createClient(
+                supabaseUrl,
+                supabaseKey
             );
-
-        });
 
 
 
         /* =====================================
-           SAVE STATUS
-        ===================================== */
+           ELEMENTS
+        ====================================== */
+
+        const loginScreen =
+            document.getElementById(
+                "loginScreen"
+            );
+
+
+        const appScreen =
+            document.getElementById(
+                "appScreen"
+            );
+
+
+        const loginForm =
+            document.getElementById(
+                "loginForm"
+            );
+
+
+        const loginMessage =
+            document.getElementById(
+                "loginMessage"
+            );
+
+
+        const logoutBtn =
+            document.getElementById(
+                "logoutBtn"
+            );
+
+
+        const backBtn =
+            document.getElementById(
+                "backBtn"
+            );
+
+
+        const navbarTitle =
+            document.getElementById(
+                "navbarTitle"
+            );
+
+
+        const projectsPage =
+            document.getElementById(
+                "projectsPage"
+            );
+
+
+        const keladGreensPage =
+            document.getElementById(
+                "keladGreensPage"
+            );
+
+
+        const plotGrid =
+            document.getElementById(
+                "plotGrid"
+            );
+
+
+        const loading =
+            document.getElementById(
+                "loading"
+            );
+
+
+        const saveBar =
+            document.getElementById(
+                "saveBar"
+            );
+
+
+        const saveAllBtn =
+            document.getElementById(
+                "saveAllBtn"
+            );
+
+
+        const message =
+            document.getElementById(
+                "message"
+            );
+
+
+
+        /* =====================================
+           STORE ORIGINAL STATUS
+
+           This lets us save only changed plots.
+        ====================================== */
+
+        let originalStatuses =
+            {};
+
+
+
+        /* =====================================
+           MESSAGE
+        ====================================== */
+
+        function showMessage(text) {
+
+            message.textContent =
+                text;
+
+
+            message.style.display =
+                "block";
+
+
+            setTimeout(
+                function () {
+
+                    message.style.display =
+                        "none";
+
+                },
+                3000
+            );
+
+        }
+
+
+
+        /* =====================================
+           SHOW ALL PROJECTS
+        ====================================== */
+
+        function showProjects() {
+
+            projectsPage.style.display =
+                "block";
+
+
+            keladGreensPage.style.display =
+                "none";
+
+
+            backBtn.style.display =
+                "none";
+
+
+            saveBar.style.display =
+                "none";
+
+
+            navbarTitle.textContent =
+                "All Projects";
+
+
+            window.scrollTo(
+                0,
+                0
+            );
+
+        }
+
+
+
+        /* =====================================
+           SHOW KELAD GREENS
+        ====================================== */
+
+        async function showKeladGreens() {
+
+            projectsPage.style.display =
+                "none";
+
+
+            keladGreensPage.style.display =
+                "block";
+
+
+            backBtn.style.display =
+                "inline-flex";
+
+
+            saveBar.style.display =
+                "block";
+
+
+            navbarTitle.textContent =
+                "Kelad Greens";
+
+
+            window.scrollTo(
+                0,
+                0
+            );
+
+
+            await loadPlots();
+
+        }
+
+
+
+        /* =====================================
+           PROJECT CLICK
+        ====================================== */
 
         document
             .querySelectorAll(
-                ".save-btn"
+                ".project-card"
             )
-            .forEach(function (button) {
+            .forEach(
+                function (card) {
+
+                    card.addEventListener(
+                        "click",
+                        function () {
+
+                            const project =
+                                this.dataset.project;
 
 
-                button.addEventListener(
-                    "click",
-                    async function () {
+                            if (
+                                project ===
+                                "kelad-greens"
+                            ) {
 
+                                showKeladGreens();
 
-                        const id =
-                            this.dataset.id;
+                            }
 
+                            else {
 
-                        const select =
-                            document.getElementById(
-                                `status-${id}`
-                            );
+                                showMessage(
+                                    "This project will be available soon."
+                                );
 
-
-                        const newStatus =
-                            select.value;
-
-
-                        this.textContent =
-                            "Saving...";
-
-
-                        this.disabled =
-                            true;
-
-
-                        const {
-                            error
-                        }
-                        =
-                        await supabase
-                            .from(
-                                "kelad_greens_plots"
-                            )
-                            .update({
-                                status:
-                                    newStatus
-                            })
-                            .eq(
-                                "id",
-                                id
-                            );
-
-
-                        this.textContent =
-                            "Save Status";
-
-
-                        this.disabled =
-                            false;
-
-
-                        if (error) {
-
-                            console.error(
-                                error
-                            );
-
-
-                            showMessage(
-                                "Error updating plot"
-                            );
-
-
-                            return;
+                            }
 
                         }
+                    );
 
-
-                        showMessage(
-                            "Plot updated successfully!"
-                        );
-
-
-                    }
-                );
-
-
-            });
-
-
-    }
+                }
+            );
 
 
 
-    /* =====================================
-       LOGIN
-    ===================================== */
+        /* =====================================
+           BACK TO PROJECTS
+        ====================================== */
 
-    loginForm.addEventListener(
-        "submit",
-        async function (event) {
+        backBtn.addEventListener(
+            "click",
+            function () {
 
+                showProjects();
 
-            event.preventDefault();
-
-
-            const email =
-                document.getElementById(
-                    "email"
-                ).value;
+            }
+        );
 
 
-            const password =
-                document.getElementById(
-                    "password"
-                ).value;
+
+        /* =====================================
+           LOAD KELAD GREENS PLOTS
+        ====================================== */
+
+        async function loadPlots() {
 
 
-            loginMessage.textContent =
-                "Logging in...";
+            plotGrid.innerHTML =
+                "";
+
+
+            originalStatuses =
+                {};
+
+
+            loading.style.display =
+                "block";
 
 
             const {
                 data,
                 error
             }
-            =
-            await supabase
-                .auth
-                .signInWithPassword({
+                =
+                await supabase
 
-                    email:
-                        email,
+                    .from(
+                        "kelad_greens_plots"
+                    )
 
-                    password:
-                        password
+                    .select(
+                        "*"
+                    )
 
-                });
+                    .order(
+                        "plot_number",
+                        {
+                            ascending: true
+                        }
+                    );
+
+
+            loading.style.display =
+                "none";
 
 
             if (error) {
@@ -1343,8 +1513,8 @@ select:focus {
                 );
 
 
-                loginMessage.textContent =
-                    error.message;
+                plotGrid.innerHTML =
+                    "<p>Error loading plots.</p>";
 
 
                 return;
@@ -1352,114 +1522,512 @@ select:focus {
             }
 
 
-            loginMessage.textContent =
-                "";
+            if (
+                !data ||
+                data.length === 0
+            ) {
+
+                plotGrid.innerHTML =
+                    "<p>No plots found.</p>";
 
 
-            loginScreen.style.display =
-                "none";
+                return;
 
-
-            adminDashboard.style.display =
-                "block";
-
-
-            loadPlots();
-
-
-        }
-    );
-
-
-
-    /* =====================================
-       CHECK EXISTING LOGIN
-    ===================================== */
-
-    async function checkLogin() {
-
-
-        const {
-            data:
-            {
-                session
             }
+
+
+            data.forEach(
+                function (plot) {
+
+
+                    originalStatuses[
+                        plot.id
+                    ]
+                        =
+                        plot.status;
+
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    card.className =
+                        "plot-card";
+
+
+                    card.innerHTML =
+                        `
+
+                        <div class="plot-card-top">
+
+                            <div class="plot-number">
+
+                                ${plot.plot_number}
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="plot-details">
+
+                            <h3>
+
+                                ${plot.plot_size}
+
+                            </h3>
+
+
+                            <p>
+
+                                Road:
+                                ${plot.road}
+
+                            </p>
+
+                        </div>
+
+
+                        <select
+                            id="status-${plot.id}"
+                            data-id="${plot.id}"
+                        >
+
+                            <option
+                                value="available"
+                                ${plot.status === "available"
+                            ? "selected"
+                            : ""
+                        }
+                            >
+
+                                Available
+
+                            </option>
+
+
+                            <option
+                                value="booked"
+                                ${plot.status === "booked"
+                            ? "selected"
+                            : ""
+                        }
+                            >
+
+                                Booked
+
+                            </option>
+
+
+                            <option
+                                value="soldout"
+                                ${plot.status === "soldout"
+                            ? "selected"
+                            : ""
+                        }
+                            >
+
+                                Sold Out
+
+                            </option>
+
+                        </select>
+
+                    `;
+
+
+                    plotGrid.appendChild(
+                        card
+                    );
+
+                }
+            );
+
         }
-        =
-        await supabase
-            .auth
-            .getSession();
-
-
-        if (session) {
-
-
-            loginScreen.style.display =
-                "none";
-
-
-            adminDashboard.style.display =
-                "block";
-
-
-            loadPlots();
-
-
-        }
-        else {
-
-
-            loginScreen.style.display =
-                "flex";
-
-
-            adminDashboard.style.display =
-                "none";
-
-
-        }
-
-
-    }
 
 
 
-    /* =====================================
-       LOGOUT
-    ===================================== */
+        /* =====================================
+           SAVE ALL CHANGES
+        ====================================== */
 
-    logoutBtn.addEventListener(
-        "click",
-        async function () {
-
-
-            logoutBtn.disabled =
-                true;
+        saveAllBtn.addEventListener(
+            "click",
+            async function () {
 
 
-            logoutBtn.textContent =
-                "Logging out...";
+                const selects =
+                    document.querySelectorAll(
+                        "#plotGrid select"
+                    );
 
 
-            const {
-                error
-            }
-            =
-            await supabase
-                .auth
-                .signOut();
+                const changes =
+                    [];
 
 
-            if (error) {
+                selects.forEach(
+                    function (select) {
 
-                console.error(
-                    error
+
+                        const id =
+                            select.dataset.id;
+
+
+                        const newStatus =
+                            select.value;
+
+
+                        if (
+                            originalStatuses[id]
+                            !==
+                            newStatus
+                        ) {
+
+                            changes.push({
+                                id: id,
+                                status: newStatus
+                            });
+
+                        }
+
+                    }
+                );
+
+
+                if (
+                    changes.length === 0
+                ) {
+
+                    showMessage(
+                        "No changes to save."
+                    );
+
+
+                    return;
+
+                }
+
+
+                saveAllBtn.disabled =
+                    true;
+
+
+                saveAllBtn.textContent =
+                    "Saving...";
+
+
+                let hasError =
+                    false;
+
+
+                for (
+                    const change
+                    of
+                    changes
+                ) {
+
+
+                    const {
+                        error
+                    }
+                        =
+                        await supabase
+
+                            .from(
+                                "kelad_greens_plots"
+                            )
+
+                            .update({
+                                status:
+                                    change.status
+                            })
+
+                            .eq(
+                                "id",
+                                change.id
+                            );
+
+
+                    if (
+                        error
+                    ) {
+
+                        console.error(
+                            error
+                        );
+
+
+                        hasError =
+                            true;
+
+                    }
+
+                }
+
+
+                saveAllBtn.disabled =
+                    false;
+
+
+                saveAllBtn.textContent =
+                    "Save All Changes";
+
+
+                if (
+                    hasError
+                ) {
+
+                    showMessage(
+                        "Some changes could not be saved."
+                    );
+
+
+                    return;
+
+                }
+
+
+                changes.forEach(
+                    function (change) {
+
+                        originalStatuses[
+                            change.id
+                        ]
+                            =
+                            change.status;
+
+                    }
                 );
 
 
                 showMessage(
-                    "Error logging out"
+                    "All changes saved successfully!"
                 );
+
+            }
+        );
+
+
+
+        /* =====================================
+           LOGIN
+        ====================================== */
+
+        loginForm.addEventListener(
+            "submit",
+            async function (event) {
+
+
+                event.preventDefault();
+
+
+                const email =
+                    document.getElementById(
+                        "email"
+                    ).value;
+
+
+                const password =
+                    document.getElementById(
+                        "password"
+                    ).value;
+
+
+                loginMessage.textContent =
+                    "Logging in...";
+
+
+                const {
+                    error
+                }
+                    =
+                    await supabase
+
+                        .auth
+
+                        .signInWithPassword({
+
+                            email:
+                                email,
+
+                            password:
+                                password
+
+                        });
+
+
+                if (
+                    error
+                ) {
+
+                    console.error(
+                        error
+                    );
+
+
+                    loginMessage.textContent =
+                        error.message;
+
+
+                    return;
+
+                }
+
+
+                loginMessage.textContent =
+                    "";
+
+
+                loginScreen.style.display =
+                    "none";
+
+
+                appScreen.style.display =
+                    "block";
+
+
+                showProjects();
+
+            }
+        );
+
+
+
+        /* =====================================
+           CHECK EXISTING SESSION
+        ====================================== */
+
+        async function checkLogin() {
+
+
+            const {
+                data:
+                {
+                    session
+                }
+            }
+                =
+                await supabase
+
+                    .auth
+
+                    .getSession();
+
+
+            if (
+                session
+            ) {
+
+                loginScreen.style.display =
+                    "none";
+
+
+                appScreen.style.display =
+                    "block";
+
+
+                showProjects();
+
+            }
+
+            else {
+
+                loginScreen.style.display =
+                    "flex";
+
+
+                appScreen.style.display =
+                    "none";
+
+            }
+
+        }
+
+
+
+        /* =====================================
+           LOGOUT
+        ====================================== */
+
+        logoutBtn.addEventListener(
+            "click",
+            async function () {
+
+
+                logoutBtn.disabled =
+                    true;
+
+
+                logoutBtn.textContent =
+                    "Logging out...";
+
+
+                const {
+                    error
+                }
+                    =
+                    await supabase
+
+                        .auth
+
+                        .signOut();
+
+
+                if (
+                    error
+                ) {
+
+                    console.error(
+                        error
+                    );
+
+
+                    showMessage(
+                        "Error logging out."
+                    );
+
+
+                    logoutBtn.disabled =
+                        false;
+
+
+                    logoutBtn.textContent =
+                        "Logout";
+
+
+                    return;
+
+                }
+
+
+                plotGrid.innerHTML =
+                    "";
+
+
+                originalStatuses =
+                    {};
+
+
+                appScreen.style.display =
+                    "none";
+
+
+                saveBar.style.display =
+                    "none";
+
+
+                loginScreen.style.display =
+                    "flex";
+
+
+                loginForm.reset();
+
+
+                loginMessage.textContent =
+                    "";
 
 
                 logoutBtn.disabled =
@@ -1469,52 +2037,19 @@ select:focus {
                 logoutBtn.textContent =
                     "Logout";
 
-
-                return;
-
             }
-
-
-            plotGrid.innerHTML =
-                "";
-
-
-            adminDashboard.style.display =
-                "none";
-
-
-            loginScreen.style.display =
-                "flex";
-
-
-            loginForm.reset();
-
-
-            loginMessage.textContent =
-                "";
-
-
-            logoutBtn.disabled =
-                false;
-
-
-            logoutBtn.textContent =
-                "Logout";
-
-
-        }
-    );
+        );
 
 
 
-    /* =====================================
-       START
-    ===================================== */
+        /* =====================================
+           START
+        ====================================== */
 
-    checkLogin();
+        checkLogin();
 
 
-</script>
+    </script>
 
 
 </body>

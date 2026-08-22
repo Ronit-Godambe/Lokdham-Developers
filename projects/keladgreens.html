@@ -1456,7 +1456,85 @@
         </p>
 
     </footer>
+<script type="module">
 
+    import { createClient } from
+        "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+
+    const supabaseUrl = "https://wmtxbkfbipntdaoeuetl.supabase.co";
+
+    const supabaseKey = "sb_publishable_IMqCNjOib4YxKhM0RL93iA_b6IAEOF3";
+
+
+    const supabase = createClient(
+        supabaseUrl,
+        supabaseKey
+    );
+
+
+    async function loadPlotStatuses() {
+
+        const {
+            data,
+            error
+        } = await supabase
+            .from("kelad_greens_plots")
+            .select("plot_number, status");
+
+
+        if (error) {
+
+            console.error(
+                "Error loading plot statuses:",
+                error
+            );
+
+            return;
+        }
+
+
+        data.forEach(function (plot) {
+
+            const card = document.querySelector(
+                `.kg-plot-card[data-plot="${plot.plot_number}"]`
+            );
+
+
+            if (!card) return;
+
+
+            const statusElement =
+                card.querySelector(".plot-status");
+
+
+            if (!statusElement) return;
+
+
+            const statusText =
+                plot.status === "soldout"
+                    ? "Sold Out"
+                    : plot.status.charAt(0).toUpperCase() +
+                      plot.status.slice(1);
+
+
+            statusElement.className =
+                "plot-status status-" + plot.status;
+
+
+            statusElement.innerHTML = `
+                <span class="status-dot"></span>
+                ${statusText}
+            `;
+
+        });
+
+    }
+
+
+    loadPlotStatuses();
+
+</script>
     <script>
 
         const menuToggle = document.getElementById("menu-toggle");

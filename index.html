@@ -16,7 +16,8 @@
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://www.lokdham.com/">
-
+    <link rel="stylesheet" href="/Common/navbar/cnavbar.css">
+    <link rel="stylesheet" href="/Common/navbar/cnavbarmob.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/stylemob.css">
     <link rel="shortcut icon" href="favicon/faviconbig.png" type="image/png">
@@ -183,21 +184,6 @@
 
     </main>
 
-    <!-- MOBILE CONTACT BAR -->
-
-    <div class="mobile-contact-buttons">
-
-        <a href="tel:+918007901111" class="mobile-call-btn">
-            <i class="fa-solid fa-phone"></i>
-            <span>Call Now</span>
-        </a>
-
-        <a href="https://wa.me/918007901111" class="mobile-whatsapp-btn" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp</span>
-        </a>
-    </div>
-
 
     <!-- ================================
      ENQUIRY POPUP
@@ -342,143 +328,161 @@
                     </p>
 
                 </form>
-                
+
             </div>
 
         </div>
     </section>
 
+    <!-- MOBILE CONTACT BAR -->
+
+    <div class="mobile-contact-buttons">
+
+        <a href="tel:+918007901111" class="mobile-call-btn">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+
+        <a href="https://wa.me/918007901111" class="mobile-whatsapp-btn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+
+
+
+
     <div id="footer-container"></div>
 
     <script src="Common/footer/cfooter.js"></script>
 
-<script>
+    <script>
 
-    function setupMobileContactBar() {
+        function setupMobileContactBar() {
 
-        const contactBar =
-            document.querySelector(".mobile-contact-buttons");
+            const contactBar =
+                document.querySelector(".mobile-contact-buttons");
 
-        const footer =
-            document.querySelector(".site-footer");
+            const footer =
+                document.querySelector(".site-footer");
 
-        if (!contactBar || !footer) {
-            return;
-        }
-
-
-        function updateContactBar() {
-
-            /* Desktop */
-
-            if (window.innerWidth > 768) {
-
-                contactBar.style.position = "";
-                contactBar.style.bottom = "";
-                contactBar.style.left = "";
-                contactBar.style.width = "";
-
+            if (!contactBar || !footer) {
                 return;
             }
 
 
-            const footerRect =
-                footer.getBoundingClientRect();
+            function updateContactBar() {
 
-            const barHeight =
-                contactBar.offsetHeight;
+                /* Desktop */
 
-            const viewportHeight =
-                window.innerHeight;
+                if (window.innerWidth > 768) {
 
+                    contactBar.style.position = "";
+                    contactBar.style.bottom = "";
+                    contactBar.style.left = "";
+                    contactBar.style.width = "";
 
-            /*
-                If footer reaches the
-                contact button area,
-                push the bar upward
-            */
-
-            const overlap =
-                viewportHeight - footerRect.top;
+                    return;
+                }
 
 
-            if (overlap > 0) {
+                const footerRect =
+                    footer.getBoundingClientRect();
 
-                contactBar.style.position =
-                    "fixed";
+                const barHeight =
+                    contactBar.offsetHeight;
 
-                contactBar.style.left =
-                    "0";
+                const viewportHeight =
+                    window.innerHeight;
 
-                contactBar.style.bottom =
-                    Math.max(
-                        0,
-                        overlap
-                    ) + "px";
 
-                contactBar.style.width =
-                    "100%";
+                /*
+                    If footer reaches the
+                    contact button area,
+                    push the bar upward
+                */
+
+                const overlap =
+                    viewportHeight - footerRect.top;
+
+
+                if (overlap > 0) {
+
+                    contactBar.style.position =
+                        "fixed";
+
+                    contactBar.style.left =
+                        "0";
+
+                    contactBar.style.bottom =
+                        Math.max(
+                            0,
+                            overlap
+                        ) + "px";
+
+                    contactBar.style.width =
+                        "100%";
+
+                }
+
+                else {
+
+                    contactBar.style.position =
+                        "fixed";
+
+                    contactBar.style.left =
+                        "0";
+
+                    contactBar.style.bottom =
+                        "0";
+
+                    contactBar.style.width =
+                        "100%";
+
+                }
 
             }
 
-            else {
 
-                contactBar.style.position =
-                    "fixed";
+            window.addEventListener(
+                "scroll",
+                updateContactBar
+            );
 
-                contactBar.style.left =
-                    "0";
 
-                contactBar.style.bottom =
-                    "0";
+            window.addEventListener(
+                "resize",
+                updateContactBar
+            );
 
-                contactBar.style.width =
-                    "100%";
 
-            }
+            updateContactBar();
 
         }
 
 
-        window.addEventListener(
-            "scroll",
-            updateContactBar
-        );
+        /*
+            Footer is loaded dynamically,
+            so wait until it exists.
+        */
+
+        const footerCheck = setInterval(function () {
+
+            const footer =
+                document.querySelector(".site-footer");
 
 
-        window.addEventListener(
-            "resize",
-            updateContactBar
-        );
+            if (footer) {
 
+                clearInterval(footerCheck);
 
-        updateContactBar();
+                setupMobileContactBar();
 
-    }
+            }
 
+        }, 100);
 
-    /*
-        Footer is loaded dynamically,
-        so wait until it exists.
-    */
-
-    const footerCheck = setInterval(function () {
-
-        const footer =
-            document.querySelector(".site-footer");
-
-
-        if (footer) {
-
-            clearInterval(footerCheck);
-
-            setupMobileContactBar();
-
-        }
-
-    }, 100);
-
-</script>
+    </script>
     <script>
 
         /*========================================

@@ -58,7 +58,9 @@ p{
 }
 
 
-
+.mobile-contact-buttons{
+    display: none;
+}
 
 
 .btn{

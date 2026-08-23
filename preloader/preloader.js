@@ -256,7 +256,7 @@
         <div class="lokdham-preloader-content">
 
             <img
-                src="img/index/onlylogo.png"
+                src="img/index/lokdhamtm.png"
                 alt="Lokdham Developers"
                 class="lokdham-preloader-logo"
             >

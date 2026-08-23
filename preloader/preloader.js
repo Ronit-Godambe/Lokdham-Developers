@@ -12,7 +12,7 @@
     const PRELOADER_KEY = "lokdhamPreloaderLastShown";
 
     /* TESTING: 5 seconds */
-    const THIRTY_MINUTES = 30 * 60 * 1000;
+    const THIRTY_MINUTES = 5 * 1000;
 
     const DISPLAY_TIME = 2200;
 
@@ -279,6 +279,15 @@
 
 
         /* ================================
+           GET LOGO
+        ================================ */
+
+        const logo = preloader.querySelector(
+            ".lokdham-preloader-logo"
+        );
+
+
+        /* ================================
            SAVE SHOW TIME
         ================================ */
 
@@ -292,29 +301,71 @@
 
 
         /* ================================
-           REMOVE PRELOADER
+           START PRELOADER TIMER
+           ONLY AFTER LOGO IS READY
         ================================ */
 
-        setTimeout(function () {
-
-            preloader.classList.add("hide");
-
-            document.body.style.overflow = "";
-
+        function startPreloaderTimer() {
 
             setTimeout(function () {
 
-                preloader.remove();
+                preloader.classList.add("hide");
 
-            }, FADE_TIME);
+                document.body.style.overflow = "";
 
 
-        }, DISPLAY_TIME);
+                setTimeout(function () {
+
+                    preloader.remove();
+
+                }, FADE_TIME);
+
+            }, DISPLAY_TIME);
+
+        }
+
+
+        /* ================================
+           WAIT FOR LOGO TO LOAD
+        ================================ */
+
+        if (logo.complete && logo.naturalWidth > 0) {
+
+            startPreloaderTimer();
+
+        } else {
+
+            logo.addEventListener(
+
+                "load",
+
+                startPreloaderTimer,
+
+                { once: true }
+
+            );
+
+
+            /* FALLBACK IF IMAGE FAILS */
+
+            logo.addEventListener(
+
+                "error",
+
+                startPreloaderTimer,
+
+                { once: true }
+
+            );
+
+        }
 
     }
 
 
-    /* START IMMEDIATELY */
+    /* ================================
+       START IMMEDIATELY
+    ================================ */
 
     addPreloader();
 

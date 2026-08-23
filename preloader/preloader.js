@@ -112,7 +112,7 @@
             padding: 20px;
 
             animation:
-                lokdhamPreloaderAppear 0.7s ease forwards;
+                lokdhamPreloaderAppear 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 
         }
 
@@ -123,15 +123,19 @@
 
         .lokdham-preloader-logo {
 
-            width: 180px;
+            width: 260px;
 
-            max-width: 60vw;
+            max-width: 75vw;
 
             height: auto;
 
             display: block;
 
-            margin-bottom: 24px;
+            margin-bottom: 30px;
+
+            filter: drop-shadow(
+                0 12px 20px rgba(11, 42, 91, 0.10)
+            );
 
         }
 
@@ -148,11 +152,13 @@
 
             font-family: 'Poppins', sans-serif;
 
-            font-size: 17px;
+            font-size: 20px;
 
-            font-weight: 500;
+            font-weight: 600;
 
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+
+            position: relative;
 
         }
 
@@ -178,19 +184,23 @@
 
         @keyframes lokdhamPreloaderAppear {
 
-            from {
+            0% {
 
                 opacity: 0;
 
-                transform: translateY(15px);
+                transform:
+                    translateY(25px)
+                    scale(0.96);
 
             }
 
-            to {
+            100% {
 
                 opacity: 1;
 
-                transform: translateY(0);
+                transform:
+                    translateY(0)
+                    scale(1);
 
             }
 
@@ -205,18 +215,22 @@
 
             .lokdham-preloader-logo {
 
-                width: 140px;
+                width: 210px;
 
-                margin-bottom: 20px;
+                max-width: 75vw;
+
+                margin-bottom: 26px;
 
             }
 
 
             .lokdham-preloader-tagline {
 
-                font-size: 14px;
+                font-size: 16px;
 
-                letter-spacing: 0.3px;
+                font-weight: 600;
+
+                letter-spacing: 0.6px;
 
             }
 

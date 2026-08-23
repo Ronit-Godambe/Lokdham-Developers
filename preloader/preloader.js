@@ -92,7 +92,9 @@
 
         }
 
-
+     .goldtxt{
+        color: #b89541;
+    }
         /* =========================================
            CONTENT
         ========================================= */
@@ -176,7 +178,7 @@
             pointer-events: none;
 
         }
-
+   
 
         /* =========================================
            CONTENT ANIMATION
@@ -263,7 +265,7 @@
 
             <p class="lokdham-preloader-tagline">
 
-                Building Trust. Creating Future.
+                Building Trust. <span class="goldtxt"> Creating Future.</span>
 
             </p>
 

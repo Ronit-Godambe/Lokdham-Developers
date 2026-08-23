@@ -10,49 +10,36 @@
 
     <title>Land Projects Near Pune | Lokdham Developers</title>
 
-<meta name="description"
-      content="Explore land and plot projects by Lokdham Developers near Pune. Discover thoughtfully planned locations designed for peaceful living and long-term investment.">
+    <meta name="description"
+        content="Explore land and plot projects by Lokdham Developers near Pune. Discover thoughtfully planned locations designed for peaceful living and long-term investment.">
 
-<meta name="keywords"
-      content="land projects Pune, plots near Pune, land for sale Pune, farmhouse plots Pune, property projects Pune, Lokdham projects">
+    <meta name="keywords"
+        content="land projects Pune, plots near Pune, land for sale Pune, farmhouse plots Pune, property projects Pune, Lokdham projects">
 
-<meta name="robots"
-      content="index, follow">
+    <meta name="robots" content="index, follow">
 
-<link rel="canonical"
-      href="https://www.lokdham.com/projects.html">
-      
+    <link rel="canonical" href="https://www.lokdham.com/projects.html">
+
     <link rel="stylesheet" href="css/styleprojects.css">
 
     <link rel="stylesheet" href="css/styleprojectsmob.css">
-    
+
+    <link rel="stylesheet" href="/Common/navbar/cnavbar.css">
+    <link rel="stylesheet" href="/Common/navbar/cnavbarmob.css">
+
     <link rel="shortcut icon" href="favicon/faviconbig.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <nav>
+    <div id="navbar-container"></div>
 
-        <div class="logo">
-            <a href="index.html"><img src="img/index/onlylogo.png" alt="Logo"></a>
-        </div>
+    <script src="Common/navbar/cnavbar.js"></script>
 
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
-        </div>
-
-        <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-        </ul>
-
-        <a href="contactus.html" class="btn">Enquire Now</a>
-
-    </nav>
     <!-- ================= PAGE HEADER ================= -->
 
     <section class="page-header">
@@ -109,7 +96,7 @@
 
                 </div>
 
-            </article> 
+            </article>
 
 
 
@@ -180,7 +167,7 @@
 
 
 
-        <!-- ================================
+    <!-- ================================
      ENQUIRY POPUP
 ================================ -->
 
@@ -330,15 +317,9 @@
 
     </section>
 
-    <footer>
+    <div id="footer-container"></div>
 
-        <p>
-
-            © 2026 Lokdham Developers. All Rights Reserved. | Designed & Developed by Ronit Godambe
-
-        </p>
-
-    </footer>
+    <script src="Common/footer/cfooter.js"></script>
 
     <script>
 
@@ -390,295 +371,295 @@
 
 
 
-<script>
+    <script>
 
-/*========================================
-        LOKDHAM ENQUIRY POPUP
-        WEBSITE-WIDE CONTROL
-========================================*/
+        /*========================================
+                LOKDHAM ENQUIRY POPUP
+                WEBSITE-WIDE CONTROL
+        ========================================*/
 
-const ENQUIRY_SHOWN_KEY = "lokdhamEnquiryShown";
-const ENQUIRY_SUBMITTED_KEY = "lokdhamEnquirySubmitted";
+        const ENQUIRY_SHOWN_KEY = "lokdhamEnquiryShown";
+        const ENQUIRY_SUBMITTED_KEY = "lokdhamEnquirySubmitted";
 
-const TWO_MINUTES = 3 * 60 * 1000;
-const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
-
-
-/*========================================
-        OPEN POPUP
-========================================*/
-
-function openEnquiryPopup() {
-
-    const popup = document.getElementById("enquiryPopup");
-
-    if (popup) {
-        popup.classList.add("active");
-    }
-
-    document.body.classList.add("enquiry-open");
-
-}
+        const TWO_MINUTES = 3 * 60 * 1000;
+        const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
 
 
-/*========================================
-        CLOSE POPUP
-========================================*/
+        /*========================================
+                OPEN POPUP
+        ========================================*/
 
-function closeEnquiryPopup() {
+        function openEnquiryPopup() {
 
-    const popup = document.getElementById("enquiryPopup");
+            const popup = document.getElementById("enquiryPopup");
 
-    if (popup) {
-        popup.classList.remove("active");
-    }
+            if (popup) {
+                popup.classList.add("active");
+            }
 
-    document.body.classList.remove("enquiry-open");
-
-}
-
-
-/*========================================
-        ESCAPE KEY
-========================================*/
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-
-        closeEnquiryPopup();
-
-    }
-
-});
-
-
-/*========================================
-        CHECK WHETHER POPUP CAN APPEAR
-========================================*/
-
-function shouldShowEnquiry() {
-
-    const now = Date.now();
-
-
-    /*--------------------------------------
-        CHECK 7-DAY SUBMISSION LOCK
-    --------------------------------------*/
-
-    const submittedTime =
-        localStorage.getItem(ENQUIRY_SUBMITTED_KEY);
-
-
-    if (submittedTime) {
-
-        const submittedAgo =
-            now - Number(submittedTime);
-
-
-        /*
-            If enquiry was submitted
-            less than 7 days ago,
-            don't show the popup.
-        */
-
-        if (submittedAgo < SEVEN_DAYS) {
-
-            return false;
+            document.body.classList.add("enquiry-open");
 
         }
 
 
-        /*
-            7 days have passed.
-            Remove old submission record.
-        */
+        /*========================================
+                CLOSE POPUP
+        ========================================*/
 
-        localStorage.removeItem(
-            ENQUIRY_SUBMITTED_KEY
-        );
+        function closeEnquiryPopup() {
 
-    }
+            const popup = document.getElementById("enquiryPopup");
 
+            if (popup) {
+                popup.classList.remove("active");
+            }
 
-    /*--------------------------------------
-        CHECK 5-MINUTE POPUP COOLDOWN
-    --------------------------------------*/
-
-    const shownTime =
-        localStorage.getItem(ENQUIRY_SHOWN_KEY);
-
-
-    if (shownTime) {
-
-        const shownAgo =
-            now - Number(shownTime);
-
-
-        /*
-            If popup was shown less than
-            5 minutes ago, don't show it.
-        */
-
-        if (shownAgo < TWO_MINUTES) {
-
-            return false;
+            document.body.classList.remove("enquiry-open");
 
         }
 
-    }
+
+        /*========================================
+                ESCAPE KEY
+        ========================================*/
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                closeEnquiryPopup();
+
+            }
+
+        });
 
 
-    return true;
+        /*========================================
+                CHECK WHETHER POPUP CAN APPEAR
+        ========================================*/
 
-}
+        function shouldShowEnquiry() {
 
-
-/*========================================
-        SHOW POPUP AFTER 15 SECONDS
-========================================*/
-
-window.addEventListener("load", function() {
-
-    setTimeout(function() {
-
-        /*
-            Make sure popup exists on this page.
-        */
-
-        const popup =
-            document.getElementById("enquiryPopup");
+            const now = Date.now();
 
 
-        if (!popup) {
-            return;
-        }
+            /*--------------------------------------
+                CHECK 7-DAY SUBMISSION LOCK
+            --------------------------------------*/
+
+            const submittedTime =
+                localStorage.getItem(ENQUIRY_SUBMITTED_KEY);
 
 
-        if (shouldShowEnquiry()) {
+            if (submittedTime) {
 
-            openEnquiryPopup();
-
-
-            /*
-                Record EXACT time popup
-                was displayed.
-            */
-
-            localStorage.setItem(
-                ENQUIRY_SHOWN_KEY,
-                Date.now().toString()
-            );
-
-        }
-
-    }, 5000);
-
-});
+                const submittedAgo =
+                    now - Number(submittedTime);
 
 
-/*========================================
-        WHATSAPP ENQUIRY
-========================================*/
+                /*
+                    If enquiry was submitted
+                    less than 7 days ago,
+                    don't show the popup.
+                */
 
-const enquiryForm =
-    document.getElementById("enquiryForm");
+                if (submittedAgo < SEVEN_DAYS) {
 
+                    return false;
 
-if (enquiryForm) {
-
-    enquiryForm.addEventListener(
-        "submit",
-        function(e) {
-
-            e.preventDefault();
+                }
 
 
-            /*----------------------------------
-                GET FORM VALUES
-            ----------------------------------*/
+                /*
+                    7 days have passed.
+                    Remove old submission record.
+                */
 
-            const name =
-                document
-                    .getElementById("enquiryName")
-                    .value
-                    .trim();
-
-
-            const phone =
-                document
-                    .getElementById("enquiryPhone")
-                    .value
-                    .trim();
-
-
-            const email =
-                document
-                    .getElementById("enquiryEmail")
-                    .value
-                    .trim();
-
-
-            const location =
-                document
-                    .getElementById("enquiryLocation")
-                    .value
-                    .trim();
-
-
-            const message =
-                document
-                    .getElementById("enquiryMessage")
-                    .value
-                    .trim();
-
-
-            /*----------------------------------
-                GET SELECTED INTEREST
-            ----------------------------------*/
-
-            const selectedInterest =
-                document.querySelector(
-                    'input[name="interest"]:checked'
+                localStorage.removeItem(
+                    ENQUIRY_SUBMITTED_KEY
                 );
 
+            }
 
-            let interest = "";
+
+            /*--------------------------------------
+                CHECK 5-MINUTE POPUP COOLDOWN
+            --------------------------------------*/
+
+            const shownTime =
+                localStorage.getItem(ENQUIRY_SHOWN_KEY);
 
 
-            if (selectedInterest) {
+            if (shownTime) {
 
-                if (
-                    selectedInterest.value === "buying"
-                ) {
+                const shownAgo =
+                    now - Number(shownTime);
 
-                    interest = "Buying a Plot";
 
-                }
+                /*
+                    If popup was shown less than
+                    5 minutes ago, don't show it.
+                */
 
-                else if (
-                    selectedInterest.value === "selling"
-                ) {
+                if (shownAgo < TWO_MINUTES) {
 
-                    interest = "Selling Land";
-
-                }
-
-                else {
-
-                    interest = "Other Enquiry";
+                    return false;
 
                 }
 
             }
 
 
-            /*----------------------------------
-                BUILD WHATSAPP MESSAGE
-            ----------------------------------*/
+            return true;
 
-            let whatsappMessage =
-`Hello Lokdham Developers,
+        }
+
+
+        /*========================================
+                SHOW POPUP AFTER 15 SECONDS
+        ========================================*/
+
+        window.addEventListener("load", function () {
+
+            setTimeout(function () {
+
+                /*
+                    Make sure popup exists on this page.
+                */
+
+                const popup =
+                    document.getElementById("enquiryPopup");
+
+
+                if (!popup) {
+                    return;
+                }
+
+
+                if (shouldShowEnquiry()) {
+
+                    openEnquiryPopup();
+
+
+                    /*
+                        Record EXACT time popup
+                        was displayed.
+                    */
+
+                    localStorage.setItem(
+                        ENQUIRY_SHOWN_KEY,
+                        Date.now().toString()
+                    );
+
+                }
+
+            }, 5000);
+
+        });
+
+
+        /*========================================
+                WHATSAPP ENQUIRY
+        ========================================*/
+
+        const enquiryForm =
+            document.getElementById("enquiryForm");
+
+
+        if (enquiryForm) {
+
+            enquiryForm.addEventListener(
+                "submit",
+                function (e) {
+
+                    e.preventDefault();
+
+
+                    /*----------------------------------
+                        GET FORM VALUES
+                    ----------------------------------*/
+
+                    const name =
+                        document
+                            .getElementById("enquiryName")
+                            .value
+                            .trim();
+
+
+                    const phone =
+                        document
+                            .getElementById("enquiryPhone")
+                            .value
+                            .trim();
+
+
+                    const email =
+                        document
+                            .getElementById("enquiryEmail")
+                            .value
+                            .trim();
+
+
+                    const location =
+                        document
+                            .getElementById("enquiryLocation")
+                            .value
+                            .trim();
+
+
+                    const message =
+                        document
+                            .getElementById("enquiryMessage")
+                            .value
+                            .trim();
+
+
+                    /*----------------------------------
+                        GET SELECTED INTEREST
+                    ----------------------------------*/
+
+                    const selectedInterest =
+                        document.querySelector(
+                            'input[name="interest"]:checked'
+                        );
+
+
+                    let interest = "";
+
+
+                    if (selectedInterest) {
+
+                        if (
+                            selectedInterest.value === "buying"
+                        ) {
+
+                            interest = "Buying a Plot";
+
+                        }
+
+                        else if (
+                            selectedInterest.value === "selling"
+                        ) {
+
+                            interest = "Selling Land";
+
+                        }
+
+                        else {
+
+                            interest = "Other Enquiry";
+
+                        }
+
+                    }
+
+
+                    /*----------------------------------
+                        BUILD WHATSAPP MESSAGE
+                    ----------------------------------*/
+
+                    let whatsappMessage =
+                        `Hello Lokdham Developers,
 
 I would like to make an enquiry.
 
@@ -687,100 +668,100 @@ Mobile: ${phone}
 Interest: ${interest}`;
 
 
-            if (email) {
+                    if (email) {
 
-                whatsappMessage +=
-`
+                        whatsappMessage +=
+                            `
 Email: ${email}`;
 
-            }
+                    }
 
 
-            if (location) {
+                    if (location) {
 
-                whatsappMessage +=
-`
+                        whatsappMessage +=
+                            `
 Preferred Location: ${location}`;
 
-            }
+                    }
 
 
-            if (message) {
+                    if (message) {
 
-                whatsappMessage +=
-`
+                        whatsappMessage +=
+                            `
 Message: ${message}`;
 
-            }
+                    }
 
 
-            whatsappMessage +=
-`
+                    whatsappMessage +=
+                        `
 
 Thank you.`;
 
 
-            /*==================================
-                YOUR WHATSAPP NUMBER
+                    /*==================================
+                        YOUR WHATSAPP NUMBER
+        
+                        Replace this with the actual
+                        Lokdham WhatsApp number.
+                    ==================================*/
 
-                Replace this with the actual
-                Lokdham WhatsApp number.
-            ==================================*/
-
-            const whatsappNumber =
-                "918007901111";
-
-
-            /*----------------------------------
-                ENCODE MESSAGE
-            ----------------------------------*/
-
-            const encodedMessage =
-                encodeURIComponent(
-                    whatsappMessage
-                );
+                    const whatsappNumber =
+                        "918007901111";
 
 
-            /*----------------------------------
-                CREATE WHATSAPP URL
-            ----------------------------------*/
+                    /*----------------------------------
+                        ENCODE MESSAGE
+                    ----------------------------------*/
 
-            const whatsappURL =
-                `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-
-            /*==================================
-                7-DAY SUBMISSION LOCK
-            ==================================*/
-
-            localStorage.setItem(
-                ENQUIRY_SUBMITTED_KEY,
-                Date.now().toString()
-            );
+                    const encodedMessage =
+                        encodeURIComponent(
+                            whatsappMessage
+                        );
 
 
-            /*----------------------------------
-                CLOSE POPUP
-            ----------------------------------*/
+                    /*----------------------------------
+                        CREATE WHATSAPP URL
+                    ----------------------------------*/
 
-            closeEnquiryPopup();
+                    const whatsappURL =
+                        `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
 
-            /*----------------------------------
-                OPEN WHATSAPP
-            ----------------------------------*/
+                    /*==================================
+                        7-DAY SUBMISSION LOCK
+                    ==================================*/
 
-            window.open(
-                whatsappURL,
-                "_blank"
+                    localStorage.setItem(
+                        ENQUIRY_SUBMITTED_KEY,
+                        Date.now().toString()
+                    );
+
+
+                    /*----------------------------------
+                        CLOSE POPUP
+                    ----------------------------------*/
+
+                    closeEnquiryPopup();
+
+
+                    /*----------------------------------
+                        OPEN WHATSAPP
+                    ----------------------------------*/
+
+                    window.open(
+                        whatsappURL,
+                        "_blank"
+                    );
+
+                }
             );
 
         }
-    );
 
-}
-
-</script>
+    </script>
 
 
 </body>

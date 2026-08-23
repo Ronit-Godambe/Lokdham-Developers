@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="preloader/preloader.js"></script>
     <title>Lokdham Developers | Project Manager</title>
 
 
@@ -1811,128 +1811,128 @@
 
 
 
-       /* =====================================
-   LOGIN
-===================================== */
-
-loginForm.addEventListener(
-    "submit",
-    async function (event) {
-
-        event.preventDefault();
-
-
-        const loginValue =
-            document.getElementById(
-                "loginInput"
-            ).value
-            .trim()
-            .toLowerCase();
-
-
-        const password =
-            document.getElementById(
-                "password"
-            ).value;
-
-
         /* =====================================
-           USERNAME → EMAIL MAP
-        ====================================== */
+    LOGIN
+ ===================================== */
 
-        const usernameMap = {
+        loginForm.addEventListener(
+            "submit",
+            async function (event) {
 
-            lokdham: "lokdhamdevelopers@gmail.com",
-            rgdev: "ronitgodambe@gmail.com"
-           
-        };
-
-
-        let email;
+                event.preventDefault();
 
 
-        /* If user entered an email */
-        if (
-            loginValue.includes("@")
-        ) {
-
-            email = loginValue;
-
-        }
-
-        /* If user entered a username */
-        else {
-
-            email =
-                usernameMap[loginValue];
-
-        }
+                const loginValue =
+                    document.getElementById(
+                        "loginInput"
+                    ).value
+                        .trim()
+                        .toLowerCase();
 
 
-        /* Invalid username */
-
-        if (!email) {
-
-            loginMessage.textContent =
-                "Invalid username or email.";
-
-            return;
-
-        }
+                const password =
+                    document.getElementById(
+                        "password"
+                    ).value;
 
 
-        loginMessage.textContent =
-            "Logging in...";
+                /* =====================================
+                   USERNAME → EMAIL MAP
+                ====================================== */
+
+                const usernameMap = {
+
+                    lokdham: "lokdhamdevelopers@gmail.com",
+                    rgdev: "ronitgodambe@gmail.com"
+
+                };
 
 
-        const {
-            error
-        }
-            =
-            await supabase
-                .auth
-                .signInWithPassword({
-
-                    email: email,
-
-                    password: password
-
-                });
+                let email;
 
 
-        if (
-            error
-        ) {
+                /* If user entered an email */
+                if (
+                    loginValue.includes("@")
+                ) {
 
-            console.error(
-                error
-            );
+                    email = loginValue;
 
+                }
 
-            loginMessage.textContent =
-                "Invalid username, email or password.";
+                /* If user entered a username */
+                else {
 
-            return;
+                    email =
+                        usernameMap[loginValue];
 
-        }
-
-
-        loginMessage.textContent =
-            "";
+                }
 
 
-        loginScreen.style.display =
-            "none";
+                /* Invalid username */
+
+                if (!email) {
+
+                    loginMessage.textContent =
+                        "Invalid username or email.";
+
+                    return;
+
+                }
 
 
-        appScreen.style.display =
-            "block";
+                loginMessage.textContent =
+                    "Logging in...";
 
 
-        showProjects();
+                const {
+                    error
+                }
+                    =
+                    await supabase
+                        .auth
+                        .signInWithPassword({
 
-    }
-);
+                            email: email,
+
+                            password: password
+
+                        });
+
+
+                if (
+                    error
+                ) {
+
+                    console.error(
+                        error
+                    );
+
+
+                    loginMessage.textContent =
+                        "Invalid username, email or password.";
+
+                    return;
+
+                }
+
+
+                loginMessage.textContent =
+                    "";
+
+
+                loginScreen.style.display =
+                    "none";
+
+
+                appScreen.style.display =
+                    "block";
+
+
+                showProjects();
+
+            }
+        );
 
 
 

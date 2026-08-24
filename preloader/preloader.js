@@ -12,7 +12,7 @@
     const PRELOADER_KEY = "lokdhamPreloaderLastShown";
 
     /* TESTING: 5 seconds */
-    const THIRTY_MINUTES = 5 * 1000;
+    const THIRTY_MINUTES = 30 * 60 * 1000;
 
     const DISPLAY_TIME = 2200;
 

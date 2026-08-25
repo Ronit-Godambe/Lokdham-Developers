@@ -11,8 +11,8 @@
     const ENQUIRY_SHOWN_KEY = "lokdhamEnquiryShown";
     const ENQUIRY_SUBMITTED_KEY = "lokdhamEnquirySubmitted";
 
-    const POPUP_DELAY = 30 * 1000;
-    const POPUP_COOLDOWN = 10 * 60 * 1000;
+    const POPUP_DELAY = 40 * 1000;
+    const POPUP_COOLDOWN = 30 * 60 * 1000;
     const SUBMISSION_LOCK = 7 * 24 * 60 * 60 * 1000;
 
 

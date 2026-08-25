@@ -12,6 +12,7 @@
     color: #ffffff;
 
     overflow: hidden;
+
 }
 
 
@@ -266,4 +267,47 @@
     color: #d5aa4b;
 
     font-weight: 500;
+}
+
+
+
+
+/* MOBILE CONTACT BAR - HIDDEN ON DESKTOP */
+
+.mobile-contact-buttons {
+    display: none;
+}
+
+
+
+/* ========================================
+   FOOTER ABOVE MOBILE CONTACT BAR
+======================================== */
+
+.site-footer {
+    isolation: isolate;
+}
+
+
+.site-footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #172b4d;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+.footer-wrapper {
+
+    position: relative;
+
+    z-index: 3;
 }

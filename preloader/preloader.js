@@ -13,6 +13,7 @@
 
     /* TESTING: 5 seconds */
     const THIRTY_MINUTES = 30 * 60 * 1000;
+    // const THIRTY_MINUTES = 2 * 1000;
 
     const DISPLAY_TIME = 2200;
 
@@ -258,7 +259,7 @@
         <div class="lokdham-preloader-content">
 
             <img
-                src="img/index/lokdhamtm.png"
+                src="/img/index/lokdhamtm.png"
                 alt="Lokdham Developers"
                 class="lokdham-preloader-logo"
             >

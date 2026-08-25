@@ -1,3 +1,7 @@
+/* ========================================
+   LOAD COMMON FOOTER
+======================================== */
+
 fetch("/Common/footer/cfooter.html")
 
     .then(response => {
@@ -14,6 +18,7 @@ fetch("/Common/footer/cfooter.html")
 
     })
 
+
     .then(data => {
 
         const footerContainer =
@@ -21,13 +26,18 @@ fetch("/Common/footer/cfooter.html")
                 "footer-container"
             );
 
-        if (footerContainer) {
 
-            footerContainer.innerHTML = data;
+        if (!footerContainer) {
+
+            return;
 
         }
 
+
+        footerContainer.innerHTML = data;
+
     })
+
 
     .catch(error => {
 

@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
- <script src="preloader/preloader.js"></script>
+    <script src="preloader/preloader.js"></script>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <script src="/preloader/preloader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
         How to Choose the Right Location for Land Investment Near Pune | Lokdham Developers
@@ -15,22 +14,26 @@
     <meta name="description"
         content="Learn how to choose the right location for land investment near Pune by evaluating connectivity, infrastructure, surroundings, development potential and future growth.">
 
-    <meta name="robots"
-        content="index, follow">
+    <meta name="robots" content="index, follow">
 
-    <link rel="canonical"
-        href="https://www.lokdham.com/blogs/blog2.html">
-        
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link rel="canonical" href="https://www.lokdham.com/blogs/blog2.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        
-    <link rel="stylesheet"
-        href="blogstyle.css">
 
-    <link rel="stylesheet"
-        href = "blogstylemob.css">
-        
-    <link rel="shortcut icon" href="favicon/faviconbig.png" type="image/png">
+    <link rel="stylesheet" href="blogstyle.css">
+
+    <link rel="stylesheet" href="blogstylemob.css">
+
+
+    <link rel="stylesheet" href="/Common/navbar/cnavbar.css">
+    <link rel="stylesheet" href="/Common/navbar/cnavbarmob.css">
+
+    <link rel="shortcut icon" href="/favicon/faviconbig.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
 
 </head>
 
@@ -38,74 +41,10 @@
 <body>
 
 
-    <!-- ================= NAVBAR ================= -->
+    <div id="navbar-container"></div>
 
-    <nav>
+    <script src="/Common/navbar/cnavbar.js"></script>
 
-        <div class="logo">
-
-            <a href="../index.html">
-
-                <img
-                    src="../img/index/onlylogo.png"
-                    alt="Lokdham Developers Logo">
-
-            </a>
-
-        </div>
-
-
-        <div class="menu-toggle"
-            id="menu-toggle">
-
-            ☰
-
-        </div>
-
-
-        <ul id="nav-links">
-
-            <li>
-                <a href="../index.html">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="../aboutus.html">
-                    About Us
-                </a>
-            </li>
-
-            <li>
-                <a href="../projects.html">
-                    Projects
-                </a>
-            </li>
-
-            <li>
-                <a href="../blogs.html">
-                    Blogs
-                </a>
-            </li>
-
-            <li>
-                <a href="../contactus.html">
-                    Contact Us
-                </a>
-            </li>
-
-        </ul>
-
-
-        <a href="../contactus.html"
-            class="btn">
-
-            Enquire Now
-
-        </a>
-
-    </nav>
 
 
 
@@ -116,7 +55,8 @@
              BLOG HERO
              ================================================= -->
 
-          <section class="blog-hero" class="blog-hero" style="background-image: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('imgblog2/right-location-for-land-investment.webp');">
+        <section class="blog-hero" class="blog-hero"
+            style="background-image: linear-gradient( rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('imgblog2/right-location-for-land-investment.webp');">
 
             <div class="blog-hero-content">
 
@@ -175,8 +115,7 @@
 
                 <div class="scrollarrow">
 
-                    <a href="#blog-content"
-                        class="scrldwn">
+                    <a href="#blog-content" class="scrldwn">
 
                         Read More ↓
 
@@ -195,9 +134,7 @@
              BLOG CONTENT
              ================================================= -->
 
-        <section
-            class="blog-content-section"
-            id="blog-content">
+        <section class="blog-content-section" id="blog-content">
 
 
             <div class="blog-content">
@@ -771,8 +708,7 @@
                     </p>
 
 
-                    <a href="../projects.html"
-                        class="cta-button">
+                    <a href="../projects.html" class="cta-button">
 
                         Explore Projects
 
@@ -806,266 +742,12 @@
         </section>
 
     </main>
+    <script src="/Common/contactbar/contactbar.js"></script>
+    <div id="footer-container"></div>
 
- <!-- ================================
-     ENQUIRY POPUP
-================================ -->
+    <script src="/Common/footer/cfooter.js"></script>
+    <script src="/Common/enquiry/enquiry.js"></script>
 
-    <section class="enquiry-popup" id="enquiryPopup">
-
-        <div class="enquiry-overlay" onclick="closeEnquiryPopup()"></div>
-
-        <div class="enquiry-modal">
-
-            <button class="enquiry-close" type="button" onclick="closeEnquiryPopup()">
-                &times;
-            </button>
-
-            <div class="enquiry-content">
-
-                <div class="enquiry-heading">
-                    <span class="enquiry-tag">LOKDHAM DEVELOPERS</span>
-
-                    <h2>Let's Talk About Your Property Plans</h2>
-
-                    <p>
-                        Looking to buy a plot or sell your land near Pune?
-                        Share your details and our team will get in touch with you.
-                    </p>
-                </div>
-
-
-                <form class="enquiry-form" id="enquiryForm">
-
-                    <!-- NAME -->
-                    <div class="enquiry-field">
-                        <label for="enquiryName">
-                            Full Name <span>*</span>
-                        </label>
-
-                        <input type="text" id="enquiryName" name="name" placeholder="Enter your full name" required>
-                    </div>
-
-
-                    <!-- MOBILE -->
-                    <div class="enquiry-field">
-                        <label for="enquiryPhone">
-                            Mobile Number <span>*</span>
-                        </label>
-
-                        <input type="tel" id="enquiryPhone" name="phone" placeholder="Enter your mobile number"
-                            inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required>
-                    </div>
-
-
-                    <!-- EMAIL -->
-                    <div class="enquiry-field">
-                        <label for="enquiryEmail">
-                            Email Address <small>(Optional)</small>
-                        </label>
-
-                        <input type="email" id="enquiryEmail" name="email" placeholder="Enter your email address">
-                    </div>
-
-
-                    <!-- INTEREST -->
-                    <div class="enquiry-field enquiry-interest">
-
-                        <label>
-                            What are you interested in? <span>*</span>
-                        </label>
-
-                        <div class="interest-options">
-
-                            <label class="interest-option">
-                                <input type="radio" name="interest" value="buying" required>
-
-                                <span class="interest-box">
-                                    <strong>Buying a Plot</strong>
-                                    <small>Looking for land near Pune</small>
-                                </span>
-                            </label>
-
-
-                            <label class="interest-option">
-                                <input type="radio" name="interest" value="selling">
-
-                                <span class="interest-box">
-                                    <strong>Selling Land</strong>
-                                    <small>Want to sell your property</small>
-                                </span>
-                            </label>
-
-
-                            <label class="interest-option">
-                                <input type="radio" name="interest" value="other">
-
-                                <span class="interest-box">
-                                    <strong>Other Enquiry</strong>
-                                    <small>Have another property question</small>
-                                </span>
-                            </label>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- LOCATION -->
-                    <div class="enquiry-field">
-
-                        <label for="enquiryLocation">
-                            Preferred Location <small>(Optional)</small>
-                        </label>
-
-                        <input type="text" id="enquiryLocation" name="location"
-                            placeholder="e.g. Purandar, Saswad, Velhe...">
-
-                    </div>
-
-
-                    <!-- MESSAGE -->
-                    <div class="enquiry-field">
-
-                        <label for="enquiryMessage">
-                            Your Message <small>(Optional)</small>
-                        </label>
-
-                        <textarea id="enquiryMessage" name="message" rows="3"
-                            placeholder="Tell us what you're looking for..."></textarea>
-
-                    </div>
-
-
-                    <!-- SUBMIT -->
-                    <button type="submit" class="enquiry-submit">
-                        Submit Enquiry
-                        <span>→</span>
-                    </button>
-
-
-                    <p class="enquiry-note">
-                        Your information is kept private and will only be used
-                        to respond to your enquiry.
-                    </p>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-
-
-
-
-
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <p>
-
-            © 2026 Lokdham Developers.
-            All Rights Reserved.
-            | Designed & Developed by Ronit Godambe
-
-        </p>
-
-    </footer>
-
-
-
-    <script>
-
-        const menu =
-            document.getElementById("menu-toggle");
-
-        const navLinks =
-            document.getElementById("nav-links");
-
-
-        menu.addEventListener("click", () => {
-
-            navLinks.classList.toggle("active");
-
-            menu.innerHTML =
-                navLinks.classList.contains("active")
-                    ? "✕"
-                    : "☰";
-
-        });
-
-    </script>
-
-
-    <!-- =========================================================
-         MOBILE NAVBAR HIDE / SHOW
-         ========================================================= -->
-
-    <script>
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            function () {
-
-                const nav =
-                    document.querySelector("nav");
-
-                let lastScrollTop = 0;
-
-
-                window.addEventListener(
-                    "scroll",
-                    function () {
-
-                        if (window.innerWidth <= 768) {
-
-                            let currentScroll =
-                                window.pageYOffset ||
-                                document.documentElement.scrollTop;
-
-
-                            if (
-                                currentScroll > lastScrollTop &&
-                                currentScroll > 75
-                            ) {
-
-                                nav.classList.add(
-                                    "nav-hidden"
-                                );
-
-                            }
-
-                            else {
-
-                                nav.classList.remove(
-                                    "nav-hidden"
-                                );
-
-                            }
-
-
-                            lastScrollTop =
-                                currentScroll <= 0
-                                    ? 0
-                                    : currentScroll;
-
-                        }
-
-                    }
-                );
-
-            }
-        );
-
-    </script>
 
 
     <!-- =========================================================
@@ -1150,13 +832,13 @@
                             const ease =
                                 progress < 0.5
                                     ? 2 *
-                                      progress *
-                                      progress
+                                    progress *
+                                    progress
                                     : 1 -
-                                      Math.pow(
-                                          -2 * progress + 2,
-                                          2
-                                      ) / 2;
+                                    Math.pow(
+                                        -2 * progress + 2,
+                                        2
+                                    ) / 2;
 
 
                             window.scrollTo(
@@ -1188,399 +870,6 @@
         );
 
     </script>
-
-
-<script>
-
-/*========================================
-        LOKDHAM ENQUIRY POPUP
-        WEBSITE-WIDE CONTROL
-========================================*/
-
-const ENQUIRY_SHOWN_KEY = "lokdhamEnquiryShown";
-const ENQUIRY_SUBMITTED_KEY = "lokdhamEnquirySubmitted";
-
-const TWO_MINUTES = 3 * 60 * 1000;
-const SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
-
-
-/*========================================
-        OPEN POPUP
-========================================*/
-
-function openEnquiryPopup() {
-
-    const popup = document.getElementById("enquiryPopup");
-
-    if (popup) {
-        popup.classList.add("active");
-    }
-
-    document.body.classList.add("enquiry-open");
-
-}
-
-
-/*========================================
-        CLOSE POPUP
-========================================*/
-
-function closeEnquiryPopup() {
-
-    const popup = document.getElementById("enquiryPopup");
-
-    if (popup) {
-        popup.classList.remove("active");
-    }
-
-    document.body.classList.remove("enquiry-open");
-
-}
-
-
-/*========================================
-        ESCAPE KEY
-========================================*/
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-
-        closeEnquiryPopup();
-
-    }
-
-});
-
-
-/*========================================
-        CHECK WHETHER POPUP CAN APPEAR
-========================================*/
-
-function shouldShowEnquiry() {
-
-    const now = Date.now();
-
-
-    /*--------------------------------------
-        CHECK 7-DAY SUBMISSION LOCK
-    --------------------------------------*/
-
-    const submittedTime =
-        localStorage.getItem(ENQUIRY_SUBMITTED_KEY);
-
-
-    if (submittedTime) {
-
-        const submittedAgo =
-            now - Number(submittedTime);
-
-
-        /*
-            If enquiry was submitted
-            less than 7 days ago,
-            don't show the popup.
-        */
-
-        if (submittedAgo < SEVEN_DAYS) {
-
-            return false;
-
-        }
-
-
-        /*
-            7 days have passed.
-            Remove old submission record.
-        */
-
-        localStorage.removeItem(
-            ENQUIRY_SUBMITTED_KEY
-        );
-
-    }
-
-
-    /*--------------------------------------
-        CHECK 5-MINUTE POPUP COOLDOWN
-    --------------------------------------*/
-
-    const shownTime =
-        localStorage.getItem(ENQUIRY_SHOWN_KEY);
-
-
-    if (shownTime) {
-
-        const shownAgo =
-            now - Number(shownTime);
-
-
-        /*
-            If popup was shown less than
-            5 minutes ago, don't show it.
-        */
-
-        if (shownAgo < TWO_MINUTES) {
-
-            return false;
-
-        }
-
-    }
-
-
-    return true;
-
-}
-
-
-/*========================================
-        SHOW POPUP AFTER 15 SECONDS
-========================================*/
-
-window.addEventListener("load", function() {
-
-    setTimeout(function() {
-
-        /*
-            Make sure popup exists on this page.
-        */
-
-        const popup =
-            document.getElementById("enquiryPopup");
-
-
-        if (!popup) {
-            return;
-        }
-
-
-        if (shouldShowEnquiry()) {
-
-            openEnquiryPopup();
-
-
-            /*
-                Record EXACT time popup
-                was displayed.
-            */
-
-            localStorage.setItem(
-                ENQUIRY_SHOWN_KEY,
-                Date.now().toString()
-            );
-
-        }
-
-    }, 5000);
-
-});
-
-
-/*========================================
-        WHATSAPP ENQUIRY
-========================================*/
-
-const enquiryForm =
-    document.getElementById("enquiryForm");
-
-
-if (enquiryForm) {
-
-    enquiryForm.addEventListener(
-        "submit",
-        function(e) {
-
-            e.preventDefault();
-
-
-            /*----------------------------------
-                GET FORM VALUES
-            ----------------------------------*/
-
-            const name =
-                document
-                    .getElementById("enquiryName")
-                    .value
-                    .trim();
-
-
-            const phone =
-                document
-                    .getElementById("enquiryPhone")
-                    .value
-                    .trim();
-
-
-            const email =
-                document
-                    .getElementById("enquiryEmail")
-                    .value
-                    .trim();
-
-
-            const location =
-                document
-                    .getElementById("enquiryLocation")
-                    .value
-                    .trim();
-
-
-            const message =
-                document
-                    .getElementById("enquiryMessage")
-                    .value
-                    .trim();
-
-
-            /*----------------------------------
-                GET SELECTED INTEREST
-            ----------------------------------*/
-
-            const selectedInterest =
-                document.querySelector(
-                    'input[name="interest"]:checked'
-                );
-
-
-            let interest = "";
-
-
-            if (selectedInterest) {
-
-                if (
-                    selectedInterest.value === "buying"
-                ) {
-
-                    interest = "Buying a Plot";
-
-                }
-
-                else if (
-                    selectedInterest.value === "selling"
-                ) {
-
-                    interest = "Selling Land";
-
-                }
-
-                else {
-
-                    interest = "Other Enquiry";
-
-                }
-
-            }
-
-
-            /*----------------------------------
-                BUILD WHATSAPP MESSAGE
-            ----------------------------------*/
-
-            let whatsappMessage =
-`Hello Lokdham Developers,
-
-I would like to make an enquiry.
-
-Name: ${name}
-Mobile: ${phone}
-Interest: ${interest}`;
-
-
-            if (email) {
-
-                whatsappMessage +=
-`
-Email: ${email}`;
-
-            }
-
-
-            if (location) {
-
-                whatsappMessage +=
-`
-Preferred Location: ${location}`;
-
-            }
-
-
-            if (message) {
-
-                whatsappMessage +=
-`
-Message: ${message}`;
-
-            }
-
-
-            whatsappMessage +=
-`
-
-Thank you.`;
-
-
-            /*==================================
-                YOUR WHATSAPP NUMBER
-
-                Replace this with the actual
-                Lokdham WhatsApp number.
-            ==================================*/
-
-            const whatsappNumber =
-                "918007901111";
-
-
-            /*----------------------------------
-                ENCODE MESSAGE
-            ----------------------------------*/
-
-            const encodedMessage =
-                encodeURIComponent(
-                    whatsappMessage
-                );
-
-
-            /*----------------------------------
-                CREATE WHATSAPP URL
-            ----------------------------------*/
-
-            const whatsappURL =
-                `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
-
-            /*==================================
-                7-DAY SUBMISSION LOCK
-            ==================================*/
-
-            localStorage.setItem(
-                ENQUIRY_SUBMITTED_KEY,
-                Date.now().toString()
-            );
-
-
-            /*----------------------------------
-                CLOSE POPUP
-            ----------------------------------*/
-
-            closeEnquiryPopup();
-
-
-            /*----------------------------------
-                OPEN WHATSAPP
-            ----------------------------------*/
-
-            window.open(
-                whatsappURL,
-                "_blank"
-            );
-
-        }
-    );
-
-}
-
-</script>
 </body>
 
 </html>

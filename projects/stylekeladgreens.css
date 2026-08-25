@@ -9,7 +9,7 @@ html {
 }
 
 body {
-
+    
     font-family: 'Poppins', sans-serif;
     background: #ffffff;
     color: #222;
@@ -62,52 +62,6 @@ p {
 
 }
 
-
-
-
-/* NAVBAR */
-
-nav {
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 8%;
-
-    position: sticky;
-    top: 0;
-
-    background: #fff;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
-
-    z-index: 999;
-
-}
-
-.logo img {
-
-    width: 80px;
-
-}
-
-nav ul {
-
-    display: flex;
-    gap: 50px;
-
-    list-style: none;
-
-}
-
-nav a {
-
-    color: #0B2A5B;
-    text-decoration: none;
-    font-weight: 500;
-
-}
 
 .btn {
 
@@ -2088,7 +2042,9 @@ nav a {
     color: #64748B;
 }
 
-
+.mobile-contact-buttons{
+    display: none;
+}
 /*========================================
         BODY LOCK
 ========================================*/
@@ -2096,19 +2052,4 @@ nav a {
 body.enquiry-open {
     overflow: hidden;
 }
-
-
-    /* FOOTER */
-
-    footer{
-
-        background:#071D40;
-
-        color:#fff;
-        
-        text-align:center;
-
-        padding:30px;
-
-    }
 

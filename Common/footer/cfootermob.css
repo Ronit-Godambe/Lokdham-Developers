@@ -31,6 +31,40 @@
 
 @media (max-width: 768px) {
 
+    body {
+        padding-bottom: 0;
+    }
+
+    .site-footer {
+        padding-bottom: 52px;
+    }
+
+    .footer-mobile-contactbar {
+
+        position: fixed;
+
+        left: 0;
+
+        bottom: 0;
+
+        width: 100%;
+
+        height: 50px;
+
+        display: flex;
+
+        margin: 0;
+
+        padding: 0;
+
+        z-index: 9999;
+
+        box-sizing: border-box;
+
+        transition: none;
+
+    }
+
     .footer-gold-line {
         width: 80%;
     }
@@ -158,6 +192,110 @@
     .footer-copyright,
     .footer-developed {
         font-size: 7.5px;
+    }
+
+}
+
+/* ========================================
+   FIXED MOBILE CONTACT BAR
+======================================== */
+
+.footer-mobile-contactbar {
+
+    display: none;
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .footer-mobile-contactbar {
+
+        position: fixed;
+
+        left: 0;
+
+        bottom: 0;
+
+        width: 100%;
+
+        height: 52px;
+
+        display: flex;
+
+        margin: 0;
+
+        padding: 0;
+
+        z-index: 9999;
+
+        box-sizing: border-box;
+
+        transition: none;
+
+    }
+
+
+    .footer-mobile-contactbar a {
+
+        flex: 1;
+
+        height: 52px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        margin: 0;
+
+        padding: 0;
+
+        color: #ffffff;
+
+        text-decoration: none;
+
+        font-family:
+            "Poppins",
+            Arial,
+            sans-serif;
+
+        font-size: 14px;
+
+        font-weight: 600;
+
+        line-height: 1;
+
+    }
+
+
+    /* CALL */
+
+    .footer-mobile-call {
+
+        background: #0B2A5B;
+
+    }
+
+
+    /* WHATSAPP */
+
+    .footer-mobile-whatsapp {
+
+        background: #C8931A;
+
+    }
+
+
+    .footer-mobile-contactbar i {
+
+        font-size: 17px;
+
+        color: #ffffff;
+
     }
 
 }

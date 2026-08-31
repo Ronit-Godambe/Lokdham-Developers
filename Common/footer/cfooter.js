@@ -47,3 +47,6 @@ fetch("/Common/footer/cfooter.html")
         );
 
     });
+
+
+

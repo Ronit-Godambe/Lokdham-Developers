@@ -1,22 +1,6 @@
- 
-    /* =========================================================
-   LOKDHAM BLOG 01
-   MOBILE RESPONSIVE CSS
-   ========================================================= */
 
-
-/* =========================================================
-   TABLET / SMALL LAPTOP
-   ========================================================= */
 
 @media (max-width: 900px) {
-
-    /* =========================================================
-   KELAD GREENS — MOBILE RESPONSIVE
-   Replace/use as: css/stylekeladgreensmobile.css
-========================================================= */
-
- /* GENERAL */
 
     section {
         padding: 60px 20px;
@@ -41,10 +25,6 @@
         height: auto;
     }
 
-    /*========================================
-                NAVBAR
-    ========================================*/
-
     nav {
         position: fixed;
         top: 0;
@@ -59,7 +39,6 @@
         z-index: 1000;
     }
 
-    /* Hide navbar */
     nav.nav-hidden {
         transform: translateY(-100%);
     }
@@ -74,8 +53,6 @@
         cursor: pointer;
         color: #0B2A5B;
     }
-
-    /* Hide Enquire Button */
 
     nav>.btn {
         display: none;
@@ -122,10 +99,6 @@
         text-decoration: none;
         color: #0B2A5B;
     }
-
-    /* -----------------------------------------------------
-       BLOG HERO
-       ----------------------------------------------------- */
 
     .blog-page {
         padding-top: 75px;
@@ -183,11 +156,6 @@
         font-size: 12px;
     }
 
-
-    /* -----------------------------------------------------
-       BLOG CONTENT
-       ----------------------------------------------------- */
-
     .blog-page .blog-content-section {
         padding: 90px 6% 80px;
     }
@@ -211,11 +179,6 @@
         line-height: 1.8;
     }
 
-
-    /* -----------------------------------------------------
-       H2
-       ----------------------------------------------------- */
-
     .blog-page .blog-content h2 {
         margin-top: 55px;
 
@@ -230,17 +193,11 @@
         text-align: left !important;
     }
 
-
-    /* Number remains attached to its gold line */
-
     .blog-page .blog-content h2 .h2-number {
         padding-bottom: 4px;
 
         border-bottom-width: 3px;
     }
-
-
-    /* Major section headings */
 
     .blog-page .blog-content h2.no.pointer {
         text-align: center !important;
@@ -254,12 +211,6 @@
 
         margin-top: 16px;
     }
-
-
-    /* -----------------------------------------------------
-       LISTS
-       ----------------------------------------------------- */
-
     .blog-page .blog-content ul {
         padding-left: 21px;
     }
@@ -271,11 +222,6 @@
         line-height: 1.7;
     }
 
-
-    /* -----------------------------------------------------
-       INFORMATION NOTE
-       ----------------------------------------------------- */
-
     .blog-page .blog-note {
         margin: 30px 0;
 
@@ -286,21 +232,11 @@
         line-height: 1.75;
     }
 
-
-    /* -----------------------------------------------------
-       WARNING LIST
-       ----------------------------------------------------- */
-
     .blog-page .warning-list {
         margin-top: 22px !important;
 
         padding: 20px 24px !important;
     }
-
-
-    /* -----------------------------------------------------
-       CHECKLIST
-       ----------------------------------------------------- */
 
     .blog-page .checklist-box {
         grid-template-columns: 1fr;
@@ -337,11 +273,6 @@
         line-height: 1.5;
     }
 
-
-    /* -----------------------------------------------------
-       CTA
-       ----------------------------------------------------- */
-
     .blog-page .blog-cta {
         margin-top: 60px;
 
@@ -369,11 +300,6 @@
         font-size: 13px;
     }
 
-
-    /* -----------------------------------------------------
-       DISCLAIMER
-       ----------------------------------------------------- */
-
     .blog-page .blog-disclaimer {
         margin-top: 38px;
 
@@ -387,16 +313,8 @@
 }
 
 
-/* =========================================================
-   MOBILE
-   600px AND BELOW
-   ========================================================= */
-
 @media (max-width: 600px) {
 
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
 
     .blog-page .blog-hero {
         min-height: 500px;
@@ -449,10 +367,6 @@
         font-size: 10px;
     }
 
-/* =========================================================
-   MOBILE H2 GOLD LINE
-   ========================================================= */
-
 .blog-page .blog-content h2.no.pointer {
     display: block;
     width: 100%;
@@ -466,9 +380,6 @@
     margin-top: 18px;
     background: var(--blog-gold);
 }
-    /* -----------------------------------------------------
-       CONTENT
-       ----------------------------------------------------- */
 
     .blog-page .blog-content-section {
         padding: 50px 6% 65px;
@@ -480,9 +391,6 @@
     }
 
 
-    /* -----------------------------------------------------
-       PARAGRAPHS
-       ----------------------------------------------------- */
 
     .blog-page .blog-content p {
         margin-bottom: 19px;
@@ -501,11 +409,6 @@
         line-height: 1.75;
     }
 
-
-    /* -----------------------------------------------------
-       HEADINGS
-       ----------------------------------------------------- */
-
     .blog-page .blog-content h2 {
         margin-top: 45px;
 
@@ -520,13 +423,6 @@
         text-align: left !important;
     }
 
-
-    /*
-       Numbered headings:
-       The gold line stays underneath the number,
-       not underneath the entire wrapped heading.
-    */
-
     .blog-page .blog-content h2 .h2-number {
         padding-bottom: 3px;
 
@@ -534,13 +430,6 @@
 
         border-bottom-width: 3px;
     }
-
-
-    /*
-       Major headings:
-       Red Flags / Checklist / Transparency
-       remain centered with a full-width divider.
-    */
 
     .blog-page .blog-content h2.no.pointer {
         margin-top: 52px;
@@ -560,10 +449,6 @@
     }
 
 
-    /* -----------------------------------------------------
-       LISTS
-       ----------------------------------------------------- */
-
     .blog-page .blog-content ul {
         margin: 18px 0 25px;
 
@@ -582,10 +467,6 @@
     }
 
 
-    /* -----------------------------------------------------
-       INFORMATION NOTE
-       ----------------------------------------------------- */
-
     .blog-page .blog-note {
         margin: 28px 0;
 
@@ -598,11 +479,6 @@
         line-height: 1.7;
     }
 
-
-    /* -----------------------------------------------------
-       WARNING LIST
-       ----------------------------------------------------- */
-
     .blog-page .warning-list {
         margin-top: 20px !important;
 
@@ -610,11 +486,6 @@
 
         border-left-width: 3px;
     }
-
-
-    /* -----------------------------------------------------
-       CHECKLIST
-       ----------------------------------------------------- */
 
     .blog-page .checklist-box {
         margin-top: 22px;
@@ -648,11 +519,6 @@
 
         line-height: 1.5;
     }
-
-
-    /* -----------------------------------------------------
-       CTA
-       ----------------------------------------------------- */
 
     .blog-page .blog-cta {
         margin-top: 55px;
@@ -700,11 +566,6 @@
         font-size: 12px;
     }
 
-
-    /* -----------------------------------------------------
-       DISCLAIMER
-       ----------------------------------------------------- */
-
     .blog-page .blog-disclaimer {
         margin-top: 32px;
 
@@ -716,12 +577,6 @@
     }
 
 }
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   400px AND BELOW
-   ========================================================= */
 
 @media (max-width: 400px) {
 
@@ -744,10 +599,6 @@
 
         line-height: 1.65;
     }
-
-    /* =========================================================
-   MOBILE SCROLL DOWN BUTTON
-   ========================================================= */
 
 .blog-page .scrldwn {
     background: var(--blog-gold);

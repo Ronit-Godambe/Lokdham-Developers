@@ -1,12 +1,6 @@
-/* =========================================
-   LOKDHAM COMMON ENQUIRY POPUP
-========================================= */
+
 
 (function () {
-
-    /* =========================================
-       SETTINGS
-    ========================================= */
 
     const ENQUIRY_SHOWN_KEY = "lokdhamEnquiryShown";
     const ENQUIRY_SUBMITTED_KEY = "lokdhamEnquirySubmitted";
@@ -15,10 +9,6 @@
     const POPUP_COOLDOWN = 30 * 60 * 1000;
     const SUBMISSION_LOCK = 7 * 24 * 60 * 60 * 1000;
 
-
-    /* =========================================
-       CHECK WHETHER POPUP CAN APPEAR
-    ========================================= */
 
     function shouldShowEnquiry() {
 
@@ -66,17 +56,9 @@
     }
 
 
-    /* =========================================
-       CREATE CSS
-    ========================================= */
-
     const style = document.createElement("style");
 
     style.innerHTML = `
-
-        /* =========================================
-           ENQUIRY POPUP
-        ========================================= */
 
         .enquiry-popup {
 
@@ -103,11 +85,6 @@
 
         }
 
-
-        /* =========================================
-           OVERLAY
-        ========================================= */
-
         .enquiry-overlay {
 
             position: absolute;
@@ -119,11 +96,6 @@
             backdrop-filter: blur(4px);
 
         }
-
-
-        /* =========================================
-           MODAL
-        ========================================= */
 
         .enquiry-modal {
 
@@ -148,11 +120,6 @@
             z-index: 1;
 
         }
-
-
-        /* =========================================
-           CLOSE BUTTON
-        ========================================= */
 
         .enquiry-close {
 
@@ -1018,22 +985,12 @@
             closeEnquiryPopup
         );
 
-
-        /* =========================================
-           OVERLAY CLICK
-        ========================================= */
-
         popup.querySelector(
             ".enquiry-overlay"
         ).addEventListener(
             "click",
             closeEnquiryPopup
         );
-
-
-        /* =========================================
-           ESCAPE KEY
-        ========================================= */
 
         document.addEventListener(
             "keydown",
@@ -1051,10 +1008,6 @@
             }
         );
 
-
-        /* =========================================
-           SHOW AFTER 30 SECONDS
-        ========================================= */
 
         setTimeout(function () {
 
@@ -1077,11 +1030,6 @@
             );
 
         }, POPUP_DELAY);
-
-
-        /* =========================================
-           FORM SUBMISSION
-        ========================================= */
 
         const enquiryForm =
             popup.querySelector("#enquiryForm");
@@ -1209,9 +1157,6 @@ Thank you.`;
                 const whatsappURL =
                     `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
-
-                /* 7-DAY SUBMISSION LOCK */
-
                 localStorage.setItem(
 
                     ENQUIRY_SUBMITTED_KEY,
@@ -1233,11 +1178,6 @@ Thank you.`;
         );
 
     }
-
-
-    /* =========================================
-       START
-    ========================================= */
 
     addPopup();
 

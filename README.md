@@ -1,1 +1,1 @@
-Live Preview - Lokdham Developers - https:/lokdham.com
+Live Preview - Lokdham Developers - https://www.lokdham.com

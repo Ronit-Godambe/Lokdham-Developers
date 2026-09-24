@@ -38,12 +38,7 @@
     display: grid;
 
     grid-template-columns:
-        1.25fr
-        1fr
-        1fr
-        1fr
-        1.05fr
-        1fr;
+        1.25fr 1fr 1fr 1fr 1.05fr 1fr;
 
     gap: 42px;
 
@@ -159,8 +154,7 @@
     align-items: center;
     justify-content: center;
 
-    border: 1px solid
-        rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.45);
 
     border-radius: 50%;
 
@@ -195,8 +189,7 @@
 
     padding-top: 18px;
 
-    border-top: 1px solid
-        rgba(213, 170, 75, 0.35);
+    border-top: 1px solid rgba(213, 170, 75, 0.35);
 
     text-align: center;
 }
@@ -314,4 +307,64 @@
     position: relative;
 
     z-index: 3;
+}
+
+
+/* ========================================
+   LOKDHAM 8-DIGIT VISITOR COUNTER
+======================================== */
+
+.visitor-counter-display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 42px;
+}
+
+
+.visitor-odometer {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    padding: 5px 6px;
+
+    background: #0a1c37;
+
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.08),
+        0 2px 5px rgba(0,0,0,0.25);
+}
+
+
+.visitor-odometer span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 30px;
+
+    background: #050505;
+
+    color: #d5aa4b;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    border-radius: 2px;
+
+    box-shadow:
+        inset 0 0 3px rgba(255,255,255,0.12),
+        0 1px 2px rgba(0,0,0,0.5);
 }

@@ -35,6 +35,33 @@
         padding-bottom: 0;
     }
 
+    /* VISITOR COUNTER */
+
+    .footer-visitor-counter {
+        margin-top: 22px;
+    }
+
+    .footer-visitor-counter h3 {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .visitor-counter-display {
+        min-height: 34px;
+    }
+
+
+    .visitor-odometer {
+        gap: 2px;
+        padding: 4px 5px;
+    }
+
+    .visitor-odometer span {
+        width: 17px;
+        height: 27px;
+        font-size: 16px;
+    }
+
     .site-footer {
         padding-bottom: 52px;
     }

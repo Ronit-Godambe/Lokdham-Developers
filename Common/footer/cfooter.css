@@ -1,53 +1,48 @@
 /* ========================================
-        LOKDHAM COMMON FOOTER
+   FOOTER
 ======================================== */
 
 .site-footer {
     position: relative;
-
     width: 100%;
-
     background: #172b4d;
-
     color: #ffffff;
-
     overflow: hidden;
-
 }
 
 
-
 /* ========================================
-        FOOTER WRAPPER
+   FOOTER WRAPPER
 ======================================== */
 
 .footer-wrapper {
     max-width: 1280px;
-
     margin: 0 auto;
-
     padding: 75px 40px 35px;
 }
 
 
 /* ========================================
-        MAIN GRID
+   FOOTER MAIN
 ======================================== */
 
 .footer-main {
     display: grid;
-
     grid-template-columns:
-        1.25fr 1fr 1fr 1fr 1.05fr 1fr;
+        1.25fr
+        1fr
+        1fr
+        1fr
+        1.05fr
+        1fr;
 
     gap: 42px;
-
     align-items: start;
 }
 
 
 /* ========================================
-        LOGO
+   BRAND
 ======================================== */
 
 .footer-brand {
@@ -55,25 +50,20 @@
     align-items: flex-start;
 }
 
-
 .footer-logo {
     display: inline-block;
     text-decoration: none;
 }
 
-
-/* Add your logo image */
-
 .footer-logo img {
     width: 165px;
     height: auto;
-
     display: block;
 }
 
 
 /* ========================================
-        HEADINGS
+   FOOTER COLUMNS
 ======================================== */
 
 .footer-column h3 {
@@ -82,20 +72,13 @@
     color: #d5aa4b;
 
     font-size: 16px;
-
     font-weight: 500;
-
     line-height: 1.4;
 }
 
 
-/* ========================================
-        LISTS
-======================================== */
-
 .footer-column ul {
     list-style: none;
-
     padding: 0;
     margin: 0;
 }
@@ -106,22 +89,17 @@
 }
 
 
-/* ========================================
-        LINKS
-======================================== */
-
 .footer-column a {
     color: rgba(255, 255, 255, 0.70);
 
     text-decoration: none;
 
     font-size: 14px;
-
     font-weight: 400;
-
     line-height: 1.5;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease;
 }
 
 
@@ -131,16 +109,13 @@
 
 
 /* ========================================
-        SOCIAL LINKS
+   SOCIAL LINKS
 ======================================== */
 
 .social-links {
     display: flex;
-
     align-items: center;
-
     gap: 9px;
-
     flex-wrap: wrap;
 }
 
@@ -150,12 +125,10 @@
     height: 30px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     border: 1px solid rgba(255, 255, 255, 0.45);
-
     border-radius: 50%;
 
     color: #ffffff;
@@ -171,15 +144,56 @@
 
 .social-links a:hover {
     background: #d5aa4b;
-
     color: #172b4d;
-
     border-color: #d5aa4b;
 }
 
 
 /* ========================================
-        FOOTER BOTTOM
+   VISITOR COUNTER
+======================================== */
+
+.footer-visitor-counter {
+    margin-top: 22px;
+}
+
+
+.footer-visitor-counter h3 {
+    margin-bottom: 10px;
+}
+
+
+.visitor-counter-display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-height: 42px;
+
+    max-width: 100%;
+
+    overflow: hidden;
+}
+
+
+.visitor-counter-display a {
+    display: inline-block;
+
+    max-width: 100%;
+}
+
+
+.visitor-counter-display img {
+    display: block;
+
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+/* ========================================
+   FOOTER BOTTOM
 ======================================== */
 
 .footer-bottom {
@@ -189,15 +203,12 @@
 
     padding-top: 18px;
 
-    border-top: 1px solid rgba(213, 170, 75, 0.35);
+    border-top:
+        1px solid rgba(213, 170, 75, 0.35);
 
     text-align: center;
 }
 
-
-/* ========================================
-        POLICY TEXT
-======================================== */
 
 .footer-policy {
     margin: 0 auto 8px;
@@ -205,9 +216,7 @@
     color: #c6c6c6;
 
     font-size: 9px;
-
     font-weight: 400;
-
     line-height: 1.5;
 
     max-width: 800px;
@@ -216,7 +225,6 @@
 
 .footer-policy a {
     color: #c6c6c6;
-
     text-decoration: none;
 }
 
@@ -226,24 +234,15 @@
 }
 
 
-/* ========================================
-        COPYRIGHT
-======================================== */
-
 .footer-copyright {
     margin: 0 0 7px;
 
     color: #c6c6c6;
 
     font-size: 9px;
-
     line-height: 1.5;
 }
 
-
-/* ========================================
-        DEVELOPED BY
-======================================== */
 
 .footer-developed {
     margin: 0;
@@ -251,34 +250,35 @@
     color: #c6c6c6;
 
     font-size: 9px;
-
     line-height: 1.5;
 }
 
 
 .footer-developed a {
     color: #C8931A;
+
     font-weight: 500;
+
     text-decoration: none;
 }
+
 
 .footer-developed a:hover {
     color: #D5AA4B;
 }
 
 
+/* ========================================
+   MOBILE BAR - HIDDEN BY DEFAULT
+======================================== */
 
-
-/* MOBILE CONTACT BAR - HIDDEN ON DESKTOP */
-
-.mobile-contact-buttons {
+.footer-mobile-contactbar {
     display: none;
 }
 
 
-
 /* ========================================
-   FOOTER ABOVE MOBILE CONTACT BAR
+   FOOTER LAYER
 ======================================== */
 
 .site-footer {
@@ -287,11 +287,9 @@
 
 
 .site-footer::before {
-
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     background: #172b4d;
@@ -303,68 +301,7 @@
 
 
 .footer-wrapper {
-
     position: relative;
 
     z-index: 3;
-}
-
-
-/* ========================================
-   LOKDHAM 8-DIGIT VISITOR COUNTER
-======================================== */
-
-.visitor-counter-display {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 42px;
-}
-
-
-.visitor-odometer {
-    display: flex;
-    align-items: center;
-    gap: 3px;
-
-    padding: 5px 6px;
-
-    background: #0a1c37;
-
-    border-radius: 5px;
-
-    box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.08),
-        0 2px 5px rgba(0,0,0,0.25);
-}
-
-
-.visitor-odometer span {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 20px;
-    height: 30px;
-
-    background: #050505;
-
-    color: #d5aa4b;
-
-    font-family:
-        "Courier New",
-        monospace;
-
-    font-size: 18px;
-
-    font-weight: 700;
-
-    line-height: 1;
-
-    border-radius: 2px;
-
-    box-shadow:
-        inset 0 0 3px rgba(255,255,255,0.12),
-        0 1px 2px rgba(0,0,0,0.5);
 }

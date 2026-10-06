@@ -9,11 +9,6 @@ html {
 }
 
 body {
-     -youbkit-touch-callout: none;
-    -youbkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     font-family: 'Poppins', sans-serif;
     background: #ffffff;
     color: #222;

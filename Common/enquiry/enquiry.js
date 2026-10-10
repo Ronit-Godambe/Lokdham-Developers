@@ -113,6 +113,8 @@ const SUBMISSION_LOCK = 0;          // Allow popup after submission
 
             overflow-y: auto;
 
+            overflow-x: hidden;
+
             background: #ffffff;
 
             border-radius: 20px;

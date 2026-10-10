@@ -670,6 +670,76 @@
 
         }
 
+
+    
+/* =========================================
+   ENQUIRY POPUP — HORIZONTAL OVERFLOW FIX
+========================================= */
+
+.enquiry-popup {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.enquiry-popup,
+.enquiry-popup * {
+    box-sizing: border-box;
+}
+
+.enquiry-modal {
+    width: 100%;
+    min-width: 0;
+    max-width: 650px;
+}
+
+.enquiry-content,
+.enquiry-form,
+.enquiry-field {
+    width: 100%;
+    min-width: 0;
+}
+
+.enquiry-field input,
+.enquiry-field textarea,
+.enquiry-submit {
+    max-width: 100%;
+    min-width: 0;
+}
+
+.interest-options {
+    width: 100%;
+    min-width: 0;
+}
+
+.interest-option,
+.interest-box {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* MOBILE FIX */
+@media screen and (max-width: 768px) {
+    .enquiry-popup {
+        padding: 14px;
+    }
+
+    .enquiry-modal {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .enquiry-content {
+        padding: 32px 20px 25px;
+    }
+}
+
+/* Prevent background page from scrolling sideways */
+body.enquiry-open {
+    overflow: hidden;
+}
+
     `;
 
     document.head.appendChild(style);

@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/slokdb58/public_html/
+    - /bin/cp -R * $DEPLOYPATH
